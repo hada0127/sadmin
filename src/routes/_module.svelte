@@ -1,0 +1,2 @@
+<div>module</div>
+<slot />

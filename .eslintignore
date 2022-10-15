@@ -1,0 +1,6 @@
+.eslintrc.js
+.routify/
+.vscode/
+public/
+src/dist/
+node_modules/
