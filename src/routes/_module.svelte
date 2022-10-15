@@ -1,42 +1,14 @@
 <script>
-  import { Button } from "../component/ui";
-  import { pageTitle, pagePath } from "../store/layout";
+  import { pageTitle, pagePath } from "$store/layout";
+  import Gnb from "$lib/layout/Gnb.svelte";
+  import Lnb from "$lib/layout/Lnb.svelte";
 </script>
 
-<nav class="navbar" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a class="navbar-item" href="/"> 관리자 UI </a>
-  </div>
-
-  <div class="navbar-menu">
-    <div class="navbar-end">
-      <div class="navbar-item">
-        <Button
-          setClass="is-text"
-          on:click={() => {
-            alert("test");
-          }}>정보변경</Button
-        >
-        <Button setClass="is-primary" iconLeft="fas fa-sign-out-alt"
-          >로그아웃</Button
-        >
-      </div>
-    </div>
-  </div>
-</nav>
+<Gnb />
 <div class="container columns is-gapless">
   <aside class="column is-narrow">
     <div class="menu">
-      <p class="menu-label">Menu</p>
-      <ul class="menu-list">
-        <li>
-          <a href="/sample">샘플화면</a>
-          <ul>
-            <li><a href="/sample">목록</a></li>
-            <li><a href="/sample/detail">상세</a></li>
-          </ul>
-        </li>
-      </ul>
+      <Lnb />
     </div>
   </aside>
   <section class="column">
@@ -45,7 +17,7 @@
         <h1>{$pageTitle}</h1>
         <div class="path">
           <a href="/">HOME</a>
-          &gt; {$pagePath}
+          {@html $pagePath}
         </div>
       </header>
       <article class="article">
@@ -56,9 +28,6 @@
 </div>
 
 <style lang="scss">
-  .navbar {
-    border-bottom: 1px solid #eee;
-  }
   .container {
     position: relative;
     max-width: 100%;
@@ -73,18 +42,6 @@
         background-color: #fafafa;
         min-height: 100vh;
         overflow-y: auto;
-        p {
-          margin: 15px;
-          color: var(--font-desc-color);
-          font-size: 10px;
-        }
-        .menu-list {
-          margin: 10px;
-          li {
-            display: block;
-            font-size: 12px;
-          }
-        }
       }
     }
     section {
@@ -103,9 +60,6 @@
             right: 0;
             bottom: 5px;
             color: var(--font-desc-color);
-            a {
-              color: var(--font-desc-color);
-            }
           }
         }
       }

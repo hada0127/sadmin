@@ -1,9 +1,8 @@
-# Svelte Admin UI Template
-Web FrontEnd Admin용 UI Template   
-Svelte + Routify3(beta) + Vite 조합      
+# Svelte Admin UI Kit
+Svelte + Routify3(beta) + Vite 조합   
 Bulma 수정적용(폰트관련)   
 Pretendard 폰트 적용   
-eslint, vscode 설정 적용      
+eslint, vscode 설정 적용   
 SCSS 적용   
 
 ## 설치

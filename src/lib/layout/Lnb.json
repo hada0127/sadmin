@@ -1,0 +1,66 @@
+[
+  {
+    "url": "/user/signin",
+    "name": "Sign In"
+  },
+  {
+    "url": "/component/label",
+    "name": "Component",
+    "submenu": [
+      {
+        "url": "/component/label",
+        "name": "Label"
+      },
+      {
+        "url": "/component/input",
+        "name": "Input"
+      },
+      {
+        "url": "/component/toggle",
+        "name": "Toggle"
+      },
+      {
+        "url": "/component/select",
+        "name": "Select"
+      },
+      {
+        "url": "/component/button",
+        "name": "Button"
+      },
+      {
+        "url": "/component/delete",
+        "name": "Delete"
+      },
+      {
+        "url": "/component/modal",
+        "name": "Modal"
+      }
+    ]
+  },
+  {
+    "url": "/sample/1",
+    "name": "Sample Pages",
+    "submenu": [
+      {
+        "url": "/sample/1",
+        "name": "List"
+      },
+      {
+        "url": "/sample/gallery/1",
+        "name": "Gallery"
+      },
+      {
+        "url": "/sample/detail/1",
+        "name": "Details"
+      },
+      {
+        "url": "/sample/dashboard",
+        "name": "DashBoard"
+      },
+      {
+        "url": "/sample/tabs",
+        "name": "Tabs"
+      }
+    ]
+  }
+]

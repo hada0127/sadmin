@@ -1,32 +1,38 @@
-import { svelte } from '@sveltejs/vite-plugin-svelte'
-import routify from '@roxi/routify/vite-plugin'
 import { defineConfig } from 'vite'
 import { mdsvex } from 'mdsvex'
+import path from 'path'
+import routify from '@roxi/routify/vite-plugin'
+import { svelte } from '@sveltejs/vite-plugin-svelte'
 import { sveltePreprocess } from 'svelte-preprocess/dist/autoProcess'
-
 
 const production = process.env.NODE_ENV === 'production'
 
 export default defineConfig({
-    clearScreen: false,
+  resolve: {
+    alias: {
+      $lib: path.resolve('./src/lib'),
+      $store: path.resolve('./src/store')
+    }
+  },
+clearScreen: false,
 
-    plugins: [
-        routify({
-            devHelper: !production,
-        }),
-        svelte({
-            emitCss: false,
-            compilerOptions: {
-                dev: !production,
-            },
-            extensions: ['.md', '.svelte'],
-            preprocess: [mdsvex({ extension: 'md' }), sveltePreprocess({
-                scss: {
-                  prependData: '@import "./src/asset/css/global.scss";'
-                }
-              })],
-        }),
-    ],
+plugins: [
+    routify({
+        devHelper: !production,
+    }),
+    svelte({
+        emitCss: false,
+        compilerOptions: {
+            dev: !production,
+        },
+        extensions: ['.md', '.svelte'],
+        preprocess: [mdsvex({ extension: 'md' }), sveltePreprocess({
+            scss: {
+                prependData: '@import "./src/asset/css/global.scss";'
+            }
+            })],
+    }),
+],
 
-    server: { port: 3000 },
+server: { port: 3000 },
 })

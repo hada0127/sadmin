@@ -31,8 +31,12 @@ body {
 
 .article {
   padding-top:20px;
+	font-size:14px;
   h2 {
     font-size:16px;
     font-weight:700;
   }
+	h2:not(:first-child) {
+		margin-top: 20px;
+	}
 }

@@ -17,5 +17,8 @@
         "svelte": "^3.39.0",
         "svelte-preprocess": "^4.10.7",
         "vite": "^3.0.3"
+    },
+    "dependencies": {
+        "axios": "^1.1.3"
     }
 }
