@@ -15,7 +15,7 @@
           setClass="is-text"
           iconLeft="fas fa-user"
           on:click={() => {
-            location.href = $url("/user/edit");
+            location.href = $url("/sample/edit");
           }}>Edit Personal Info</Button
         >
         <Button setClass="is-primary" iconLeft="fas fa-sign-out-alt"

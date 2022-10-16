@@ -1,6 +1,6 @@
 [
   {
-    "url": "/user/signin",
+    "url": "/sample/signin",
     "name": "Sign In"
   },
   {
@@ -34,6 +34,10 @@
       {
         "url": "/component/modal",
         "name": "Modal"
+      },
+      {
+        "url": "/component/plain",
+        "name": "Plain Things"
       }
     ]
   },
