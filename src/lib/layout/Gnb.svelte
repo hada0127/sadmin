@@ -5,20 +5,20 @@
 
 <nav class="navbar" aria-label="main navigation">
   <div class="navbar-brand">
-    <a class="navbar-item" href="/">Svelte Admin UI Kit</a>
+    <a class="navbar-item" href="/">Sadmin</a>
   </div>
 
   <div class="navbar-menu">
     <div class="navbar-end">
       <div class="navbar-item">
         <Button
-          setClass="is-text"
+          setStyle="is-text"
           iconLeft="fas fa-user"
           on:click={() => {
             location.href = $url("/sample/edit");
           }}>Edit Personal Info</Button
         >
-        <Button setClass="is-primary" iconLeft="fas fa-sign-out-alt"
+        <Button setStyle="is-primary" iconLeft="fas fa-sign-out-alt"
           >Sign Out</Button
         >
       </div>

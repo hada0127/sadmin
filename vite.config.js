@@ -34,5 +34,8 @@ plugins: [
     }),
 ],
 
+optimizeDeps: {
+  include: ["highlight.js", "highlight.js/lib/core"],
+},
 server: { port: 3000 },
 })

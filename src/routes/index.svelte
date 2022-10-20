@@ -4,7 +4,7 @@
   pagePath.set(`&gt; <a href="/">Intro</a>`);
 </script>
 
-<h2>Svelte Admin UI Kit</h2>
+<h2>Sadmin - Svelte Admin UI Kit</h2>
 <p style="width:100%;">
   Lorem Ipsum is simply dummy text of the printing and typesetting industry.
   Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,

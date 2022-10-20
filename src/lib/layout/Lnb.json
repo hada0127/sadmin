@@ -16,6 +16,10 @@
         "name": "Input"
       },
       {
+        "url": "/component/file",
+        "name": "File"
+      },
+      {
         "url": "/component/toggle",
         "name": "Toggle"
       },
