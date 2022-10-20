@@ -1,5 +1,8 @@
 # Sadmin - Svelte Admin UI Kit
-Sadmin is an Administrator UI kit that utilizes the component function of svelte.
+Sadmin is an Administrator UI kit that utilizes the component function of svelte.   
+
+## Documents
+[Open Documents](http://sadmin.tarucy.net/)
 
 ## Installation
 ```

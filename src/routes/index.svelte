@@ -13,7 +13,8 @@
 <h2>Sadmin - Svelte Admin UI Kit</h2>
 <p>
   Sadmin is an Administrator UI kit that utilizes the component function of
-  svelte.
+  svelte.<br />
+  [<a href="https://github.com/hada0127/sadmin" target="_blank">Github</a>]
 </p>
 <h2>Installation</h2>
 <figure class="highlight">
