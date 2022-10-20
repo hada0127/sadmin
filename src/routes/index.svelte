@@ -14,13 +14,13 @@
 <p>
   Sadmin is an Administrator UI kit that utilizes the component function of
   svelte.<br />
-  [<a href="https://github.com/hada0127/sadmin" target="_blank">Github</a>]
+  [<a href="https://github.com/hada0127/sadmin" target="_blank">Source Code</a>]
 </p>
 <h2>Installation</h2>
 <figure class="highlight">
   <HighlightAuto code={`npx degit hada0127/sadmin`} />
 </figure>
-<p>Setting Nginx</p>
+<h2>Setting Nginx</h2>
 <figure class="highlight">
   <HighlightAuto
     code={`server {
@@ -32,9 +32,27 @@
   etag on;
   location / {
     try_files $uri $uri/ /index.html;
-  }`}
+  }
+}`}
   />
 </figure>
+
+<h2>Routing Manual</h2>
+<p>
+  <a href="https://v3.ci.routify.dev/docs#" target="_blank"
+    >Routify 3 Documentation</a
+  >
+</p>
+
+<h2>Styling Manual</h2>
+<p>
+  <a href="https://bulma.io/documentation/" target="_blank"
+    >Bulma Documentation</a
+  ><br />
+  <a href="https://sass-lang.com/documentation/" target="_blank"
+    >Sass Documentation</a
+  >
+</p>
 
 <h2>Version History</h2>
 <p style="width:100%;">Before release</p>

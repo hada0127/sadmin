@@ -5,7 +5,7 @@
   export let checked = false;
 
   export let disabled = false;
-  export let style = "is-primary";
+  export let style = $$props.class ? $$props.class : "is-primary";
 </script>
 
 <label>

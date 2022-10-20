@@ -1,9 +1,5 @@
 [
   {
-    "url": "/sample/signin",
-    "name": "Sign In"
-  },
-  {
     "url": "/component/label",
     "name": "Component",
     "submenu": [
@@ -49,6 +45,10 @@
     "url": "/sample/1",
     "name": "Sample Pages",
     "submenu": [
+      {
+        "url": "/sample/signin",
+        "name": "Sign In"
+      },
       {
         "url": "/sample/1",
         "name": "List"

@@ -24,46 +24,46 @@
 
 <h2>Type</h2>
 <p>Default type is "button"</p>
-<Button style="is-primary" type="submit">submit</Button>
-<Button style="" type="reset">reset</Button>
+<Button class="is-primary" type="submit">submit</Button>
+<Button class="" type="reset">reset</Button>
 <figure class="highlight">
   <HighlightSvelte code={`<Button>button</Button>`} />
 </figure>
 
 <h2>Colors</h2>
-<Button style="is-white">white</Button>
-<Button style="is-light">light</Button>
-<Button style="is-dark">dark</Button>
-<Button style="is-black">black</Button>
-<Button style="is-text">text</Button>
-<Button style="is-ghost">ghost</Button>
+<Button class="is-white">white</Button>
+<Button class="is-light">light</Button>
+<Button class="is-dark">dark</Button>
+<Button class="is-black">black</Button>
+<Button class="is-text">text</Button>
+<Button class="is-ghost">ghost</Button>
 <figure class="highlight">
   <HighlightSvelte
-    code={`<Button style="is-white">white</Button>
-<Button style="is-light">light</Button>
-<Button style="is-dark">dark</Button>
-<Button style="is-black">black</Button>
-<Button style="is-text">text</Button>
-<Button style="is-ghost">ghost</Button>
+    code={`<Button class="is-white">white</Button>
+<Button class="is-light">light</Button>
+<Button class="is-dark">dark</Button>
+<Button class="is-black">black</Button>
+<Button class="is-text">text</Button>
+<Button class="is-ghost">ghost</Button>
 `}
   />
 </figure>
 <div class="mt-4">
-  <Button style="is-primary">primary</Button>
-  <Button style="is-link">link</Button>
-  <Button style="is-info">info</Button>
-  <Button style="is-success">success</Button>
-  <Button style="is-warning">warning</Button>
-  <Button style="is-danger">danger</Button>
+  <Button class="is-primary">primary</Button>
+  <Button class="is-link">link</Button>
+  <Button class="is-info">info</Button>
+  <Button class="is-success">success</Button>
+  <Button class="is-warning">warning</Button>
+  <Button class="is-danger">danger</Button>
 </div>
 <figure class="highlight">
   <HighlightSvelte
-    code={`<Button style="is-primary">primary</Button>
-<Button style="is-link">link</Button>
-<Button style="is-info">info</Button>
-<Button style="is-success">success</Button>
-<Button style="is-warning">warning</Button>
-<Button style="is-danger">danger</Button>
+    code={`<Button class="is-primary">primary</Button>
+<Button class="is-link">link</Button>
+<Button class="is-info">info</Button>
+<Button class="is-success">success</Button>
+<Button class="is-warning">warning</Button>
+<Button class="is-danger">danger</Button>
 `}
   />
 </figure>
@@ -71,39 +71,39 @@
 <h2>Styles</h2>
 <div>
   <h3>Outlined</h3>
-  <Button style="is-primary is-outlined">primary</Button>
-  <Button style="is-link is-outlined">link</Button>
-  <Button style="is-info is-outlined">info</Button>
-  <Button style="is-success is-outlined">success</Button>
-  <Button style="is-warning is-outlined">warning</Button>
-  <Button style="is-danger is-outlined">danger</Button>
+  <Button class="is-primary is-outlined">primary</Button>
+  <Button class="is-link is-outlined">link</Button>
+  <Button class="is-info is-outlined">info</Button>
+  <Button class="is-success is-outlined">success</Button>
+  <Button class="is-warning is-outlined">warning</Button>
+  <Button class="is-danger is-outlined">danger</Button>
 </div>
 <figure class="highlight">
   <HighlightSvelte
-    code={`<Button style="is-primary is-outlined">primary</Button>
-<Button style="is-link is-outlined">link</Button>
-<Button style="is-info is-outlined">info</Button>
-<Button style="is-success is-outlined">success</Button>
-<Button style="is-warning is-outlined">warning</Button>
-<Button style="is-danger is-outlined">danger</Button>
+    code={`<Button class="is-primary is-outlined">primary</Button>
+<Button class="is-link is-outlined">link</Button>
+<Button class="is-info is-outlined">info</Button>
+<Button class="is-success is-outlined">success</Button>
+<Button class="is-warning is-outlined">warning</Button>
+<Button class="is-danger is-outlined">danger</Button>
 `}
   />
 </figure>
 <div class="mt-4">
   <h3>Inverted</h3>
-  <Button style="is-primary is-inverted">primary</Button>
-  <Button style="is-link is-inverted">link</Button>
-  <Button style="is-info is-inverted">info</Button>
-  <Button style="is-success is-inverted">success</Button>
-  <Button style="is-danger is-inverted">danger</Button>
+  <Button class="is-primary is-inverted">primary</Button>
+  <Button class="is-link is-inverted">link</Button>
+  <Button class="is-info is-inverted">info</Button>
+  <Button class="is-success is-inverted">success</Button>
+  <Button class="is-danger is-inverted">danger</Button>
 </div>
 <figure class="highlight">
   <HighlightSvelte
-    code={`<Button style="is-primary is-inverted">primary</Button>
-<Button style="is-link is-inverted">link</Button>
-<Button style="is-info is-inverted">info</Button>
-<Button style="is-success is-inverted">success</Button>
-<Button style="is-danger is-inverted">danger</Button>
+    code={`<Button class="is-primary is-inverted">primary</Button>
+<Button class="is-link is-inverted">link</Button>
+<Button class="is-info is-inverted">info</Button>
+<Button class="is-success is-inverted">success</Button>
+<Button class="is-danger is-inverted">danger</Button>
 `}
   />
 </figure>
@@ -113,25 +113,25 @@
   will not work.
 </p>
 <Button
-  style="is-primary"
+  class="is-primary"
   on:click={() => {
     alert("click!");
   }}>click</Button
 >
 <Button
-  style="is-primary is-static"
+  class="is-primary is-static"
   on:click={() => {
     alert("click!");
   }}>static</Button
 >
 <Button
-  style="is-primary is-loading"
+  class="is-primary is-loading"
   on:click={() => {
     alert("click!");
   }}>loading</Button
 >
 <Button
-  style="is-primary"
+  class="is-primary"
   disabled
   on:click={() => {
     alert("click!");
@@ -139,10 +139,10 @@
 >
 <figure class="highlight">
   <HighlightSvelte
-    code={`<Button style="is-primary" on:click={() => { alert("click!");}}>static</Button>
-<Button style="is-primary is-static' on:click={() => { alert("click!");}}>static</Button>
-<Button style="is-primary is-loading' on:click={() => { alert("click!");}}>loading</Button>
-<Button style="is-primary' disabled on:click={() => { alert("click!");}}>disabled</Button>`}
+    code={`<Button class="is-primary" on:click={() => { alert("click!");}}>static</Button>
+<Button class="is-primary is-static' on:click={() => { alert("click!");}}>static</Button>
+<Button class="is-primary is-loading' on:click={() => { alert("click!");}}>loading</Button>
+<Button class="is-primary' disabled on:click={() => { alert("click!");}}>disabled</Button>`}
   />
 </figure>
 
@@ -153,14 +153,14 @@
     target="_blank">Spec Sheet</a
   >)
 </p>
-<Button style="is-primary" iconLeft="fab fa-github">button</Button>
-<Button style="is-success" iconLeft="fas fa-check">button</Button>
-<Button style="is-danger is-outlined" iconRight="fas fa-times">button</Button>
+<Button class="is-primary" iconLeft="fab fa-github">button</Button>
+<Button class="is-success" iconLeft="fas fa-check">button</Button>
+<Button class="is-danger is-outlined" iconRight="fas fa-times">button</Button>
 <figure class="highlight">
   <HighlightSvelte
-    code={`<Button style="is-primary" iconLeft="fab fa-github">button</Button>
-<Button style="is-success" iconLeft="fas fa-check">button</Button>
-<Button style="is-danger is-outlined" iconRight="fas fa-times">button</Button>`}
+    code={`<Button class="is-primary" iconLeft="fab fa-github">button</Button>
+<Button class="is-success" iconLeft="fas fa-check">button</Button>
+<Button class="is-danger is-outlined" iconRight="fas fa-times">button</Button>`}
   />
 </figure>
 

@@ -12,13 +12,13 @@
     <div class="navbar-end">
       <div class="navbar-item">
         <Button
-          setStyle="is-text"
+          class="is-text"
           iconLeft="fas fa-user"
           on:click={() => {
             location.href = $url("/sample/edit");
           }}>Edit Personal Info</Button
         >
-        <Button setStyle="is-primary" iconLeft="fas fa-sign-out-alt"
+        <Button class="is-primary" iconLeft="fas fa-sign-out-alt"
           >Sign Out</Button
         >
       </div>

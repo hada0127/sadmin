@@ -2,7 +2,7 @@
   export let multiple = false;
   export let size = "2";
   export let value = "";
-  export let style = "";
+  export let style = $$props.class ? $$props.class : "";
   export let icon = "";
   export let disabled = false;
   export let placeholder = "";
@@ -22,7 +22,7 @@
       <select
         size={multiple === true ? size : ""}
         multiple
-        disabled={disabled}
+        {disabled}
         bind:value
         class:placeholder={checkPlaceholder}
       >
@@ -32,18 +32,14 @@
         <slot />
       </select>
     {:else if value != ""}
-      <select
-        disabled={disabled}
-        bind:value
-        class:placeholder={checkPlaceholder}
-      >
+      <select {disabled} bind:value class:placeholder={checkPlaceholder}>
         {#if placeholder && placeholder.length > 0}
           <option disabled>{placeholder}</option>
         {/if}
         <slot />
       </select>
     {:else}
-      <select disabled={disabled} class:placeholder={checkPlaceholder}>
+      <select {disabled} class:placeholder={checkPlaceholder}>
         {#if placeholder && placeholder.length > 0}
           <option disabled>{placeholder}</option>
         {/if}

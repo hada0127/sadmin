@@ -4,7 +4,7 @@
   export let accept;
   export let multiple = false;
   export let files;
-  export let style;
+  export let style = $$props.class ? $$props.class : "";
   export let icon = "fas fa-upload";
 </script>
 
@@ -13,10 +13,10 @@
     <input
       class="file-input"
       type="file"
-      id={id}
-      name={name}
-      accept={accept}
-      multiple={multiple}
+      {id}
+      {name}
+      {accept}
+      {multiple}
       bind:files
     />
     <span class="file-cta">

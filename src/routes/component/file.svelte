@@ -29,39 +29,39 @@
 
 <h2>Colors</h2>
 <div>
-  <File name="thumnail" style="is-primary" />
-  <File name="thumnail" style="is-link" />
-  <File name="thumnail" style="is-info" />
+  <File name="thumnail" class="is-primary" />
+  <File name="thumnail" class="is-link" />
+  <File name="thumnail" class="is-info" />
 </div>
 <div class="mt-2">
-  <File name="thumnail" style="is-success" />
-  <File name="thumnail" style="is-warning" />
-  <File name="thumnail" style="is-danger" />
+  <File name="thumnail" class="is-success" />
+  <File name="thumnail" class="is-warning" />
+  <File name="thumnail" class="is-danger" />
 </div>
 <figure class="highlight">
   <HighlightSvelte
-    code={`<File name="thumnail" style="is-primary" />
-<File name="thumnail" style="is-link" />
-<File name="thumnail" style="is-info" />
-<File name="thumnail" style="is-success" />
-<File name="thumnail" style="is-warning" />
-<File name="thumnail" style="is-danger" />`}
+    code={`<File name="thumnail" class="is-primary" />
+<File name="thumnail" class="is-link" />
+<File name="thumnail" class="is-info" />
+<File name="thumnail" class="is-success" />
+<File name="thumnail" class="is-warning" />
+<File name="thumnail" class="is-danger" />`}
   />
 </figure>
 
 <h2>Icon & Styles</h2>
-<File name="thumnail" style="is-boxed is-primary" />
+<File name="thumnail" class="is-boxed is-primary" />
 <File
   name="thumnail"
-  style="is-boxed is-warning"
+  class="is-boxed is-warning"
   icon="fas fa-cloud-upload-alt"
 />
 <figure class="highlight">
   <HighlightSvelte
-    code={`<File name="thumnail" style="is-boxed is-primary" />
+    code={`<File name="thumnail" class="is-boxed is-primary" />
 <File
   name="thumnail"
-  style="is-boxed is-warning"
+  class="is-boxed is-warning"
   icon="fas fa-cloud-upload-alt"
 />`}
   />
@@ -71,7 +71,7 @@
 <File name="thumnail" accept=".jpg, .jpeg, .gif, .png" />
 <figure class="highlight">
   <HighlightSvelte
-    code={`<File name="thumnail" style="is-primary" accept=".jpg, .jpeg, .gif, .png" />`}
+    code={`<File name="thumnail" class="is-primary" accept=".jpg, .jpeg, .gif, .png" />`}
   />
 </figure>
 

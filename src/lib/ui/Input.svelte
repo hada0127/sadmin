@@ -4,7 +4,7 @@
   const onInput = (e) => (value = e.target.value);
   export let id;
   export let name;
-  export let style;
+  export let style = $$props.class ? $$props.class : "";
   export let disabled;
   export let readonly;
   export let placeholder;
