@@ -1,6 +1,8 @@
 export { default as Button } from './Button.svelte';
 export { default as Label } from './Label.svelte';
 export { default as Input } from './Input.svelte';
+export { default as Date } from './Date.svelte';
+export { default as Time } from './Time.svelte';
 export { default as File } from './File.svelte';
 export { default as Delete } from './Delete.svelte';
 export { default as Toggle } from './Toggle.svelte';

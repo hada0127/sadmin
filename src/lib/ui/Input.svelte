@@ -15,6 +15,7 @@
   export let match = "";
   export let success = "";
   export let invalid = "";
+  export let pattern = "";
 
   export let matchResult = false;
   let matchView = false;
@@ -33,17 +34,17 @@
   class:has-icons-right={iconRight && iconRight.length > 0}
 >
   <input
-    id={id}
-    name={name}
-    type={type}
-    value={value}
+    {id}
+    {name}
+    {type}
+    {value}
     class="input is-small {style}"
     class:is-danger={matchView && matchResult === false}
     class:is-success={matchView && matchResult === true}
-    readonly={readonly}
-    disabled={disabled}
-    placeholder={placeholder}
-    maxlength={maxlength}
+    {readonly}
+    {disabled}
+    {placeholder}
+    {maxlength}
     on:input={onInput}
   />
   {#if iconLeft && iconLeft.length > 0}

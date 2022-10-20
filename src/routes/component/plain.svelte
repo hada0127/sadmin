@@ -10,7 +10,6 @@
 
 <h2>Radio</h2>
 <h2>Checkbox</h2>
-<h2>File</h2>
 <h2>Textarea</h2>
 <h2>Progress</h2>
 

@@ -72,6 +72,12 @@
 </figure>
 
 <h2>Icon</h2>
+<p>
+  Using Font Awesome (<a
+    href="https://www.fontawesomecheatsheet.com/font-awesome-cheatsheet-5x/"
+    target="_blank">Spec Sheet</a
+  >)
+</p>
 <Input
   placeholder="Email"
   iconLeft="fas fa-envelope"
@@ -166,7 +172,7 @@
 <div class="mt-2">
   <Input
     placeholder="Id"
-    iconLeft="fas fa-envelope"
+    iconLeft="fas fa-id-card"
     match={idRegex}
     success="Success"
     invalid="Alphabet, number, 4~20 characters"
@@ -175,17 +181,14 @@
 <figure class="highlight">
   <HighlightSvelte
     code={`<script>
-  const emailRegex =
-    /([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+  idRegex = /^[a-zA-Z][0-9a-zA-Z]{3,20}$/;
 </script>
 <Input
-  type="email"
-  placeholder="Email"
-  iconLeft="fas fa-envelope"
-  match={emailRegex}
+  placeholder="Id"
+  iconLeft="fas fa-id-card"
+  match={idRegex}
   success="Success"
-  invalid="Invalid Email address."
-  memo="Please, write Email address."
+  invalid="Alphabet, number, 4~20 characters"
 />`}
   />
 </figure>
@@ -194,27 +197,22 @@
   <Input
     type="tel"
     placeholder="tel"
-    iconLeft="fas fa-envelope"
+    iconLeft="fas fa-mobile-alt"
     match={telRegex}
-    success="Success"
-    invalid="Invalid Tel Number."
     memo="000-0000-0000"
   />
 </div>
 <figure class="highlight">
   <HighlightSvelte
     code={`<script>
-  const emailRegex =
-    /([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+  const telRegex = /\d{3}-\d{3,4}-\d{4}/;
 </script>
 <Input
-  type="email"
-  placeholder="Email"
-  iconLeft="fas fa-envelope"
-  match={emailRegex}
-  success="Success"
-  invalid="Invalid Email address."
-  memo="Please, write Email address."
+  type="tel"
+  placeholder="tel"
+  iconLeft="fas fa-mobile-alt"
+  match={telRegex}
+  memo="000-0000-0000"
 />`}
   />
 </figure>
