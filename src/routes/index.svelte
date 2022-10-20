@@ -17,7 +17,7 @@
 </p>
 <h2>Installation</h2>
 <figure class="highlight">
-  <HighlightAuto code={`npx degit hada0127/svelte-admin`} />
+  <HighlightAuto code={`npx degit hada0127/sadmin`} />
 </figure>
 
 <h2>Version History</h2>
