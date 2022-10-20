@@ -1,26 +1,11 @@
-# Svelte Admin UI Kit
-Svelte + Routify3(beta) + Vite 조합   
-Bulma 수정적용(폰트관련)   
-Pretendard 폰트 적용   
-eslint, vscode 설정 적용   
-SCSS 적용   
+# Sadmin - Svelte Admin UI Kit
+Sadmin is an Administrator UI kit that utilizes the component function of svelte.
 
-## 설치
+## Installation
 ```
-npx degit hada0127/svelte-admin
+npx degit hada0127/sadmin
 ```
-
-## test
-```
-yarn dev
-```
-
-## build
-```
-yarn build
-```
-
-## nginx 설정
+## Setting Nginx
 ```
 server {
   listen 80;
@@ -33,3 +18,8 @@ server {
     try_files $uri $uri/ /index.html;
   }
 ```
+## Version History
+Before release   
+
+## License
+MIT License.

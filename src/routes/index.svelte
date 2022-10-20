@@ -19,6 +19,21 @@
 <figure class="highlight">
   <HighlightAuto code={`npx degit hada0127/sadmin`} />
 </figure>
+<p>Setting Nginx</p>
+<figure class="highlight">
+  <HighlightAuto
+    code={`server {
+  listen 80;
+  root /usr/share/nginx/html;
+  gzip on;
+  gzip_types text/css application/javascript application/json image/svg+xml;
+  gzip_comp_level 9;
+  etag on;
+  location / {
+    try_files $uri $uri/ /index.html;
+  }`}
+  />
+</figure>
 
 <h2>Version History</h2>
 <p style="width:100%;">Before release</p>
