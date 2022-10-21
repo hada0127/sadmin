@@ -2,18 +2,19 @@
   import { pageTitle, pagePath } from "../store/layout";
   import { HighlightAuto } from "svelte-highlight";
   import highlightStyle from "svelte-highlight/styles/vs2015";
-  pageTitle.set("Intro");
-  pagePath.set(`&gt; <a href="/">Intro</a>`);
+  pageTitle.set("Guide");
+  pagePath.set(`&gt; <a href="/">Guide</a>`);
 </script>
 
 <svelte:head>
   {@html highlightStyle}
 </svelte:head>
-
 <h2>Sadmin - Svelte Admin UI Kit</h2>
 <p>
-  Sadmin is an Administrator UI kit that utilizes the component function of
-  svelte.<br />
+  <img src="/src/asset/favicon/favicon.svg" alt="logo" style="width:50px;" /><br
+  />
+  Sadmin is an Administrator UI kit that utilizes the component function of svelte.<br
+  />
   [<a href="https://github.com/hada0127/sadmin" target="_blank">Source Code</a>]
 </p>
 <h2>Installation</h2>
@@ -48,9 +49,16 @@
 <p>
   <a href="https://bulma.io/documentation/" target="_blank"
     >Bulma Documentation</a
-  ><br />
+  >
+  <br />
+  To maintain design consistency, Changed the font, and the component size is forced
+  to use "is-small". <br /><br />
   <a href="https://sass-lang.com/documentation/" target="_blank"
     >Sass Documentation</a
+  ><br /><br />
+  <a
+    href="https://www.fontawesomecheatsheet.com/font-awesome-cheatsheet-5x/"
+    target="_blank">FA free Cheatsheet</a
   >
 </p>
 

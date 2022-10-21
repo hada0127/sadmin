@@ -5,7 +5,13 @@
 
 <nav class="navbar" aria-label="main navigation">
   <div class="navbar-brand">
-    <a class="navbar-item" href="/">Sadmin</a>
+    <a class="navbar-item" href="/">
+      <img
+        src="/src/asset/favicon/favicon.svg"
+        alt="logo"
+        style="width:15px;margin-right:5px;"
+      /> Sadmin</a
+    >
   </div>
 
   <div class="navbar-menu">
