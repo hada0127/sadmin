@@ -2,6 +2,7 @@
   import { pageTitle, pagePath } from "../store/layout";
   import { HighlightAuto } from "svelte-highlight";
   import highlightStyle from "svelte-highlight/styles/vs2015";
+  import Logo from "$asset/favicon/favicon.svg";
   pageTitle.set("Guide");
   pagePath.set(`&gt; <a href="/">Guide</a>`);
 </script>
@@ -11,8 +12,7 @@
 </svelte:head>
 <h2>Sadmin - Svelte Admin UI Kit</h2>
 <p>
-  <img src="/src/asset/favicon/favicon.svg" alt="logo" style="width:50px;" /><br
-  />
+  <img src={Logo} alt="logo" style="width:50px;" /><br />
   Sadmin is an Administrator UI kit that utilizes the component function of svelte.<br
   />
   [<a href="https://github.com/hada0127/sadmin" target="_blank">Source Code</a>]
