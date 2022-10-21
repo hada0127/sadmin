@@ -1,7 +1,7 @@
 <script>
   import { Button } from "../ui";
   import { url } from "@roxi/routify";
-  import Logo from "$asset/favicon/favicon.svg";
+  import Logo from "$asset/favicon/android-chrome-512x512.png";
 </script>
 
 <nav class="navbar" aria-label="main navigation">

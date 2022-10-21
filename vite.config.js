@@ -19,7 +19,7 @@ clearScreen: false,
 
 plugins: [
     routify({
-        devHelper: !production,
+        devHelper: false,
     }),
     svelte({
         emitCss: false,

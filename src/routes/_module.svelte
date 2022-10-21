@@ -4,27 +4,29 @@
   import Lnb from "$lib/layout/Lnb.svelte";
 </script>
 
-<Gnb />
-<div class="container columns is-gapless">
-  <aside class="column is-narrow">
-    <div class="menu">
-      <Lnb />
-    </div>
-  </aside>
-  <section class="column">
-    <div class="contents">
-      <header>
-        <h1>{$pageTitle}</h1>
-        <div class="path">
-          <a href="/">HOME</a>
-          {@html $pagePath}
-        </div>
-      </header>
-      <article class="article">
-        <slot />
-      </article>
-    </div>
-  </section>
+<div class="body" data-routify-scroll="lock">
+  <Gnb />
+  <div class="container columns is-gapless">
+    <aside class="column is-narrow">
+      <div class="menu">
+        <Lnb />
+      </div>
+    </aside>
+    <section class="column">
+      <div class="contents">
+        <header>
+          <h1>{$pageTitle}</h1>
+          <div class="path">
+            <a href="/">HOME</a>
+            {@html $pagePath}
+          </div>
+        </header>
+        <article class="article">
+          <slot />
+        </article>
+      </div>
+    </section>
+  </div>
 </div>
 
 <style lang="scss">

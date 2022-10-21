@@ -2,7 +2,7 @@
   import { pageTitle, pagePath } from "../store/layout";
   import { HighlightAuto } from "svelte-highlight";
   import highlightStyle from "svelte-highlight/styles/vs2015";
-  import Logo from "$asset/favicon/favicon.svg";
+  import Logo from "$asset/favicon/android-chrome-512x512.png";
   pageTitle.set("Guide");
   pagePath.set(`&gt; <a href="/">Guide</a>`);
 </script>
