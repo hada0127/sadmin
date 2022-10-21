@@ -35,43 +35,43 @@
 </figure>
 
 <h2>Colors</h2>
-<Select class="is-primary">
+<Select style="is-primary">
   <option value="1">primary</option>
 </Select>
-<Select class="is-link">
+<Select style="is-link">
   <option value="1">link</option>
 </Select>
-<Select class="is-info">
+<Select style="is-info">
   <option value="1">info</option>
 </Select>
-<Select class="is-success">
+<Select style="is-success">
   <option value="1">success</option>
 </Select>
-<Select class="is-warning">
+<Select style="is-warning">
   <option value="1">warning</option>
 </Select>
-<Select class="is-danger">
+<Select style="is-danger">
   <option value="1">danger</option>
 </Select>
 
 <figure class="highlight">
   <HighlightSvelte
-    code={`<Select class="is-primary">
+    code={`<Select style="is-primary">
   <option value="1">primary</option>
 </Select>
-<Select class="is-link">
+<Select style="is-link">
   <option value="1">link</option>
 </Select>
-<Select class="is-info">
+<Select style="is-info">
   <option value="1">info</option>
 </Select>
-<Select class="is-success">
+<Select style="is-success">
   <option value="1">success</option>
 </Select>
-<Select class="is-warning">
+<Select style="is-warning">
   <option value="1">warning</option>
 </Select>
-<Select class="is-danger">
+<Select style="is-danger">
   <option value="1">danger</option>
 </Select>`}
   />

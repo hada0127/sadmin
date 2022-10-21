@@ -27,6 +27,7 @@
     width: 3.5em;
     height: 2.2em;
     background-color: #aaa;
+    cursor: pointer;
   }
   input::before {
     content: "";

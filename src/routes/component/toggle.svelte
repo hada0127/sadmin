@@ -29,20 +29,20 @@
 
 <h2>Colors</h2>
 <p>Default color is "is-primary"</p>
-<Toggle class="is-primary" checked>Toggle</Toggle>
-<Toggle class="is-link" checked>Toggle</Toggle>
-<Toggle class="is-info" checked>Toggle</Toggle>
-<Toggle class="is-success" checked>Toggle</Toggle>
-<Toggle class="is-warning" checked>Toggle</Toggle>
-<Toggle class="is-danger" checked>Toggle</Toggle>
+<Toggle style="is-primary" checked>Toggle</Toggle>
+<Toggle style="is-link" checked>Toggle</Toggle>
+<Toggle style="is-info" checked>Toggle</Toggle>
+<Toggle style="is-success" checked>Toggle</Toggle>
+<Toggle style="is-warning" checked>Toggle</Toggle>
+<Toggle style="is-danger" checked>Toggle</Toggle>
 <figure class="highlight" checked>
   <HighlightSvelte
-    code={`<Toggle class="is-primary">Toggle</Toggle>
-<Toggle class="is-link">Toggle</Toggle>
-<Toggle class="is-info">Toggle</Toggle>
-<Toggle class="is-success">Toggle</Toggle>
-<Toggle class="is-warning">Toggle</Toggle>
-<Toggle class="is-danger">Toggle</Toggle>`}
+    code={`<Toggle style="is-primary">Toggle</Toggle>
+<Toggle style="is-link">Toggle</Toggle>
+<Toggle style="is-info">Toggle</Toggle>
+<Toggle style="is-success">Toggle</Toggle>
+<Toggle style="is-warning">Toggle</Toggle>
+<Toggle style="is-danger">Toggle</Toggle>`}
   />
 </figure>
 

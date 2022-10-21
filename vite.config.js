@@ -27,11 +27,7 @@ plugins: [
             dev: !production,
         },
         extensions: ['.md', '.svelte'],
-        preprocess: [mdsvex({ extension: 'md' }), sveltePreprocess({
-            scss: {
-                prependData: '@import "./src/asset/css/global.scss";'
-            }
-            })],
+        preprocess: [mdsvex({ extension: 'md' }), sveltePreprocess()],
     }),
 ],
 

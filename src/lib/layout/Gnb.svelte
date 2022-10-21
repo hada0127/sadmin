@@ -1,13 +1,16 @@
 <script>
   import { Button } from "../ui";
   import { url } from "@roxi/routify";
-  import Logo from "$asset/favicon/android-chrome-512x512.png";
 </script>
 
 <nav class="navbar" aria-label="main navigation">
   <div class="navbar-brand">
     <a class="navbar-item" href="/">
-      <img src={Logo} alt="logo" style="width:15px;margin-right:5px;" /> Sadmin</a
+      <img
+        src="/favicon/android-chrome-512x512.png"
+        alt="logo"
+        style="width:15px;margin-right:5px;"
+      /> Sadmin</a
     >
   </div>
 
