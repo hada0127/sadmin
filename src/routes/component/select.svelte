@@ -1,11 +1,9 @@
 <script>
   import { pageTitle, pagePath } from "$store/layout";
-  import { params } from "@roxi/routify";
+  import { Select } from "$lib/ui";
   import { HighlightSvelte } from "svelte-highlight";
   import highlightStyle from "svelte-highlight/styles/vs2015";
-  import { Select } from "$lib/ui";
 
-  let page = $params.page;
   pageTitle.set("Component Select");
   pagePath.set(
     `&gt; <a href="/component/label">Component</a> &gt; <a href="/component/select">Component Select</a>`
@@ -35,43 +33,43 @@
 </figure>
 
 <h2>Colors</h2>
-<Select style="is-primary">
+<Select class="is-primary">
   <option value="1">primary</option>
 </Select>
-<Select style="is-link">
+<Select class="is-link">
   <option value="1">link</option>
 </Select>
-<Select style="is-info">
+<Select class="is-info">
   <option value="1">info</option>
 </Select>
-<Select style="is-success">
+<Select class="is-success">
   <option value="1">success</option>
 </Select>
-<Select style="is-warning">
+<Select class="is-warning">
   <option value="1">warning</option>
 </Select>
-<Select style="is-danger">
+<Select class="is-danger">
   <option value="1">danger</option>
 </Select>
 
 <figure class="highlight">
   <HighlightSvelte
-    code={`<Select style="is-primary">
+    code={`<Select class="is-primary">
   <option value="1">primary</option>
 </Select>
-<Select style="is-link">
+<Select class="is-link">
   <option value="1">link</option>
 </Select>
-<Select style="is-info">
+<Select class="is-info">
   <option value="1">info</option>
 </Select>
-<Select style="is-success">
+<Select class="is-success">
   <option value="1">success</option>
 </Select>
-<Select style="is-warning">
+<Select class="is-warning">
   <option value="1">warning</option>
 </Select>
-<Select style="is-danger">
+<Select class="is-danger">
   <option value="1">danger</option>
 </Select>`}
   />

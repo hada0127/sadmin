@@ -1,7 +1,4 @@
 <script>
-  let label;
-  let input;
-
   export let checked = false;
 
   export let disabled = false;

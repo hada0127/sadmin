@@ -9,15 +9,15 @@
 <svelte:head>
   {@html highlightStyle}
 </svelte:head>
-<h2>Sadmin - Svelte Admin UI Kit</h2>
+<h2>Sadmin - Svelte Admin UI Template</h2>
 <p>
   <img
     src="/favicon/android-chrome-512x512.png"
     alt="logo"
     style="width:50px;"
   /><br />
-  Sadmin is an Administrator UI kit that utilizes the component function of svelte.<br
-  />
+  Sadmin is an Administrator UI Template that utilizes the component function of
+  svelte.<br />
   [<a href="https://github.com/hada0127/sadmin" target="_blank">Source Code</a>]
 </p>
 <h2>Installation</h2>

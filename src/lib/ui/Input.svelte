@@ -15,7 +15,6 @@
   export let match = "";
   export let success = "";
   export let invalid = "";
-  export let pattern = "";
 
   export let matchResult = false;
   let matchView = false;

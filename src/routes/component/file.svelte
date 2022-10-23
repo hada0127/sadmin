@@ -1,16 +1,13 @@
 <script>
   import { pageTitle, pagePath } from "$store/layout";
-  import { params } from "@roxi/routify";
   import { File } from "$lib/ui";
   import { HighlightSvelte } from "svelte-highlight";
   import highlightStyle from "svelte-highlight/styles/vs2015";
 
-  let page = $params.page;
   pageTitle.set("Component File");
   pagePath.set(
     `&gt; <a href="/component/label">Component</a> &gt; <a href="/component/file">Component File</a>`
   );
-  let toggleChecked = true;
 </script>
 
 <svelte:head>

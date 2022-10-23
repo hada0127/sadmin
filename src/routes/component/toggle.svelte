@@ -1,11 +1,9 @@
 <script>
   import { pageTitle, pagePath } from "$store/layout";
-  import { params } from "@roxi/routify";
   import { Toggle } from "$lib/ui";
   import { HighlightSvelte } from "svelte-highlight";
   import highlightStyle from "svelte-highlight/styles/vs2015";
 
-  let page = $params.page;
   pageTitle.set("Component Toggle");
   pagePath.set(
     `&gt; <a href="/component/label">Component</a> &gt; <a href="/component/toggle">Component Toggle</a>`
@@ -55,6 +53,7 @@
 <Toggle disabled checked>Toggle</Toggle>`}
   />
 </figure>
+
 <h2>Binding</h2>
 <Toggle bind:checked={toggleChecked}>Toggle</Toggle>
 <p>{toggleChecked}</p>

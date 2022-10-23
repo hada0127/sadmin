@@ -1,7 +1,5 @@
 <script>
   import { pageTitle, pagePath } from "../store/layout";
-  import { HighlightAuto } from "svelte-highlight";
-  import highlightStyle from "svelte-highlight/styles/vs2015";
   pageTitle.set("License");
   pagePath.set(`&gt; <a href="/license">License</a>`);
 </script>

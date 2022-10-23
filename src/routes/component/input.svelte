@@ -1,11 +1,9 @@
 <script>
   import { pageTitle, pagePath } from "$store/layout";
-  import { params } from "@roxi/routify";
   import { Input } from "$lib/ui";
   import { HighlightSvelte } from "svelte-highlight";
   import highlightStyle from "svelte-highlight/styles/vs2015";
 
-  let page = $params.page;
   pageTitle.set("Component Input");
   pagePath.set(
     `&gt; <a href="/component/label">Component</a> &gt; <a href="/component/input">Component Input</a>`
@@ -18,6 +16,7 @@
   const telRegex = /\d{3}-\d{3,4}-\d{4}/;
 </script>
 
+/** eslint-disable import/no-unresolved */
 <svelte:head>
   {@html highlightStyle}
 </svelte:head>
@@ -40,33 +39,33 @@
 </figure>
 
 <h2>Colors</h2>
-<Input style="is-primary" />
-<Input style="is-link" />
-<Input style="is-info" />
-<Input style="is-success" />
-<Input style="is-warning" />
-<Input style="is-danger" />
+<Input class="is-primary" />
+<Input class="is-link" />
+<Input class="is-info" />
+<Input class="is-success" />
+<Input class="is-warning" />
+<Input class="is-danger" />
 
 <figure class="highlight">
   <HighlightSvelte
-    code={`<Input style="is-primary" />
-<Input style="is-link" />
-<Input style="is-info" />
-<Input style="is-success" />
-<Input style="is-warning" />
-<Input style="is-danger" />`}
+    code={`<Input class="is-primary" />
+<Input class="is-link" />
+<Input class="is-info" />
+<Input class="is-success" />
+<Input class="is-warning" />
+<Input class="is-danger" />`}
   />
 </figure>
 
 <h2>Static & Readonly, Disabled</h2>
-<Input style="is-static" value="is-static" readonly />
+<Input class="is-static" value="is-static" readonly />
 <Input value="readonly" readonly />
 <Input value="disabled" disabled />
 
 <figure class="highlight">
   <HighlightSvelte
-    code={`<Input style="is-primary is-static" value="is-static" readonly />
-<Input style="is-primary" value="readonly" readonly />
+    code={`<Input class="is-primary is-static" value="is-static" readonly />
+<Input class="is-primary" value="readonly" readonly />
 <Input value="disabled" disabled />`}
   />
 </figure>
@@ -101,7 +100,7 @@
 />
 <Input
   type="password"
-  style="is-danger"
+  class="is-danger"
   placeholder="Password"
   iconLeft="fas fa-lock"
   memo="Please enter characters between 8 and 30 digits."
@@ -109,7 +108,7 @@
 <figure class="highlight">
   <HighlightSvelte
     code={`<Input type="password" placeholder="Password" iconLeft="fas fa-lock" memo="Please enter characters between 8 and 30 digits." />
-<Input type="password" style="is-danger" placeholder="Password" iconLeft="fas fa-lock" memo="Please enter characters between 8 and 30 digits." />`}
+<Input type="password" class="is-danger" placeholder="Password" iconLeft="fas fa-lock" memo="Please enter characters between 8 and 30 digits." />`}
   />
 </figure>
 

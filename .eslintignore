@@ -1,6 +1,6 @@
-.eslintrc.js
+.eslintrc.cjs
 .routify/
 .vscode/
 public/
-src/dist/
+dist/
 node_modules/
