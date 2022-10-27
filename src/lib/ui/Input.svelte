@@ -27,23 +27,24 @@
 </script>
 
 <div
+  class={style}
   class:control={(iconLeft && iconLeft.length > 0) ||
     (iconRight && iconRight.length > 0)}
   class:has-icons-left={iconLeft && iconLeft.length > 0}
   class:has-icons-right={iconRight && iconRight.length > 0}
 >
   <input
-    {id}
-    {name}
-    {type}
-    {value}
-    class="input is-small {style}"
+    id={id}
+    name={name}
+    type={type}
+    value={value}
+    class="is-small {style} input"
     class:is-danger={matchView && matchResult === false}
     class:is-success={matchView && matchResult === true}
-    {readonly}
-    {disabled}
-    {placeholder}
-    {maxlength}
+    readonly={readonly}
+    disabled={disabled}
+    placeholder={placeholder}
+    maxlength={maxlength}
     on:input={onInput}
   />
   {#if iconLeft && iconLeft.length > 0}
@@ -69,5 +70,12 @@
 <style lang="scss">
   div {
     display: inline-block;
+  }
+  .is-fullwidth {
+    display: flex;
+    width: 100%;
+  }
+  p {
+    font-size: 11px;
   }
 </style>

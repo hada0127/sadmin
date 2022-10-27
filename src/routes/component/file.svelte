@@ -4,9 +4,9 @@
   import { HighlightSvelte } from "svelte-highlight";
   import highlightStyle from "svelte-highlight/styles/vs2015";
 
-  pageTitle.set("Component File");
+  pageTitle.set("File");
   pagePath.set(
-    `&gt; <a href="/component/label">Component</a> &gt; <a href="/component/file">Component File</a>`
+    `&gt; <a href="/component/label">Component</a> &gt; <a href="/component/file">File</a>`
   );
 </script>
 

@@ -4,9 +4,9 @@
   import { HighlightSvelte } from "svelte-highlight";
   import highlightStyle from "svelte-highlight/styles/vs2015";
 
-  pageTitle.set("Component Input");
+  pageTitle.set("Input");
   pagePath.set(
-    `&gt; <a href="/component/label">Component</a> &gt; <a href="/component/input">Component Input</a>`
+    `&gt; <a href="/component/label">Component</a> &gt; <a href="/component/input">Input</a>`
   );
   let passwordCheckResult = false;
   const passwordRegex = /^.{8,30}$/;
@@ -16,7 +16,6 @@
   const telRegex = /\d{3}-\d{3,4}-\d{4}/;
 </script>
 
-/** eslint-disable import/no-unresolved */
 <svelte:head>
   {@html highlightStyle}
 </svelte:head>

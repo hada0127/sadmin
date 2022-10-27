@@ -4,9 +4,9 @@
   import { HighlightSvelte } from "svelte-highlight";
   import highlightStyle from "svelte-highlight/styles/vs2015";
 
-  pageTitle.set("Component Button");
+  pageTitle.set("Button");
   pagePath.set(
-    `&gt; <a href="/component/label">Component</a> &gt; <a href="/component/button">Component Button</a>`
+    `&gt; <a href="/component/label">Component</a> &gt; <a href="/component/button">Button</a>`
   );
 </script>
 

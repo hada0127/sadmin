@@ -12,8 +12,8 @@
         "name": "Input"
       },
       {
-        "url": "/component/file",
-        "name": "File"
+        "url": "/component/checkbox",
+        "name": "Checkbox & Radio"
       },
       {
         "url": "/component/toggle",
@@ -22,6 +22,18 @@
       {
         "url": "/component/select",
         "name": "Select"
+      },
+      {
+        "url": "/component/datetime",
+        "name": "Date & Time"
+      },
+      {
+        "url": "/component/textarea",
+        "name": "Textarea"
+      },
+      {
+        "url": "/component/file",
+        "name": "File"
       },
       {
         "url": "/component/button",
@@ -36,8 +48,8 @@
         "name": "Modal"
       },
       {
-        "url": "/component/plain",
-        "name": "Plain Things"
+        "url": "/component/etc",
+        "name": "Etc"
       }
     ]
   },

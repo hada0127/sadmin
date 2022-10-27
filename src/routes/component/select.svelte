@@ -4,9 +4,9 @@
   import { HighlightSvelte } from "svelte-highlight";
   import highlightStyle from "svelte-highlight/styles/vs2015";
 
-  pageTitle.set("Component Select");
+  pageTitle.set("Select");
   pagePath.set(
-    `&gt; <a href="/component/label">Component</a> &gt; <a href="/component/select">Component Select</a>`
+    `&gt; <a href="/component/label">Component</a> &gt; <a href="/component/select">Select</a>`
   );
   let bindSelectBasic = "1";
   let bindSelectPlaceholder;
