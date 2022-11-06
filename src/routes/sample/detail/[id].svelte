@@ -1,5 +1,5 @@
 <script>
-  import { pageTitle, pagePath } from "@/store/layout";
+  import { pageTitle, pagePath } from "$store/layout";
   import { params } from "@roxi/routify";
   let id = $params.id;
   pageTitle.set("Sample Details");
