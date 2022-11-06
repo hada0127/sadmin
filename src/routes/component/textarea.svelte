@@ -1,8 +1,8 @@
 <script>
   import { pageTitle, pagePath } from "$store/layout";
-  pageTitle.set("Date & Time");
+  pageTitle.set("Textarea");
   pagePath.set(
-    `&gt; <a href="/component/label">Component</a> &gt; <a href="/component/datetime">Date & Time</a>`
+    `&gt; <a href="/component/label">Component</a> &gt; <a href="/component/textarea">Textarea</a>`
   );
 </script>
 

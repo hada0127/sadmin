@@ -11,7 +11,7 @@
   let passwordCheckResult = false;
   const passwordRegex = /^.{8,30}$/;
   const emailRegex =
-    /([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+    /([\w-.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
   const idRegex = /^[a-zA-Z][0-9a-zA-Z]{3,20}$/;
   const telRegex = /\d{3}-\d{3,4}-\d{4}/;
 </script>
@@ -52,7 +52,7 @@
 <Input class="is-info" />
 <Input class="is-success" />
 <Input class="is-warning" />
-<Input class="is-danger" />`}
+<Input class="is-daner" />`}
   />
 </figure>
 
@@ -153,8 +153,7 @@
 <figure class="highlight">
   <HighlightSvelte
     code={`<script>
-  const emailRegex =
-    /([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+  const emailRegex = ${emailRegex};
 </script>
 <Input
   type="email"
@@ -203,7 +202,7 @@
 <figure class="highlight">
   <HighlightSvelte
     code={`<script>
-  const telRegex = /\d{3}-\d{3,4}-\d{4}/;
+  const telRegex = /\\d{3}-\\d{3,4}-\\d{4}/;
 </script>
 <Input
   type="tel"

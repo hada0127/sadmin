@@ -4,8 +4,8 @@
     "name": "Component",
     "submenu": [
       {
-        "url": "/component/label",
-        "name": "Label"
+        "url": "/component/field",
+        "name": "Field"
       },
       {
         "url": "/component/input",
@@ -32,6 +32,10 @@
         "name": "Textarea"
       },
       {
+        "url": "/component/editor",
+        "name": "Editor"
+      },
+      {
         "url": "/component/file",
         "name": "File"
       },
@@ -46,10 +50,6 @@
       {
         "url": "/component/modal",
         "name": "Modal"
-      },
-      {
-        "url": "/component/etc",
-        "name": "Etc"
       }
     ]
   },

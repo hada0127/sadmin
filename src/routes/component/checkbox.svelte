@@ -1,6 +1,6 @@
 <script>
   import { pageTitle, pagePath } from "$store/layout";
-  import { Label } from "$lib/ui";
+  import { Field } from "$lib/ui";
   import { HighlightSvelte } from "svelte-highlight";
   import highlightStyle from "svelte-highlight/styles/vs2015";
 
@@ -15,37 +15,38 @@
 </svelte:head>
 
 <h2>Checkbox Basic</h2>
-<Label class="checkbox">
+<Field class="checkbox">
   <input type="checkbox" />
   Remember me
-</Label>
-<Label class="checkbox">
+</Field>
+<Field class="checkbox">
   <input type="checkbox" />
+  <!-- svelte-ignore a11y-invalid-attribute -->
   I agree to the <a href="#">terms and conditions</a>
-</Label>
-<Label label="Remember me" class="checkbox" disabled>
+</Field>
+<Field label="Remember me" class="checkbox" disabled>
   <input type="checkbox" disabled />
   Remember me
-</Label>
+</Field>
 <figure class="highlight">
   <HighlightSvelte
-    code={`<Label class="checkbox">
+    code={`<Field class="checkbox">
   <input type="checkbox" />
   Remember me
-</Label>
-<Label class="checkbox">
+</Field>
+<Field class="checkbox">
   <input type="checkbox" />
   I agree to the <a href="#">terms and conditions</a>
-</Label>
-<Label label="Remember me" class="checkbox" disabled>
+</Field>
+<Field label="Remember me" class="checkbox" disabled>
   <input type="checkbox" disabled />
   Remember me
-</Label>`}
+</Field>`}
   />
 </figure>
 
 <h2>Radio Basic</h2>
-<Label label="Control" class="radio">
+<Field label="Control" class="radio">
   <label>
     <input type="radio" name="rsvp" />
     Going
@@ -58,20 +59,22 @@
     <input type="radio" name="rsvp" disabled />
     Maybe
   </label>
-</Label>
+</Field>
 <figure class="highlight">
   <HighlightSvelte
-    code={`<Label class="checkbox">
-  <input type="checkbox" />
-  Remember me
-</Label>
-<Label class="checkbox">
-  <input type="checkbox" />
-  I agree to the <a href="#">terms and conditions</a>
-</Label>
-<Label label="Remember me" class="checkbox" disabled>
-  <input type="checkbox" disabled />
-  Remember me
-</Label>`}
+    code={`<Field label="Control" class="radio">
+  <label>
+    <input type="radio" name="rsvp" />
+    Going
+  </label>
+  <label>
+    <input type="radio" name="rsvp" />
+    Not going
+  </label>
+  <label disabled>
+    <input type="radio" name="rsvp" disabled />
+    Maybe
+  </label>
+</Field>`}
   />
 </figure>

@@ -10,9 +10,8 @@ const production = process.env.NODE_ENV === 'production'
 export default defineConfig({
   resolve: {
     alias: {
-      $lib: path.resolve('./src/lib'),
-      $asset: path.resolve('./src/asset'),
-      $store: path.resolve('./src/store')
+      '$lib/': `${path.resolve(__dirname, 'src')}/lib/`,
+      '$store/': `${path.resolve(__dirname, 'src')}/store/`
     }
   },
 clearScreen: false,

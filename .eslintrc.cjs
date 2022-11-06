@@ -1,12 +1,13 @@
 module.exports = {
     "env": {
-        "browser": true,
-        "es2020": true
+      browser: true,
+      es2017: true,
+      node: true
     },
     "extends": "eslint:recommended",
     "parserOptions": {
-        "ecmaVersion": 12,
-        "sourceType": "module"
+      ecmaVersion: 2020,
+      sourceType: "module"
     },
     plugins: [
       'svelte3'
