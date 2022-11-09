@@ -142,7 +142,7 @@
     <tr>
       <td>Highlight.js</td>
       <td
-        ><a href="https://github.com/highlightjs/highlight.js"
+        ><a href="https://github.com/highlightjs/highlight.js" target="_blank"
           >https://github.com/highlightjs/highlight.js</a
         ></td
       >
@@ -151,8 +151,26 @@
     <tr>
       <td>svelte-highlight</td>
       <td
-        ><a href="https://github.com/metonym/svelte-highlight"
+        ><a href="https://github.com/metonym/svelte-highlight" target="_blank"
           >https://github.com/metonym/svelte-highlight</a
+        ></td
+      >
+      <td>MIT</td>
+    </tr>
+    <tr>
+      <td>flatpickr</td>
+      <td
+        ><a href="https://flatpickr.js.org/" target="_blank"
+          >https://flatpickr.js.org/</a
+        ></td
+      >
+      <td>MIT</td>
+    </tr>
+    <tr>
+      <td>dayjs</td>
+      <td
+        ><a href="https://github.com/iamkun/dayjs" target="_blank"
+          >https://github.com/iamkun/dayjs</a
         ></td
       >
       <td>MIT</td>

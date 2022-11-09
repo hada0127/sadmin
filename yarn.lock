@@ -345,6 +345,11 @@
   "resolved" "https://registry.npmjs.org/css-what/-/css-what-6.1.0.tgz"
   "version" "6.1.0"
 
+"dayjs@^1.11.6":
+  "integrity" "sha512-zZbY5giJAinCG+7AGaw0wIhNZ6J8AhWuSXKvuc1KAyMiRsvGQWqh4L+MomvhdAYjN+lqvVCMq1I41e3YHvXkyQ=="
+  "resolved" "https://registry.npmjs.org/dayjs/-/dayjs-1.11.6.tgz"
+  "version" "1.11.6"
+
 "debug@^4.1.1", "debug@^4.3.2", "debug@^4.3.4":
   "integrity" "sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ=="
   "resolved" "https://registry.npmjs.org/debug/-/debug-4.3.4.tgz"
@@ -1406,6 +1411,11 @@
   "version" "4.4.1"
   dependencies:
     "punycode" "^2.1.0"
+
+"uuid@^9.0.0":
+  "integrity" "sha512-MXcSTerfPa4uqyzStbRoTgt5XIe3x5+42+q1sDuy3R5MDk66URdLMOZe5aPX/SQd+kuYAh0FdP/pO28IkQyTeg=="
+  "resolved" "https://registry.npmjs.org/uuid/-/uuid-9.0.0.tgz"
+  "version" "9.0.0"
 
 "vfile-message@^2.0.4":
   "integrity" "sha512-DjssxRGkMvifUOJre00juHoP9DPWuzjxKuMDrhNbk2TdaYYBNMStsNhEOt3idrtI12VQYM/1+iM0KOzXi4pxwQ=="

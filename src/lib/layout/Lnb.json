@@ -24,8 +24,8 @@
         "name": "Select"
       },
       {
-        "url": "/component/datetime",
-        "name": "Date & Time"
+        "url": "/component/date",
+        "name": "Date"
       },
       {
         "url": "/component/textarea",
