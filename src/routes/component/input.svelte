@@ -153,7 +153,8 @@
 <figure class="highlight">
   <HighlightSvelte
     code={`<script>
-  const emailRegex = ${emailRegex};
+  const emailRegex = /([\\w-.]+)@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.)|(([\\w-]+\\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\\]?)$/;
+  const idRegex = /^[a-zA-Z][0-9a-zA-Z]{3,20}$/;
 </script>
 <Input
   type="email"
