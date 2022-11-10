@@ -2,7 +2,6 @@
   import { onMount } from "svelte";
   import flatpickr from "flatpickr";
   import "flatpickr/dist/flatpickr.min.css";
-  import { Korean } from "flatpickr/dist/l10n/ko.js";
   import { v4 as uuidv4 } from "uuid";
 
   export let style = $$props.class ? $$props.class : "";
@@ -22,7 +21,6 @@
   onMount(() => {
     let options = {
       dateFormat: "Y-m-d",
-      locale: Korean,
     };
     if (minDate.length > 0) options.minDate = minDate;
     if (maxDate.length > 0) options.maxDate = maxDate;

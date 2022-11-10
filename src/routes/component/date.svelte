@@ -202,6 +202,7 @@
 />`}
   />
 </figure>
+
 <h2>Range Calendar</h2>
 <Date mode="range" class="is-fullwidth" />
 <div class="mt-2">
