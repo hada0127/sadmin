@@ -34,17 +34,19 @@
   class:has-icons-right={iconRight && iconRight.length > 0}
 >
   <input
-    id={id}
-    name={name}
-    type={type}
-    value={value}
+    {id}
+    {name}
+    {type}
+    {value}
     class="is-small {style} input"
-    class:is-danger={matchView && matchResult === false}
-    class:is-success={matchView && matchResult === true}
-    readonly={readonly}
-    disabled={disabled}
-    placeholder={placeholder}
-    maxlength={maxlength}
+    class:is-danger={(matchView && matchResult === false) ||
+      style.includes("is-danger")}
+    class:is-success={(matchView && matchResult === true) ||
+      style.includes("is-success")}
+    {readonly}
+    {disabled}
+    {placeholder}
+    {maxlength}
     on:input={onInput}
   />
   {#if iconLeft && iconLeft.length > 0}

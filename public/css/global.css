@@ -77,9 +77,6 @@ figure.highlight pre {
 	border-radius: 4px;
 }
 
-.button.is-small:not(.is-rounded) {
-    border-radius: 4px !important;
-}
-.input.is-small:not(.is-rounded) {
+.button.is-small:not(.is-rounded), .input.is-small:not(.is-rounded), .is-small.input, .is-small.textarea {
     border-radius: 4px !important;
 }

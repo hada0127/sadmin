@@ -1,0 +1,53 @@
+/*
+fix font
+*/
+.ql-container * {
+  font-family: 'Pretendard';
+}
+/*
+border radius
+*/
+.ql-toolbar {
+   border-radius: 4px 4px 0 0;
+}
+.ql-container {
+   border-radius: 0 0 4px 4px;
+}
+/*
+Add Quill Tool
+*/
+.ql-toolbar .ql-insert-table:before {
+	font-family: "Font Awesome 5 Free";
+   content: "\f0ce";
+   display: inline-block;
+   padding-right: 3px;
+   vertical-align: middle;
+   font-weight: 900;
+}
+
+.ql-toolbar .ql-insert-grid:before {
+	font-family: "Font Awesome 5 Free";
+   content: "\f0db";
+   display: inline-block;
+   padding-right: 3px;
+   vertical-align: middle;
+   font-weight: 900;
+}
+/*
+grid
+*/
+.quill-grid-wrapper {
+   width:100% !important;
+ 
+ }
+ .quill-grid {
+   width:100% !important;
+   table-layout: fixed;
+ }
+ .quill-grid td {
+   padding:0;
+   border:0;
+ }
+ .ql-area .quill-grid td {
+   border:1px dashed #CCC;
+ }

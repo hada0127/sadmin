@@ -2,6 +2,7 @@ export { default as Button } from './Button.svelte';
 export { default as Field } from './Field.svelte';
 export { default as Input } from './Input.svelte';
 export { default as Textarea } from './Textarea.svelte';
+export { default as Editor } from './Editor/Editor.svelte';
 export { default as Date } from './Date.svelte';
 export { default as Time } from './Time.svelte';
 export { default as File } from './File.svelte';

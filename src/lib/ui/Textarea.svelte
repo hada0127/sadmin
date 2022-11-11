@@ -28,17 +28,19 @@
 
 <div class={style}>
   <textarea
-    id={id}
-    name={name}
+    {id}
+    {name}
     class="is-small {style} textarea"
-    class:is-danger={matchView && matchResult === false}
-    class:is-success={matchView && matchResult === true}
+    class:is-danger={(matchView && matchResult === false) ||
+      style.includes("is-danger")}
+    class:is-success={(matchView && matchResult === true) ||
+      style.includes("is-success")}
     class:has-fixed-size={fixed}
-    readonly={readonly}
-    disabled={disabled}
-    placeholder={placeholder}
-    maxlength={maxlength}
-    rows={rows}
+    {readonly}
+    {disabled}
+    {placeholder}
+    {maxlength}
+    {rows}
     on:input={onInput}>{value}</textarea
   >
 </div>

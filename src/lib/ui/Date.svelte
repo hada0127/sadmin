@@ -16,7 +16,7 @@
   export let mode;
   export let defaultDate;
 
-  let dateID = `f` + uuidv4();
+  const dateID = `f` + uuidv4();
 
   onMount(() => {
     let options = {
@@ -37,8 +37,8 @@
     <input
       type="text"
       bind:value
-      placeholder={placeholder}
-      disabled={disabled}
+      {placeholder}
+      {disabled}
       readonly
       class="is-small input {style}"
     />
@@ -46,8 +46,8 @@
     <input
       type="text"
       bind:value
-      placeholder={placeholder}
-      disabled={disabled}
+      {placeholder}
+      {disabled}
       class="is-small input flatpickr {dateID} {style}"
     />
   {/if}
