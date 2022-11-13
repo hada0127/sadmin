@@ -3,12 +3,16 @@
   export let labelFor = null;
   export let memo = "";
   export let required = false;
-  export let style = $$props.class ? $$props.class : "";
+  export let inheritsClass = $$props.class ? $$props.class : "";
   export let disabled = false;
 </script>
 
-{#if style.includes("checkbox") === true}
-  <label for={labelFor} class="field {style}" disabled={disabled || null}>
+{#if inheritsClass.includes("checkbox") === true}
+  <label
+    for={labelFor}
+    class="field {inheritsClass}"
+    disabled={disabled || null}
+  >
     {#if label}
       {label}
     {/if}
@@ -19,11 +23,11 @@
       <slot />
     </div>
     {#if memo}
-      <p class="help {style}">{memo}</p>
+      <p class="help {inheritsClass}">{memo}</p>
     {/if}
   </label>
 {:else}
-  <div for={labelFor} class="field {style}" disabled={disabled || null}>
+  <div for={labelFor} class="field {inheritsClass}" disabled={disabled || null}>
     {#if label}
       {label}
     {/if}
@@ -34,7 +38,7 @@
       <slot />
     </div>
     {#if memo}
-      <p class="help {style}">{memo}</p>
+      <p class="help {inheritsClass}">{memo}</p>
     {/if}
   </div>
 {/if}

@@ -2,7 +2,7 @@
   export let multiple = false;
   export let size = "2";
   export let value = "";
-  export let style = $$props.class ? $$props.class : "";
+  export let inheritsClass = $$props.class ? $$props.class : "";
   export let icon = "";
   export let disabled = false;
   export let placeholder = "";
@@ -17,7 +17,7 @@
 </script>
 
 <div class="control" class:has-icons-left={icon.length > 0}>
-  <div class="select is-small {style} " class:is-multiple={multiple}>
+  <div class="select is-small {inheritsClass} " class:is-multiple={multiple}>
     {#if multiple && multiple === true}
       <select
         size={multiple === true ? size : ""}

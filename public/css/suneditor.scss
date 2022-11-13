@@ -1,0 +1,92 @@
+/*
+fix sun editor 
+*/
+.sun-editor {
+	font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  border-radius: 4px;
+  .se-dialog .se-dialog-inner .se-dialog-form .se-input-form {
+    padding: 4px;
+  }
+  .se-toolbar {
+    background-color:transparent;
+    outline:0;
+    border-bottom: 1px solid #dadada;
+    .se-btn-module-border {
+      height:25px;
+      border:0;
+      border-radius: 0;
+    }
+    .se-btn-module-border:not(:last-child) {
+      border-right:1px solid #EEE;
+    }
+    .se-btn {
+      height:25px;
+      line-height: inherit;
+      vertical-align: middle;
+      color:#444;
+      i {
+        margin-top:-2px;
+      }
+    }
+    .se-btn:disabled {
+      color:#BBB;
+    }
+    .se-btn[data-command="underline"] i {
+      margin-top:-1px;
+    }
+    .se-btn[data-command="codeView"] i {
+      -webkit-text-stroke: 0.5px #FFF;
+    }
+    .se-btn:not(.se-btn-tool-format) {
+      width:25px;
+    }
+    .se-btn:hover {
+      color:hsl(171, 100%, 41%);
+      background: none !important;
+    }
+    .se-btn:enabled.active {
+      color:hsl(171, 100%, 41%);
+    }    
+  }
+  .sun-editor-editable {
+    table.se-table-grid {
+      border:0;
+      padding:0;
+      margin:0;
+      border-collapse: collapse;
+      border-spacing: 0;
+      background-color: transparent;
+      tr{
+        border:0;
+        padding:0;
+        margin:0;
+        td, th {
+          border:1px dashed #EEE;
+          padding:0;
+          margin:0;
+        }
+      }
+    }
+  }
+}
+*:not(.se-wrapper) > .sun-editor-editable {
+  padding:0;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  table.se-table-grid {
+    border:0;
+    padding:0;
+    margin:0;
+    * {
+      border:0;
+      padding:0;
+      margin:0;
+    }
+  }
+  .se-table-selected-cell {
+    outline: inherit;
+  }
+}

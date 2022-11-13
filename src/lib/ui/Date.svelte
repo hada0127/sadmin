@@ -4,7 +4,7 @@
   import "flatpickr/dist/flatpickr.min.css";
   import { v4 as uuidv4 } from "uuid";
 
-  export let style = $$props.class ? $$props.class : "";
+  export let inheritsClass = $$props.class ? $$props.class : "";
   export let value = "";
   export let placeholder = "";
   export let readonly;
@@ -32,7 +32,7 @@
   });
 </script>
 
-<div class="control has-icons-right {style} {disabled}">
+<div class="control has-icons-right {inheritsClass} {disabled}">
   {#if readonly === true}
     <input
       type="text"
@@ -40,7 +40,7 @@
       {placeholder}
       {disabled}
       readonly
-      class="is-small input {style}"
+      class="is-small input {inheritsClass}"
     />
   {:else}
     <input
@@ -48,7 +48,7 @@
       bind:value
       {placeholder}
       {disabled}
-      class="is-small input flatpickr {dateID} {style}"
+      class="is-small input flatpickr {dateID} {inheritsClass}"
     />
   {/if}
   <span class="icon is-small is-right">

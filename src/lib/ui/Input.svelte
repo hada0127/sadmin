@@ -4,7 +4,7 @@
   const onInput = (e) => (value = e.target.value);
   export let id;
   export let name;
-  export let style = $$props.class ? $$props.class : "";
+  export let inheritsClass = $$props.class ? $$props.class : "";
   export let disabled;
   export let readonly;
   export let placeholder;
@@ -27,7 +27,7 @@
 </script>
 
 <div
-  class={style}
+  class={inheritsClass}
   class:control={(iconLeft && iconLeft.length > 0) ||
     (iconRight && iconRight.length > 0)}
   class:has-icons-left={iconLeft && iconLeft.length > 0}
@@ -38,11 +38,11 @@
     {name}
     {type}
     {value}
-    class="is-small {style} input"
+    class="is-small {inheritsClass} input"
     class:is-danger={(matchView && matchResult === false) ||
-      style.includes("is-danger")}
+      inheritsClass.includes("is-danger")}
     class:is-success={(matchView && matchResult === true) ||
-      style.includes("is-success")}
+      inheritsClass.includes("is-success")}
     {readonly}
     {disabled}
     {placeholder}
@@ -66,7 +66,7 @@
 {:else if matchView && matchResult === true}
   <p class="help is-success">{success}</p>
 {:else if memo}
-  <p class="help {style}">{memo}</p>
+  <p class="help {inheritsClass}">{memo}</p>
 {/if}
 
 <style lang="scss">

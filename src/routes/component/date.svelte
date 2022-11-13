@@ -55,7 +55,7 @@
 
 <h2>minDate & maxDate</h2>
 <Date bind:value={today} minDate="today" />
-<Date bind:value={today} minDate={minDate} maxDate={maxDate} />
+<Date bind:value={today} {minDate} {maxDate} />
 <figure class="highlight">
   <HighlightSvelte
     code={`<script>

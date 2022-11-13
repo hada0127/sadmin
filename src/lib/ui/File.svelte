@@ -4,11 +4,11 @@
   export let accept;
   export let multiple = false;
   export let files;
-  export let style = $$props.class ? $$props.class : "";
+  export let inheritsClass = $$props.class ? $$props.class : "";
   export let icon = "fas fa-upload";
 </script>
 
-<div class="file has-name is-small {style}">
+<div class="file has-name is-small {inheritsClass}">
   <label class="file-label">
     <input
       class="file-input"

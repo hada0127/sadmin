@@ -1,14 +1,14 @@
 <script>
   export let type = "button";
 
-  export let style = $$props.class ? $$props.class : "";
+  export let inheritsClass = $$props.class ? $$props.class : "";
 
   export let iconLeft = null;
   export let iconRight = null;
   export let disabled = false;
 </script>
 
-<button {type} class="button {style} is-small" on:click {disabled}>
+<button {type} class="button {inheritsClass} is-small" on:click {disabled}>
   {#if iconLeft}
     <i class={iconLeft} style="margin-right:5px;" />
   {/if}
