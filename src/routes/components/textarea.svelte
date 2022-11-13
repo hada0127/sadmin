@@ -6,7 +6,7 @@
 
   pageTitle.set("Textarea");
   pagePath.set(
-    `&gt; <a href="/component/label">Component</a> &gt; <a href="/component/textarea">Textarea</a>`
+    `&gt; <a href="/components/field">Component</a> &gt; <a href="/components/textarea">Textarea</a>`
   );
   let reviewCheckResult = false;
   const reviewRegex = /^.{100,300}$/;

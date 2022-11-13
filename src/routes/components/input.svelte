@@ -6,7 +6,7 @@
 
   pageTitle.set("Input");
   pagePath.set(
-    `&gt; <a href="/component/label">Component</a> &gt; <a href="/component/input">Input</a>`
+    `&gt; <a href="/components/field">Component</a> &gt; <a href="/components/input">Input</a>`
   );
   let passwordCheckResult = false;
   const passwordRegex = /^.{8,30}$/;

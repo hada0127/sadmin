@@ -6,7 +6,7 @@
 
   pageTitle.set("Button");
   pagePath.set(
-    `&gt; <a href="/component/label">Component</a> &gt; <a href="/component/button">Button</a>`
+    `&gt; <a href="/components/field">Component</a> &gt; <a href="/components/button">Button</a>`
   );
 </script>
 

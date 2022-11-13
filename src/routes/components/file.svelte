@@ -6,7 +6,7 @@
 
   pageTitle.set("File");
   pagePath.set(
-    `&gt; <a href="/component/label">Component</a> &gt; <a href="/component/file">File</a>`
+    `&gt; <a href="/components/field">Component</a> &gt; <a href="/components/file">File</a>`
   );
 </script>
 

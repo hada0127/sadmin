@@ -6,7 +6,7 @@
 
   pageTitle.set("Field");
   pagePath.set(
-    `&gt; <a href="/component/label">Component</a> &gt; <a href="/component/tabs">Field</a>`
+    `&gt; <a href="/components/field">Component</a> &gt; <a href="/components/tabs">Field</a>`
   );
 </script>
 

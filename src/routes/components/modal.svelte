@@ -5,7 +5,7 @@
 
   pageTitle.set("Modal");
   pagePath.set(
-    `&gt; <a href="/component/label">Component</a> &gt; <a href="/component/modal">Modal</a>`
+    `&gt; <a href="/components/field">Component</a> &gt; <a href="/components/modal">Modal</a>`
   );
 </script>
 

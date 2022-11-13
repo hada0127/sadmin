@@ -6,7 +6,7 @@
 
   pageTitle.set("Select");
   pagePath.set(
-    `&gt; <a href="/component/label">Component</a> &gt; <a href="/component/select">Select</a>`
+    `&gt; <a href="/components/field">Component</a> &gt; <a href="/components/select">Select</a>`
   );
   let bindSelectBasic = "1";
   let bindSelectPlaceholder;

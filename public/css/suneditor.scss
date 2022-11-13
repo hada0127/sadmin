@@ -5,6 +5,7 @@ fix sun editor
 	font-family: inherit;
   font-size: inherit;
   font-weight: inherit;
+  color: inherit;
   border-radius: 4px;
   .se-dialog .se-dialog-inner .se-dialog-form .se-input-form {
     padding: 4px;
@@ -39,7 +40,7 @@ fix sun editor
     .se-btn[data-command="codeView"] i {
       -webkit-text-stroke: 0.5px #FFF;
     }
-    .se-btn:not(.se-btn-tool-format) {
+    .se-btn:not(.se-btn-tool-font, .se-btn-tool-format, .se-btn-tool-size) {
       width:25px;
     }
     .se-btn:hover {
@@ -51,6 +52,7 @@ fix sun editor
     }    
   }
   .sun-editor-editable {
+    background-color: inherit;
     table.se-table-grid {
       border:0;
       padding:0;
@@ -76,6 +78,8 @@ fix sun editor
   font-family: inherit;
   font-size: inherit;
   font-weight: inherit;
+  color: inherit;
+  background-color: inherit;
   table.se-table-grid {
     border:0;
     padding:0;

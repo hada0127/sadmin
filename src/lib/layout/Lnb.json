@@ -1,54 +1,54 @@
 [
   {
-    "url": "/component/label",
-    "name": "Component",
+    "url": "/components/label",
+    "name": "Components",
     "submenu": [
       {
-        "url": "/component/field",
+        "url": "/components/field",
         "name": "Field"
       },
       {
-        "url": "/component/input",
+        "url": "/components/input",
         "name": "Input"
       },
       {
-        "url": "/component/checkbox",
+        "url": "/components/checkbox",
         "name": "Checkbox & Radio"
       },
       {
-        "url": "/component/toggle",
+        "url": "/components/toggle",
         "name": "Toggle"
       },
       {
-        "url": "/component/select",
+        "url": "/components/select",
         "name": "Select"
       },
       {
-        "url": "/component/date",
+        "url": "/components/date",
         "name": "Date"
       },
       {
-        "url": "/component/textarea",
+        "url": "/components/textarea",
         "name": "Textarea"
       },
       {
-        "url": "/component/editor",
+        "url": "/components/editor",
         "name": "Editor"
       },
       {
-        "url": "/component/file",
+        "url": "/components/file",
         "name": "File"
       },
       {
-        "url": "/component/button",
+        "url": "/components/button",
         "name": "Button"
       },
       {
-        "url": "/component/delete",
+        "url": "/components/delete",
         "name": "Delete"
       },
       {
-        "url": "/component/modal",
+        "url": "/components/modal",
         "name": "Modal"
       }
     ]

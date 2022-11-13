@@ -34,8 +34,16 @@
   export let placeholder = "";
   export let width = "100%";
   export let height = "auto";
+  export let toolbar = [
+    ["undo", "redo"],
+    ["formatBlock", "bold", "underline", "strike"],
+    ["fontColor", "hiliteColor"],
+    ["align", "list", "table"],
+    ["link", "image", "video"],
+    ["fullScreen", "codeView"],
+  ];
 
-  export let editorOptions = {
+  let editorOptions = {
     //lang: lang.ko,
     plugins: {
       blockquote,
@@ -62,14 +70,7 @@
     placeholder: placeholder,
     width: width,
     height: height,
-    buttonList: [
-      ["undo", "redo"],
-      ["formatBlock", "bold", "underline", "strike"],
-      ["fontColor", "hiliteColor"],
-      ["align", "list", "table"],
-      ["link", "image", "video"],
-      ["fullScreen", "codeView"],
-    ],
+    buttonList: toolbar,
     formats: [
       "h1",
       "h2",

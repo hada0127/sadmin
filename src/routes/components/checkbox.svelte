@@ -6,7 +6,7 @@
 
   pageTitle.set("Checkbox & Radio");
   pagePath.set(
-    `&gt; <a href="/component/label">Component</a> &gt; <a href="/component/checkbox">Checkbox & Radio</a>`
+    `&gt; <a href="/components/field">Component</a> &gt; <a href="/components/checkbox">Checkbox & Radio</a>`
   );
 </script>
 

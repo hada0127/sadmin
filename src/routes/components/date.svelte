@@ -7,7 +7,7 @@
 
   pageTitle.set("Date");
   pagePath.set(
-    `&gt; <a href="/component/label">Component</a> &gt; <a href="/component/date">Date</a>`
+    `&gt; <a href="/components/field">Component</a> &gt; <a href="/components/date">Date</a>`
   );
   let today = dayjs().format("YYYY-MM-DD");
   let minDate = dayjs().subtract(10, "day").format("YYYY-MM-DD");

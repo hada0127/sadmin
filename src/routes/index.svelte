@@ -16,8 +16,9 @@
     alt="logo"
     style="width:50px;"
   /><br />
-  Sadmin is an Administrator UI Template that utilizes the component function of
-  svelte.<br />
+  Sadmin is an Administrator UI Template that utilizes the components of svelte.<br
+  />
+  Features include built-in components for easy customization.<br />
   [<a href="https://github.com/hada0127/sadmin" target="_blank">Source Code</a>]
 </p>
 <h2>Installation</h2>
@@ -171,6 +172,15 @@
       <td
         ><a href="https://github.com/iamkun/dayjs" target="_blank"
           >https://github.com/iamkun/dayjs</a
+        ></td
+      >
+      <td>MIT</td>
+    </tr>
+    <tr>
+      <td>SunEditor</td>
+      <td
+        ><a href="http://suneditor.com/" target="_blank"
+          >http://suneditor.com/</a
         ></td
       >
       <td>MIT</td>

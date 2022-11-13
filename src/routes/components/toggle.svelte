@@ -6,7 +6,7 @@
 
   pageTitle.set("Toggle");
   pagePath.set(
-    `&gt; <a href="/component/label">Component</a> &gt; <a href="/component/toggle">Toggle</a>`
+    `&gt; <a href="/components/field">Component</a> &gt; <a href="/components/toggle">Toggle</a>`
   );
   let toggleChecked = true;
 </script>
