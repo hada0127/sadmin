@@ -44,10 +44,6 @@
         "name": "Button"
       },
       {
-        "url": "/components/delete",
-        "name": "Delete"
-      },
-      {
         "url": "/components/modal",
         "name": "Modal"
       }

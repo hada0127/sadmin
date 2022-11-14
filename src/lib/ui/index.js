@@ -7,7 +7,6 @@ export { default as EditorView } from './EditorView.svelte';
 export { default as Date } from './Date.svelte';
 export { default as Time } from './Time.svelte';
 export { default as File } from './File.svelte';
-export { default as Delete } from './Delete.svelte';
 export { default as Toggle } from './Toggle.svelte';
 export { default as Select } from './Select.svelte';
 export { default as Modal } from './Modal.svelte';
