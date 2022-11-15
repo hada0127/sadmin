@@ -1,6 +1,6 @@
 <script>
   import "suneditor/dist/css/suneditor.min.css";
-  import "$public/css/suneditor.scss";
+  import "@public/css/suneditor.scss";
 
   export let value = "";
   export let width = "100%";

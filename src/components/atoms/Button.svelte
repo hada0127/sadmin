@@ -24,4 +24,8 @@
   button:not(:last-child) {
     margin-right: 5px;
   }
+  i:before {
+    text-decoration: underline;
+    text-decoration-color: #fff;
+  }
 </style>

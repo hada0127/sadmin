@@ -1,5 +1,7 @@
 <script>
-  import { Input, Button, Field } from "$lib/ui";
+  import Input from "@components/atoms/Input.svelte";
+  import Button from "@components/atoms/Button.svelte";
+  import Field from "@components/atoms/Field.svelte";
   let userId = "";
   let userPassword = "";
 

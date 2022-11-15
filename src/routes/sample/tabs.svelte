@@ -1,11 +1,9 @@
 <script>
-  import { pageTitle, pagePath } from "$store/layout";
-  pageTitle.set("Sample Tabs");
-  pagePath.set(
-    `&gt; <a href="/sample/1">Sample</a> &gt; <a href="/sample/tabs">Sample Tabs</a>`
-  );
+  import Layout from "@components/templates/Layout.svelte";
+  let pageTitle = "Sample Tabs";
+  let pagePath = `&gt; <a href="/sample/1">Sample</a> &gt; <a href="/sample/tabs">Sample Tabs</a>`;
 </script>
 
-Tabs
+<Layout {pageTitle} {pagePath}>Tabs</Layout>
 
 <style lang="scss"></style>

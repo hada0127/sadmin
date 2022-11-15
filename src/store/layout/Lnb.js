@@ -1,4 +1,5 @@
-[
+
+export const LnbData = [
   {
     "url": "/components/label",
     "name": "Components",
@@ -79,4 +80,4 @@
       }
     ]
   }
-]
+];

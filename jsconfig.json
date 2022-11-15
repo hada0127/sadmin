@@ -1,8 +1,9 @@
 {
   "compilerOptions": {
     "paths": {
-      "$lib/*": ["./src/*", "./dist/lib/*"],
-      "$store/*": ["./src/store/*", "./dist/store/*"]
+      "@components/*": ["./src/components/*"],
+      "@store/*": ["./src/store/*"],
+      "@public/*": ["./public/*"]
     },
     "moduleResolution": "Node",
     "target": "ESNext",
@@ -22,7 +23,7 @@
     "sourceMap": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
+    "forceConsistentCasingInFileNames": false,
     /**
      * Typecheck JS in `.svelte` and `.js` files by default.
      * Disable this if you'd like to use dynamic types.
@@ -33,5 +34,5 @@
    * Use global.d.ts instead of compilerOptions.types
    * to avoid limiting type declarations.
    */
-  "include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.svelte", "src/lib/ui/index.js"]
+  "include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.svelte"]
 }

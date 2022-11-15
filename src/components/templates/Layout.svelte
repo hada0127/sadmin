@@ -1,7 +1,8 @@
 <script>
-  import { pageTitle, pagePath } from "$store/layout";
-  import Gnb from "$lib/layout/Gnb.svelte";
-  import Lnb from "$lib/layout/Lnb.svelte";
+  import Gnb from "@components/modules/Gnb.svelte";
+  import Lnb from "@components/modules/Lnb.svelte";
+
+  export let pageTitle, pagePath;
 </script>
 
 <div class="body" data-routify-scroll="lock">
@@ -15,10 +16,10 @@
     <section class="column">
       <div class="contents">
         <header>
-          <h1>{$pageTitle}</h1>
+          <h1>{pageTitle}</h1>
           <div class="path">
             <a href="/">HOME</a>
-            {@html $pagePath}
+            {@html pagePath}
           </div>
         </header>
         <article class="article">

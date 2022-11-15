@@ -1,5 +1,5 @@
 <script>
-  import { Button } from "../ui";
+  import Button from "../atoms/Button.svelte";
   import { url } from "@roxi/routify";
 </script>
 
@@ -18,11 +18,10 @@
     <div class="navbar-end">
       <div class="navbar-item">
         <Button
-          class="is-text"
-          iconLeft="fas fa-user"
+          iconLeft="fas fa-cog"
           on:click={() => {
-            location.href = $url("/sample/edit");
-          }}>Edit Personal Info</Button
+            location.href = $url("/setting");
+          }}>Setting</Button
         >
         <Button class="is-primary" iconLeft="fas fa-sign-out-alt"
           >Sign Out</Button

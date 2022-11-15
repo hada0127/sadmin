@@ -26,7 +26,7 @@
   } from "suneditor/src/plugins";
   import table from "./editor/table";
   import "suneditor/dist/css/suneditor.min.css";
-  import "$public/css/suneditor.scss";
+  import "@public/css/suneditor.scss";
 
   const editorID = `f` + uuidv4();
   let editorObj = {};

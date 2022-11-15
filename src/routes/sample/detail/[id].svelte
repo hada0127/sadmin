@@ -1,13 +1,13 @@
 <script>
-  import { pageTitle, pagePath } from "$store/layout";
+  import Layout from "@components/templates/Layout.svelte";
   import { params } from "@roxi/routify";
   let id = $params.id;
-  pageTitle.set("Sample Details");
-  pagePath.set(
-    `&gt; <a href="/sample/1">Sample</a> &gt; <a href="/sample/detail/1">Sample Details</a>`
-  );
+  let pageTitle = "Sample Details";
+  let pagePath = `&gt; <a href="/sample/1">Sample</a> &gt; <a href="/sample/detail/1">Sample Details</a>`;
 </script>
 
-id: {id}
+<Layout {pageTitle} {pagePath}>
+  id: {id}
+</Layout>
 
 <style lang="scss"></style>

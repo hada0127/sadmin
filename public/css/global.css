@@ -81,3 +81,6 @@ figure.highlight pre {
     border-radius: 4px !important;
 }
 
+table.is-fixed {
+	table-layout:fixed;
+}

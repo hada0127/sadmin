@@ -11,6 +11,5 @@
   ],
   "svelte.ask-to-enable-ts-plugin": false,
   "svelte.plugin.svelte.useNewTransformation": false,
-  "svelte.plugin.svelte.note-new-transformation": false,
-
+  "svelte.plugin.svelte.note-new-transformation": false
 }

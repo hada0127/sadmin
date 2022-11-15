@@ -1,11 +1,11 @@
 <script>
   import { isActive } from "@roxi/routify";
-  import lnbData from "./Lnb.json";
+  import { LnbData } from "@store/layout/Lnb.js";
 </script>
 
 <p class="menu-label">Menu</p>
 <ul class="menu-list">
-  {#each lnbData as lnb}
+  {#each LnbData as lnb}
     <li>
       <a href={lnb.url} class:active={$isActive(lnb.url) && !lnb.submenu}
         >{lnb.name}</a
