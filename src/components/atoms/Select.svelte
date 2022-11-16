@@ -1,14 +1,16 @@
 <script>
   export let multiple = false;
-  export let size = "2";
-  export let value = "";
-  export let inheritsClass = $$props.class ? $$props.class : "";
-  export let icon = "";
+  export let id;
+  export let name;
+  export let size = '2';
+  export let value = '';
+  export let inheritsClass = $$props.class ? $$props.class : '';
+  export let icon = '';
   export let disabled = false;
-  export let placeholder = "";
+  export let placeholder = '';
 
   let checkPlaceholder;
-  $: if (value === "" && placeholder && placeholder.length > 0) {
+  $: if (value === '' && placeholder && placeholder.length > 0) {
     value = placeholder;
     checkPlaceholder = true;
   } else {
@@ -16,30 +18,46 @@
   }
 </script>
 
-<div class="control" class:has-icons-left={icon.length > 0}>
+<div class="control {inheritsClass}" class:has-icons-left={icon.length > 0}>
   <div class="select is-small {inheritsClass} " class:is-multiple={multiple}>
     {#if multiple && multiple === true}
       <select
-        size={multiple === true ? size : ""}
+        {id}
+        {name}
+        size={multiple === true ? size : ''}
         multiple
         {disabled}
         bind:value
         class:placeholder={checkPlaceholder}
+        class={inheritsClass}
       >
         {#if placeholder && placeholder.length > 0}
           <option disabled>{placeholder}</option>
         {/if}
         <slot />
       </select>
-    {:else if value != ""}
-      <select {disabled} bind:value class:placeholder={checkPlaceholder}>
+    {:else if value != ''}
+      <select
+        {id}
+        {name}
+        {disabled}
+        bind:value
+        class:placeholder={checkPlaceholder}
+        class={inheritsClass}
+      >
         {#if placeholder && placeholder.length > 0}
           <option disabled>{placeholder}</option>
         {/if}
         <slot />
       </select>
     {:else}
-      <select {disabled} class:placeholder={checkPlaceholder}>
+      <select
+        {id}
+        {name}
+        {disabled}
+        class:placeholder={checkPlaceholder}
+        class={inheritsClass}
+      >
         {#if placeholder && placeholder.length > 0}
           <option disabled>{placeholder}</option>
         {/if}

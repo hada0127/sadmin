@@ -2,7 +2,7 @@
     "name": "starter",
     "type": "module",
     "scripts": {
-        "build": "vite build",
+        "build": "vite build --base=/",
         "preview": "vite preview",
         "dev": "vite"
     },

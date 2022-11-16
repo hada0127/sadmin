@@ -1,13 +1,13 @@
 <script>
   export let label = null;
   export let labelFor = null;
-  export let memo = "";
+  export let memo = '';
   export let required = false;
-  export let inheritsClass = $$props.class ? $$props.class : "";
+  export let inheritsClass = $$props.class ? $$props.class : '';
   export let disabled = false;
 </script>
 
-{#if inheritsClass.includes("checkbox") === true}
+{#if inheritsClass.includes('checkbox') === true}
   <label
     for={labelFor}
     class="field {inheritsClass}"
@@ -48,7 +48,6 @@
     display: block;
     font-size: 12px;
     font-weight: 700;
-    margin-top: 10px;
     color: var(--font-base-color);
     div {
       font-weight: 400;

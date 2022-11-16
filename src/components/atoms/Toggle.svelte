@@ -1,12 +1,16 @@
 <script>
+  export let id;
+  export let name;
   export let checked = false;
 
   export let disabled = false;
-  export let style = $$props.class ? $$props.class : "is-primary";
+  export let style = $$props.class ? $$props.class : 'is-primary';
 </script>
 
 <label>
   <input
+    {id}
+    {name}
     type="checkbox"
     bind:checked
     class="{style} "
@@ -27,7 +31,7 @@
     cursor: pointer;
   }
   input::before {
-    content: "";
+    content: '';
     position: absolute;
     left: 0;
     width: 2em;

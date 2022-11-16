@@ -1,7 +1,7 @@
 <script>
-  export let type = "button";
+  export let type = 'button';
 
-  export let inheritsClass = $$props.class ? $$props.class : "";
+  export let inheritsClass = $$props.class ? $$props.class : '';
 
   export let iconLeft = null;
   export let iconRight = null;
@@ -23,9 +23,5 @@
 <style>
   button:not(:last-child) {
     margin-right: 5px;
-  }
-  i:before {
-    text-decoration: underline;
-    text-decoration-color: #fff;
   }
 </style>

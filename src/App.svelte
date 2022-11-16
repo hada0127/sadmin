@@ -3,4 +3,6 @@
   import routes from "../.routify/routes.default.js";
 </script>
 
-<Router {routes} />
+<div class="body" data-routify-scroll="lock">
+  <Router {routes} />
+</div>

@@ -1,7 +1,7 @@
 <script>
-  import { onMount } from "svelte";
-  import { v4 as uuidv4 } from "uuid";
-  import suneditor from "suneditor";
+  import { onMount } from 'svelte';
+  import { v4 as uuidv4 } from 'uuid';
+  import suneditor from 'suneditor';
   //import lang from "suneditor/src/lang";
   import {
     blockquote,
@@ -23,24 +23,24 @@
     audio,
     math,
     imageGallery,
-  } from "suneditor/src/plugins";
-  import table from "./editor/table";
-  import "suneditor/dist/css/suneditor.min.css";
-  import "@public/css/suneditor.scss";
+  } from 'suneditor/src/plugins';
+  import table from './editor/table';
+  import 'suneditor/dist/css/suneditor.min.css';
+  import '@public/css/suneditor.scss';
 
   const editorID = `f` + uuidv4();
   let editorObj = {};
-  export let value = "";
-  export let placeholder = "";
-  export let width = "100%";
-  export let height = "auto";
+  export let value = '';
+  export let placeholder = '';
+  export let width = '100%';
+  export let height = 'auto';
   export let toolbar = [
-    ["undo", "redo"],
-    ["formatBlock", "bold", "underline", "strike"],
-    ["fontColor", "hiliteColor"],
-    ["align", "list", "table"],
-    ["link", "image", "video"],
-    ["fullScreen", "codeView"],
+    ['undo', 'redo'],
+    ['formatBlock', 'bold', 'underline', 'strike'],
+    ['fontColor', 'hiliteColor'],
+    ['align', 'list', 'table'],
+    ['link', 'image', 'video'],
+    ['fullScreen', 'codeView'],
   ];
 
   let editorOptions = {
@@ -72,14 +72,14 @@
     height: height,
     buttonList: toolbar,
     formats: [
-      "h1",
-      "h2",
-      "h3",
+      'h1',
+      'h2',
+      'h3',
       {
-        tag: "p",
-        name: "normal" || null,
-        command: "replace",
-        class: "",
+        tag: 'p',
+        name: 'normal' || null,
+        command: 'replace',
+        class: '',
       },
     ],
     icons: {

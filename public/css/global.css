@@ -22,6 +22,7 @@ basic
 :root{
 --font-base-color:#4a4a4a;
 --font-desc-color:#888;
+--line-base-color:#EFEFEF;
 --font-red-color:hsl(348, 100%, 61%);
 
 }
@@ -83,4 +84,8 @@ figure.highlight pre {
 
 table.is-fixed {
 	table-layout:fixed;
+}
+
+.is-fullwidth {
+	width:100%;
 }
