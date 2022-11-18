@@ -55,15 +55,6 @@ input[type="checkbox"], input[type="radio"] {
 	vertical-align: middle;
 }
 
-.field.radio label {
-	display: inline-block;
-	margin-right: 10px;
-	cursor: pointer;
-}
-.field.radio label[disabled] {
-	cursor: not-allowed;;
-}
-
 figure.highlight {
 	margin-top:5px;
 }

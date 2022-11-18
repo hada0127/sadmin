@@ -1,20 +1,23 @@
 <script>
+  import { params, url } from '@roxi/routify';
   import Button from '@components/atoms/Button.svelte';
-  // const handleSubmit = (e) => {
-  //   //    location.href = url;
-  //   const formData = new FormData(e.target);
+  const handleSubmit = (e) => {
+    //    location.href = url;
+    const formData = new FormData(e.target);
 
-  //   const data = {};
-  //   for (let field of formData) {
-  //     const [key, value] = field;
-  //     data[key] = value;
-  //   }
-  //   console.log(data);
-  // };
+    const data = {};
+    for (let field of formData) {
+      const [key, value] = field;
+      data[key] = value;
+    }
+    data['page'] = '1';
+    console.log($params);
+    history.pushState($url($url(), data));
+  };
 </script>
 
 <div class="box">
-  <form action="./1">
+  <form on:submit|preventDefault={handleSubmit}>
     <slot />
     <div class="has-text-centered">
       <Button type="reset">Reset</Button>

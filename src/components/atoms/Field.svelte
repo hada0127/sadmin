@@ -59,14 +59,21 @@
       font-size: 11px;
       font-weight: 400;
     }
+    &.radio {
+      cursor: default;
+      :global(label) {
+        display: inline-block;
+        margin-right: 10px;
+        cursor: pointer;
+      }
+      :global(label[disabled]) {
+        cursor: not-allowed;
+      }
+    }
   }
 
-  .field.radio {
-    cursor: default;
-  }
-
-  .field.radio,
-  .field.checkbox {
+  .field.radio > div,
+  .field.checkbox > div {
     line-height: 30px;
     min-height: 30px;
     vertical-align: middle;
