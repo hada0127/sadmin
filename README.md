@@ -1,50 +1,14 @@
-# Svelte SPA Boilerplate
-Web FrontEnd 용 Boilerplate   
-Sveltekit (ts, eslint, prettier, playwright, vitest)   
-Reset css 기본적용   
-   
-### 주요 디렉토리 구조
-```bash
-├── build //빌드 파일
-├── static
-│   ├── css
-│   │   └── reset.css //Reset css
-│   ├── favicon
-│   ├── font
-│   └── assets
-├── src
-│   ├── lib //$lib로 접근
-│   │   ├── scss // scss ($scss로 접근)
-│   │   │   └── variable.scss //Scss 변수
-│   │   ├── store // store 저장소 ($store로 접근)
-│   │   └── components // 컴포넌트 ($components로 접근, Atomic Design Pattern 간략화)
-│   │       ├── atoms
-│   │       ├── modules
-│   │       └── templates
-│   └── routes
-│       ├── [...404]
-│       │   └── +page.svelte //404 오류 페이지
-│       └── +page.svelte //각 폴더 내 시작파일
-├── app.html //기본 html 구조
-└── 200.html //기본 html 구조 (200 fallback)
-``` 
+# Sadmin - Svelte Admin UI Kit
+Sadmin is an Administrator UI kit that utilizes the component function of svelte.   
+Features include built-in components for easy customization.   
+## Documents
+[Open Documents](http://sadmin.tarucy.net/)
 
-## 설치
+## Installation
 ```
-npx degit hada0127/svelte-web
+npx degit hada0127/sadmin
 ```
-
-## test
-```
-yarn dev
-```
-
-## build
-```
-yarn build
-```
-
-## nginx 설정
+## Setting Nginx
 ```
 server {
   listen 80;
@@ -56,25 +20,10 @@ server {
   location / {
     try_files $uri $uri/ /index.html;
   }
+}  
 ```
+## Version History
+Before release   
 
-## 초기설정(참고)
-```
-npm i -g yarn
-yarn global add eslint
-yarn global add typescript
-npm create svelte@latest
-```
-Where should we create your project?   
-  (leave blank to use current directory)    
-✔ Which Svelte app template? › **Skeleton project**   
-✔ Add type checking with TypeScript? › **Yes, using TypeScript syntax**   
-✔ Add ESLint for code linting? **Yes**   
-✔ Add Prettier for code formatting? **Yes**   
-✔ Add Playwright for browser testing? **Yes**   
-✔ Add Vitest for unit testing? **Yes**   
-```
-yarn
-yarn add axios
-yarn add -D sass
-```
+## License
+MIT License.
