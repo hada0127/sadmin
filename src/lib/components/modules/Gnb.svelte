@@ -1,5 +1,5 @@
 <script>
-  import Button from "../atoms/Button.svelte";
+  import Button from '$components/atoms/Button.svelte';
 </script>
 
 <nav class="navbar" aria-label="main navigation">

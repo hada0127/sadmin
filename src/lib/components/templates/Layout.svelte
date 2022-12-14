@@ -1,7 +1,7 @@
-<script>
+<script lang="ts">
   import Gnb from '$components/modules/Gnb.svelte';
   import Lnb from '$components/modules/Lnb.svelte';
-  export let pageTitle, pagePath;
+  export let pageTitle :string, pagePath :string;
 </script>
 
 <Gnb />

@@ -1,11 +1,11 @@
-<script>
+<script lang="ts">
   import "suneditor/dist/css/suneditor.min.css";
-  import "@public/css/suneditor.scss";
+  import "$scss/suneditor.scss";
 
   export let value = "";
   export let width = "100%";
   export let height = "auto";
-  let widthUnit, heightUnit;
+  let widthUnit: string, heightUnit: string;
   let match = /^[0-9]+$/;
   $: widthUnit = match.test(width) ? "px" : "";
   $: heightUnit = match.test(height) ? "px" : "";
