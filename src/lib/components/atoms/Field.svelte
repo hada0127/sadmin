@@ -1,6 +1,6 @@
-<script>
-  export let label = null;
-  export let labelFor = null;
+<script lang="ts">
+  export let label: string | null = null;
+  export let labelFor: string | null = null;
   export let memo = '';
   export let required = false;
   export let inheritsClass = $$props.class ? $$props.class : '';
