@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import Layout from '$components/templates/Layout.svelte';
 	import Toggle from '$components/atoms/Toggle.svelte';
 	import { HighlightSvelte } from 'svelte-highlight';
@@ -20,7 +20,7 @@
 	<figure class="highlight">
 		<HighlightSvelte
 			code={`<Toggle>Toggle</Toggle>
-  <Toggle checked>Toggle</Toggle>`}
+<Toggle checked>Toggle</Toggle>`}
 		/>
 	</figure>
 
@@ -35,11 +35,11 @@
 	<figure class="highlight" checked>
 		<HighlightSvelte
 			code={`<Toggle style="is-primary">Toggle</Toggle>
-  <Toggle style="is-link">Toggle</Toggle>
-  <Toggle style="is-info">Toggle</Toggle>
-  <Toggle style="is-success">Toggle</Toggle>
-  <Toggle style="is-warning">Toggle</Toggle>
-  <Toggle style="is-danger">Toggle</Toggle>`}
+<Toggle style="is-link">Toggle</Toggle>
+<Toggle style="is-info">Toggle</Toggle>
+<Toggle style="is-success">Toggle</Toggle>
+<Toggle style="is-warning">Toggle</Toggle>
+<Toggle style="is-danger">Toggle</Toggle>`}
 		/>
 	</figure>
 
@@ -49,7 +49,7 @@
 	<figure class="highlight">
 		<HighlightSvelte
 			code={`<Toggle disabled>Toggle</Toggle>
-  <Toggle disabled checked>Toggle</Toggle>`}
+<Toggle disabled checked>Toggle</Toggle>`}
 		/>
 	</figure>
 
@@ -59,10 +59,10 @@
 	<figure class="highlight">
 		<HighlightSvelte
 			code={`<script>
-    let toggleChecked = true;
-  <\u002Fscript>
-  <Toggle bind:checked={toggleChecked}>Toggle</Toggle>
-  <p>{toggleChecked}</p>`}
+  let toggleChecked = true;
+<\u002Fscript>
+<Toggle bind:checked={toggleChecked}>Toggle</Toggle>
+<p>{toggleChecked}</p>`}
 		/>
 	</figure>
 </Layout>

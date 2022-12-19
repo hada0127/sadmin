@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import Layout from '$components/templates/Layout.svelte';
 	import Select from '$components/atoms/Select.svelte';
 	import { HighlightSvelte } from 'svelte-highlight';
@@ -7,9 +7,9 @@
 	let pageTitle = 'Select';
 	let pagePath = `&gt; <a href="/components/field">Components</a> &gt; <a href="/components/select">Select</a>`;
 	let bindSelectBasic = '1';
-	let bindSelectPlaceholder;
+	let bindSelectPlaceholder = '';
 	let bindSelectDisabled = '2';
-	let bindSelectMultie;
+	let bindSelectMultie = '';
 </script>
 
 <svelte:head>
@@ -152,7 +152,7 @@
 	</figure>
 
 	<h2>Multiple</h2>
-	<Select bind:value={bindSelectMultie} multiple size="5">
+	<Select bind:value={bindSelectMultie} multiple size={5}>
 		<option value="Argentina">Argentina</option>
 		<option value="Bolivia">Bolivia</option>
 		<option value="Brazil">Brazil</option>

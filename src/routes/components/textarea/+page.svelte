@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import Layout from '$components/templates/Layout.svelte';
 	import Textarea from '$components/atoms/Textarea.svelte';
 	import { HighlightSvelte } from 'svelte-highlight';
@@ -7,8 +7,8 @@
 	let pageTitle = 'Textarea';
 	let pagePath = `&gt; <a href="/components/field">Components</a> &gt; <a href="/components/textarea">Textarea</a>`;
 	let reviewCheckResult = false;
-	const reviewRegex = /^.{100,300}$/;
-	let text;
+	const reviewRegex = '/^.{100,300}$/';
+	let text: string = '';
 </script>
 
 <svelte:head>
@@ -17,8 +17,8 @@
 
 <Layout {pageTitle} {pagePath}>
 	<h2>Basic</h2>
-	<Textarea bind:value={text} placeholder="description" rows="5" />
-	<Textarea bind:value={text} placeholder="description" rows="5" fixed />
+	<Textarea bind:value={text} placeholder="description" rows={5} />
+	<Textarea bind:value={text} placeholder="description" rows={5} fixed />
 	<p>Input Text : {text}</p>
 	<figure class="highlight">
 		<HighlightSvelte
@@ -97,7 +97,7 @@
 		placeholder="Review"
 		iconLeft="fas fa-lock"
 		match={reviewRegex}
-		maxlength="300"
+		maxlength={300}
 		success="Success"
 		invalid="Please enter characters between 100 and 300 digits."
 		bind:matchResult={reviewCheckResult}

@@ -5,15 +5,14 @@
 	import Field from '$components/atoms/Field.svelte';
 	import Select from '$components/atoms/Select.svelte';
 	import Input from '$components/atoms/Input.svelte';
-	import { params } from '@roxi/routify';
 
 	let pageTitle = 'Sample List';
 	let pagePath = `&gt; <a href="/sample">Sample List</a>`;
 
-	let nowPage = $params.page ? $params.page : 1;
-	let searchCity = $params.searchCity ? $params.searchCity : '1';
-	let searchKeyword = $params.searchKeyword ? $params.searchKeyword : '';
-	let searchReservation = $params.searchReservation ? $params.searchReservation : 'a';
+	// let nowPage = $params.page ? $params.page : 1;
+	// let searchCity = $params.searchCity ? $params.searchCity : '1';
+	// let searchKeyword = $params.searchKeyword ? $params.searchKeyword : '';
+	// let searchReservation = $params.searchReservation ? $params.searchReservation : 'a';
 </script>
 
 <Layout {pageTitle} {pagePath}>

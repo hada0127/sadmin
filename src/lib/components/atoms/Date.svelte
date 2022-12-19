@@ -6,8 +6,8 @@
 	import { v4 as uuidv4 } from 'uuid';
 
 	export let inheritsClass: string | null = $$props.class ? $$props.class : '';
-	export let id: string | null;
-	export let name: string | null;
+	export let id: string = '';
+	export let name: string = '';
 	export let value: string = '';
 	export let placeholder: string = '';
 	export let readonly: boolean;
@@ -16,8 +16,8 @@
 	export let maxDate: string = '';
 	export let disable: boolean;
 	export let enable: boolean;
-	export let mode: string | null;
-	export let defaultDate: string | null;
+	export let mode: string = '';
+	export let defaultDate: string = '';
 
 	const dateID = `f` + uuidv4();
 
