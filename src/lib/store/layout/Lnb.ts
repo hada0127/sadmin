@@ -59,15 +59,15 @@ export const LnbData = [
           "name": "Sign In"
         },
         {
-          "url": "/sample/1",
+          "url": "/sample",
           "name": "List"
         },
         {
-          "url": "/sample/gallery/1",
+          "url": "/sample/gallery",
           "name": "Gallery"
         },
         {
-          "url": "/sample/detail/1",
+          "url": "/sample/test-slug",
           "name": "Details"
         },
         {

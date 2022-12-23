@@ -1,29 +1,28 @@
 <script lang="ts">
-	export let type: string = 'text';
-	export let value: string = '';
+	export let type = 'text';
+	export let value = '';
 	const onInput = (e: Event) => {
 		const target = e.target as HTMLSelectElement;
 		value = target.value;
 	};
-	export let id: string = '';
-	export let name: string = '';
+	export let id: string | null = null;
+	export let name = '';
 	export let inheritsClass = $$props.class ? $$props.class : '';
 	export let disabled: boolean | null = null;
 	export let readonly: boolean | null = null;
-	export let placeholder: string = '';
+	export let placeholder = '';
 	export let maxlength: number | null = null;
-	export let iconLeft: string = '';
-	export let iconRight: string = '';
-	export let memo: string = '';
-	export let match: string = '';
-	export let success: string = '';
-	export let invalid: string = '';
+	export let iconLeft = '';
+	export let iconRight = '';
+	export let memo = '';
+	export let match: RegExp | null = null;
+	export let success = '';
+	export let invalid = '';
 
 	export let matchResult = false;
 	let matchView = false;
-	$: if (match !== '' && value && value.length > 0) {
-		let regexp = new RegExp(match);
-		matchResult = regexp.test(value);
+	$: if (match && value && value.length > 0) {
+		matchResult = match.test(value);
 		matchView = true;
 	} else {
 		matchView = false;

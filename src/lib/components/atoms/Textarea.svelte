@@ -1,29 +1,28 @@
 <script lang="ts">
-	export let value: string = '';
+	export let value = '';
 	const onInput = (e: Event) => {
 		const target = e.target as HTMLSelectElement;
 		value = target.value;
 	};
-	export let id: string = '';
-	export let name: string = '';
+	export let id = '';
+	export let name = '';
 	export let style: string = $$props.class ? $$props.class : '';
-	export let disabled: boolean = false;
-	export let readonly: boolean = false;
-	export let placeholder: string = '';
+	export let disabled = false;
+	export let readonly = false;
+	export let placeholder = '';
 	export let maxlength: number | null = null;
-	export let memo: string = '';
-	export let match: string = '';
-	export let success: string = '';
-	export let invalid: string = '';
+	export let memo = '';
+	export let match: RegExp | null = null;
+	export let success = '';
+	export let invalid = '';
 	export let rows: number | null = null;
-	export let fixed: boolean = false;
+	export let fixed = false;
 
-	export let matchResult: boolean = false;
+	export let matchResult = false;
 
 	let matchView = false;
-	$: if (match !== '' && value && value.length > 0) {
-		let regexp = new RegExp(match);
-		matchResult = regexp.test(value);
+	$: if (match && value && value.length > 0) {
+		matchResult = match.test(value);
 		matchView = true;
 	} else {
 		matchView = false;

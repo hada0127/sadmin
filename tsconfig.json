@@ -10,5 +10,6 @@
 		"sourceMap": true,
 		"strict": true
 	},
-  "include": ["src/**/*.ts", "src/**/*.js", "src/**/*.svelte"]
+  "include": ["src/**/*.ts", "src/**/*.svelte"],
+	"exclude": ["node_modules", "src/**/*.js"]
 }

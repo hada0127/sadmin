@@ -1,9 +1,9 @@
 <script lang="ts">
 	export let id: string | null = null;
 	export let name: string | null = null;
-	export let checked: boolean = false;
+	export let checked = false;
 
-	export let disabled: boolean = false;
+	export let disabled = false;
 	export let style: string = $$props.class ? $$props.class : 'is-primary';
 </script>
 

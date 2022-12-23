@@ -1,15 +1,15 @@
 <script lang="ts">
-	export let multiple: boolean = false;
-	export let id: string = '';
-	export let name: string = '';
-	export let size: number = 2;
-	export let value: string = '';
+	export let multiple = false;
+	export let id = '';
+	export let name = '';
+	export let size = 2;
+	export let value = '';
 	export let inheritsClass: string = $$props.class ? $$props.class : '';
-	export let icon: string = '';
-	export let disabled: boolean = false;
-	export let placeholder: string = '';
+	export let icon = '';
+	export let disabled = false;
+	export let placeholder = '';
 
-	let checkPlaceholder: boolean = false;
+	let checkPlaceholder = false;
 	$: if (value === '' && placeholder && placeholder.length > 0) {
 		value = placeholder;
 		checkPlaceholder = true;

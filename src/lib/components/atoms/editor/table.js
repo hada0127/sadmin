@@ -1,4 +1,4 @@
-// @ts-nocheck
+
 /* eslint-disable no-case-declarations */
 /*
  * wysiwyg web editor

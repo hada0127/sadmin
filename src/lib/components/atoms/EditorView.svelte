@@ -2,9 +2,9 @@
 	import 'suneditor/dist/css/suneditor.min.css';
 	import '$scss/suneditor.scss';
 
-	export let value: string = '';
-	export let width: string = '100%';
-	export let height: string = 'auto';
+	export let value = '';
+	export let width = '100%';
+	export let height = 'auto';
 	let widthUnit: string, heightUnit: string;
 	let match = /^[0-9]+$/;
 	$: widthUnit = match.test(width) ? 'px' : '';
