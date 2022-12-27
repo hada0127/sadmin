@@ -67,10 +67,6 @@ export const LnbData = [
           "name": "List"
         },
         {
-          "url": "/sample/gallery",
-          "name": "Gallery"
-        },
-        {
           "url": "/sample/test-slug",
           "name": "Details"
         }

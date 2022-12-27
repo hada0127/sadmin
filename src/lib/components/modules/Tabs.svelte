@@ -1,11 +1,16 @@
 <script lang="ts">
   import { onMount } from 'svelte';
+  import { v4 as uuidv4 } from 'uuid';
   export let tabs: string[] = [];
+  export let inheritsClass = $$props.class ? $$props.class : '';
+
+  const tabID = `t` + uuidv4();
   let nowTab: number;
   $: nowTab = 0;
+
   const setTabs = (selectTab: number) => {
     nowTab = selectTab;
-    document.querySelectorAll('.tabsgroup div:not(.tabs)').forEach((el, i) => {
+    document.querySelectorAll(`#${tabID} div:not(.tabs)`).forEach((el, i) => {
       if (i === selectTab) {
         el.classList.add('is-visible');
       } else {
@@ -18,8 +23,8 @@
   });
 </script>
 
-<div class="tabsgroup">
-  <div class="tabs is-small">
+<div id={tabID} class="tabsgroup">
+  <div class="tabs is-small {inheritsClass}">
     <ul>
       {#each tabs as tab, i}
         <li class={i === nowTab ? 'is-active' : ''}>

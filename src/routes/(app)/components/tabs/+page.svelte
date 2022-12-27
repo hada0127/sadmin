@@ -28,4 +28,19 @@
   />
 </figure>
 
+<Tabs tabs={['Basic Info', 'Extend', 'Log']} class="is-boxed mt-5">
+  <div>tab1</div>
+  <div>tab2</div>
+  <div>tab3</div>
+</Tabs>
+<figure class="highlight">
+  <HighlightSvelte
+    code={`<Tabs tabs={['Basic Info', 'Extend', 'Log']} class="is-boxed">
+  <div>tab1</div>
+  <div>tab2</div>
+  <div>tab3</div>
+</Tabs>`}
+  />
+</figure>
+
 <style lang="scss"></style>
