@@ -11,5 +11,5 @@
 		"strict": true
 	},
   "include": ["src/**/*.ts", "src/**/*.svelte"],
-	"exclude": ["node_modules", "src/**/*.js"]
+	"exclude": ["node_modules", "src/**/*.js", "src/lib/components/atom/Editor.svelte", "src/lib/components/atom/Date.svelte"]
 }

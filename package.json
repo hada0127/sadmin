@@ -41,6 +41,7 @@
 		"dayjs": "^1.11.7",
 		"flatpickr": "^4.6.13",
 		"suneditor": "^2.44.3",
+		"svelte-flatpickr": "^3.2.6",
 		"uuid": "^9.0.0"
 	}
 }

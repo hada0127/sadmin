@@ -27,7 +27,7 @@
   const dateID = `f` + uuidv4();
 
   onMount(() => {
-    let options: ParsedOptions = {
+    const options = {
       dateFormat: 'Y-m-d'
     };
     if (minDate.length > 0) options.minDate = new Date(minDate);

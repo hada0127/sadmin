@@ -15,6 +15,9 @@
   let searchReservation = $page.params.searchReservation ? $page.params.searchReservation : 'a';
 </script>
 
+<h1>asdf</h1>
+<h2>123asdf</h2>
+
 <SearchBox>
   <div class="columns">
     <Field label="City" class="column is-3">

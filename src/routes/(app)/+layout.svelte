@@ -38,7 +38,7 @@
       h1 {
         font-size: 20px;
         font-weight: 700;
-        border-bottom: var(--line-base-color);
+        border-bottom: 1px solid var(--line-base-color);
       }
       .path {
         position: absolute;
