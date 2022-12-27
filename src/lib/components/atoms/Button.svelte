@@ -1,5 +1,5 @@
 <script lang="ts">
-  export let type = 'button';
+  export let type: 'button' | 'submit' | 'reset' | null | undefined = 'button';
 
   export let inheritsClass = $$props.class ? $$props.class : '';
 

@@ -33,8 +33,12 @@ body {
 
 .article {
   padding:20px 0;
-	font-size:14px;
+	font-size:12px;
 
+}
+.article h1 {
+	font-size:20px;
+	font-weight:700;
 }
 .article h2 {
 	font-size:16px;
@@ -75,6 +79,10 @@ figure.highlight pre {
 
 table.is-fixed {
 	table-layout:fixed;
+}
+
+.table:not(:last-child) {
+	margin-bottom:0.5rem;
 }
 
 .is-fullwidth {

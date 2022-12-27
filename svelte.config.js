@@ -14,7 +14,7 @@ const config = {
       '$scss': './src/lib/scss',
     },		
 		adapter: adapter({
-      fallback: '200.html'
+      fallback: 'index.html'
     }),
     prerender: { entries: [] }
 	}

@@ -6,6 +6,7 @@
   import Select from '$components/atoms/Select.svelte';
   import Input from '$components/atoms/Input.svelte';
   import { pageTitle, pagePath } from '$store/layout/PageTitle';
+  import Button from '$components/atoms/Button.svelte';
   pageTitle.set('Sample List');
   pagePath.set(`&gt; <a href="/sample">Sample List</a>`);
 
@@ -14,9 +15,6 @@
   let searchKeyword = $page.params.searchKeyword ? $page.params.searchKeyword : '';
   let searchReservation = $page.params.searchReservation ? $page.params.searchReservation : 'a';
 </script>
-
-<h1>asdf</h1>
-<h2>123asdf</h2>
 
 <SearchBox>
   <div class="columns">
@@ -46,8 +44,51 @@
     </Field>
   </div>
 </SearchBox>
-<div>s</div>
-<div>s</div>
+<table class="table is-fullwidth is-hoverable">
+  <thead>
+    <tr>
+      <th class="has-text-centered">No</th>
+      <th>Title</th>
+      <th class="has-text-centered">Name</th>
+      <th class="has-text-centered">Regist Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="has-text-centered">1</td>
+      <td><a href="/sample/1">Stay in the middle! Like you a little! Don't want no riddle!</a></td>
+      <td class="has-text-centered">Minji</td>
+      <td class="has-text-centered"> 2022-12-27 </td>
+    </tr>
+    <tr>
+      <td class="has-text-centered">2</td>
+      <td><a href="/sample/2">Do you want somebody~ Like I want somebody</a></td>
+      <td class="has-text-centered">Minji</td>
+      <td class="has-text-centered"> 2022-12-28 </td>
+    </tr>
+    <tr>
+      <td class="has-text-centered">3</td>
+      <td><a href="/sample/3">Do you think about me now</a></td>
+      <td class="has-text-centered">Minji</td>
+      <td class="has-text-centered"> 2022-12-28 </td>
+    </tr>
+    <tr>
+      <td class="has-text-centered">4</td>
+      <td><a href="/sample/4">I want you so, want you, so say it ditto</a></td>
+      <td class="has-text-centered">New Jeans</td>
+      <td class="has-text-centered"> 2022-12-28 </td>
+    </tr>
+    <tr>
+      <td class="has-text-centered">5</td>
+      <td><a href="/sample/5">I just want you call my phone right now</a></td>
+      <td class="has-text-centered">Minji</td>
+      <td class="has-text-centered"> 2022-12-28 </td>
+    </tr>
+  </tbody>
+</table>
+<div class="has-text-right">
+  <Button class="is-primary" iconLeft="fas fa-search">Regist</Button>
+</div>
 <Pagination bind:page={nowPage} />
 
 <style lang="scss"></style>

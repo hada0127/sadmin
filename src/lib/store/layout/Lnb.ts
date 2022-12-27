@@ -47,6 +47,10 @@ export const LnbData = [
         {
           "url": "/components/modal",
           "name": "Modal"
+        },
+        {
+          "url": "/components/tabs",
+          "name": "Tabs"
         }
       ]
     },
@@ -69,14 +73,6 @@ export const LnbData = [
         {
           "url": "/sample/test-slug",
           "name": "Details"
-        },
-        {
-          "url": "/sample/dashboard",
-          "name": "DashBoard"
-        },
-        {
-          "url": "/sample/tabs",
-          "name": "Tabs"
         }
       ]
     }
