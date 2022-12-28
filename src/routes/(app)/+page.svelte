@@ -61,7 +61,20 @@
 </p>
 
 <h2>Version History</h2>
-<p style="width:100%;">Before release</p>
+<table class="table is-fullwidth  is-hoverable">
+  <thead>
+    <tr>
+      <th>Version</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1.0.0</td>
+      <td>First Release</td>
+    </tr>
+  </tbody>
+</table>
 
 <h2>Open Source Usage List</h2>
 <table class="table is-fullwidth  is-hoverable">
