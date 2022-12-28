@@ -10,10 +10,20 @@
   pageTitle.set('Sample List');
   pagePath.set(`&gt; <a href="/sample">Sample List</a>`);
 
-  let nowPage: number = $page.params.page ? parseInt($page.params.page) : 1;
+  //search
   let searchCity = $page.params.searchCity ? $page.params.searchCity : '1';
   let searchKeyword = $page.params.searchKeyword ? $page.params.searchKeyword : '';
   let searchReservation = $page.params.searchReservation ? $page.params.searchReservation : 'a';
+
+  //paging
+  let nowPage: number;
+  let pageSize = 20;
+  let totalArticles = 223;
+  $: {
+    nowPage = $page.url.searchParams.get('page')
+      ? parseInt($page.url.searchParams.get('page') as string)
+      : 1;
+  }
 </script>
 
 <SearchBox>
@@ -89,6 +99,6 @@
 <div class="has-text-right">
   <Button class="is-primary" iconLeft="fas fa-search">Regist</Button>
 </div>
-<Pagination bind:page={nowPage} />
+<Pagination bind:nowPage bind:pageSize bind:totalArticles />
 
 <style lang="scss"></style>
