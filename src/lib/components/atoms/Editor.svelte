@@ -109,9 +109,8 @@
   };
   let editorObj;
   onMount(async () => {
-    editorObj[`${editorID}`] = suneditor.create(editorID, editorOptions);
-    console.log(editorObj);
-    editorObj[`${editorID}`].onChange = function (contents) {
+    editorObj = suneditor.create(editorID, editorOptions);
+    editorObj.onChange = function (contents) {
       value = contents;
     };
   });
@@ -124,4 +123,8 @@
   <textarea id={editorID}>{value}</textarea>
 </div>
 
-<style lang="scss"></style>
+<style lang="scss">
+  :global(.sun-editor .se-btn-tray) {
+    line-height: initial;
+  }
+</style>

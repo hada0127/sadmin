@@ -24,9 +24,6 @@
 <Field label="Title" memo="Field memo">
   <Input placeholder="Field memo & Input memo duplicated" memo="Input memo" class="is-fullwidth" />
 </Field>
-<Field label="Title" memo="Guide text" disabled>
-  <Input placeholder="name" disabled />
-</Field>
 <figure class="highlight">
   <HighlightSvelte
     code={`<Field label="Title" required>
@@ -37,9 +34,6 @@
 </Field>
 <Field label="Title" memo="Field guide">
   <Input placeholder="name" memo="Input guide" class="is-fullwidth" />
-</Field>
-<Field label="Title" memo="Guide text" disabled>
-  <Input placeholder="name" disabled />
 </Field>`}
   />
 </figure>

@@ -88,3 +88,26 @@ table.is-fixed {
 .is-fullwidth {
 	width:100%;
 }
+
+
+
+article .is-bordered {
+	border:1px solid var(--line-base-color);
+	border-radius:4px;
+	margin: 10px 0;
+}
+
+article .is-bordered .columns {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+}
+
+article .is-bordered .columns:last-child {
+  margin-bottom: 0;
+}
+
+article .is-bordered .columns:not(:last-child) {
+  margin-bottom: 0;
+}
+

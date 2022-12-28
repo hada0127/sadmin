@@ -1,13 +1,11 @@
 <script lang="ts">
   export let label = '';
-  export let labelFor = '';
   export let memo = '';
   export let required = false;
   export let inheritsClass: string = $$props.class ? $$props.class : '';
-  export let disabled = false;
 </script>
 
-<div for={labelFor} class="field {inheritsClass}" disabled={disabled || null}>
+<div class="field {inheritsClass}">
   {#if label}
     {label}
   {/if}
@@ -29,6 +27,8 @@
     font-weight: 700;
     color: var(--font-base-color);
     div {
+      min-height: 30px;
+      line-height: 30px;
       font-weight: 400;
     }
     span {
