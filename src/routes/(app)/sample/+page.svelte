@@ -11,9 +11,15 @@
   pagePath.set(`&gt; <a href="/sample">Sample List</a>`);
 
   //search
-  let searchCity = $page.params.searchCity ? $page.params.searchCity : '1';
-  let searchKeyword = $page.params.searchKeyword ? $page.params.searchKeyword : '';
-  let searchReservation = $page.params.searchReservation ? $page.params.searchReservation : 'a';
+  let searchCity = $page.url.searchParams.get('searchCity')
+    ? ($page.url.searchParams.get('searchCity') as string)
+    : '1';
+  let searchKeyword = $page.url.searchParams.get('searchKeyword')
+    ? ($page.url.searchParams.get('searchKeyword') as string)
+    : '';
+  let searchReservation = $page.url.searchParams.get('searchReservation')
+    ? ($page.url.searchParams.get('searchReservation') as string)
+    : 'a';
 
   //paging
   let nowPage: number;

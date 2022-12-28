@@ -1,5 +1,5 @@
 <script lang="ts">
-  export let searchData: object | string = '';
+  import { page } from '$app/stores';
   export let nowPage = 1;
   export let totalArticles = 1;
   export let pageSize = 20;
@@ -11,7 +11,10 @@
     active: boolean;
   }
   let pageList: PageList[] = [];
+  let searchData = '';
   $: {
+    $page.url.searchParams.delete('page');
+    searchData = $page.url.searchParams.toString();
     totalPage = Math.floor(totalArticles / pageSize);
     outputStart = Math.floor((nowPage - 1) / pageCols) * pageCols + 1;
     pageList = [];
