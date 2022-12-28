@@ -62,6 +62,10 @@
 
 <h2>Version History</h2>
 <table class="table is-fullwidth  is-hoverable">
+  <colgroup>
+    <col width="100" />
+    <col width="*" />
+  </colgroup>
   <thead>
     <tr>
       <th>Version</th>
