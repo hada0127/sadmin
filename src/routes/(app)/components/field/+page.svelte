@@ -1,7 +1,8 @@
 <script>
   import Field from '$components/atoms/Field.svelte';
   import Input from '$components/atoms/Input.svelte';
-  import { HighlightSvelte } from 'svelte-highlight';
+  import { Highlight } from 'svelte-highlight';
+  import html from 'svelte-highlight/languages/vbscript-html';
   import highlightStyle from 'svelte-highlight/styles/vs2015';
   import { pageTitle, pagePath } from '$store/layout/PageTitle';
   pageTitle.set('Field');
@@ -25,7 +26,8 @@
   <Input placeholder="Field memo & Input memo duplicated" memo="Input memo" class="is-fullwidth" />
 </Field>
 <figure class="highlight">
-  <HighlightSvelte
+  <Highlight
+    language={html}
     code={`<Field label="Title" required>
   <Input placeholder="name" />
 </Field>
@@ -58,7 +60,8 @@
   <Input placeholder="name" />
 </Field>
 <figure class="highlight">
-  <HighlightSvelte
+  <Highlight
+    language={html}
     code={`<Field label="Title" memo="Guide text" class="is-primary">
   <Input placeholder="name" />
 </Field>

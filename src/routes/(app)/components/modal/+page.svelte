@@ -12,7 +12,7 @@
   let modalCloseButton: boolean;
   let modalCloseKey: boolean;
   let modalCloseUser: boolean;
-  let closeModal: MouseEvent;
+  let closeModal: (() => void) | undefined;
 </script>
 
 <svelte:head>
@@ -31,17 +31,17 @@
 
 <figure class="highlight">
   <HighlightSvelte
-    code={`<script>
-    let modalDefault;
-  <\u002Fscript>
-  <Button
-    on:click={() => {
-      modalDefault = !modalDefault;
-    }}>Basic Modal</Button
-  >
-  <Modal bind:active={modalDefault}>
-    <div class="box">test</div>
-  </Modal>`}
+    code={`<script lang="ts">
+  let modalDefault: boolean;
+<\u002Fscript>
+<Button
+  on:click={() => {
+    modalDefault = !modalDefault;
+  }}>Basic Modal</Button
+>
+<Modal bind:active={modalDefault}>
+  <div class="box">test</div>
+</Modal>`}
   />
 </figure>
 
@@ -118,47 +118,41 @@
 </Modal>
 <figure class="highlight">
   <HighlightSvelte
-    code={`<script>
-    let modal1;
-  <\u002Fscript>
-  <Button
-    on:click={() => {
-      modalCloseButton = !modalCloseButton;
-    }}>close="button"</Button
-  >
-  <Modal bind:active={modalCloseButton} close="button">
-    <div class="box">test</div>
-  </Modal>
-  
-  <Button
-    on:click={() => {
-      modalCloseKey = !modalCloseKey;
-    }}>close="key"</Button
-  >
-  <Modal bind:active={modalCloseKey} close="key">
-    <div class="box">close="key"</div>
-  </Modal>
-  
-  <Button
-    on:click={() => {
-      modalCloseUser = !modalCloseUser;
-    }}>close="user"</Button
-  >
-  <Modal
-    bind:active={modalCloseUser}
-    bind:this={modalUserComponents}
-    close="user"
-  >
-    <div class="box">
-      close="user"
-      <Button
-        class="modal-close-user"
-        on:click={() => {
-          modalUserComponents.closeModal();
-        }}>close</Button
-      >
-    </div>
-  </Modal>`}
+    code={`<script lang="ts">
+  let modalCloseButton: boolean;
+  let modalCloseKey: boolean;
+  let modalCloseUser: boolean;
+  let closeModal: (() => void) | undefined;
+<\u002Fscript>
+<Button
+  on:click={() => {
+    modalCloseButton = !modalCloseButton;
+  }}>close="button"</Button
+>
+<Modal bind:active={modalCloseButton} close="button">
+  <div class="box">test</div>
+</Modal>
+
+<Button
+  on:click={() => {
+    modalCloseKey = !modalCloseKey;
+  }}>close="key"</Button
+>
+<Modal bind:active={modalCloseKey} close="key">
+  <div class="box">close="key"</div>
+</Modal>
+
+<Button
+  on:click={() => {
+    modalCloseUser = !modalCloseUser;
+  }}>close="user"</Button
+>
+<Modal bind:active={modalCloseUser} bind:closeModal close="user">
+  <div class="box">
+    <p>close="user"</p>
+    <Button class="modal-close-user" on:click={closeModal}>close</Button>
+  </div>
+</Modal>`}
   />
 </figure>
 

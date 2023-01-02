@@ -1,6 +1,7 @@
 <script lang="ts">
   import Select from '$components/atoms/Select.svelte';
-  import { HighlightSvelte } from 'svelte-highlight';
+  import { HighlightSvelte, Highlight } from 'svelte-highlight';
+  import html from 'svelte-highlight/languages/vbscript-html';
   import highlightStyle from 'svelte-highlight/styles/vs2015';
   import { pageTitle, pagePath } from '$store/layout/PageTitle';
   pageTitle.set('Select');
@@ -23,7 +24,8 @@
   <option value="2">Jeju</option>
 </Select>
 <figure class="highlight">
-  <HighlightSvelte
+  <Highlight
+    language={html}
     code={`<Select>
     <option value="1">Seoul</option>
     <option value="2">Jeju</option>
@@ -52,7 +54,8 @@
 </Select>
 
 <figure class="highlight">
-  <HighlightSvelte
+  <Highlight
+    language={html}
     code={`<Select class="is-primary">
   <option value="1">primary</option>
 </Select>
@@ -86,7 +89,8 @@
   <option value="2">Jeju</option>
 </Select>
 <figure class="highlight">
-  <HighlightSvelte
+  <Highlight
+    language={html}
     code={`<Select>
   <option value="1">Seoul</option>
   <option value="2">Jeju</option>

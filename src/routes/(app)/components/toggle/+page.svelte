@@ -1,6 +1,7 @@
 <script lang="ts">
   import Toggle from '$components/atoms/Toggle.svelte';
-  import { HighlightSvelte } from 'svelte-highlight';
+  import { HighlightSvelte, Highlight } from 'svelte-highlight';
+  import html from 'svelte-highlight/languages/vbscript-html';
   import highlightStyle from 'svelte-highlight/styles/vs2015';
   import { pageTitle, pagePath } from '$store/layout/PageTitle';
   pageTitle.set('Toggle');
@@ -18,7 +19,8 @@
 <Toggle>Toggle</Toggle>
 <Toggle checked>Toggle</Toggle>
 <figure class="highlight">
-  <HighlightSvelte
+  <Highlight
+    language={html}
     code={`<Toggle>Toggle</Toggle>
 <Toggle checked>Toggle</Toggle>`}
   />
@@ -32,8 +34,9 @@
 <Toggle style="is-success" checked>Toggle</Toggle>
 <Toggle style="is-warning" checked>Toggle</Toggle>
 <Toggle style="is-danger" checked>Toggle</Toggle>
-<figure class="highlight" checked>
-  <HighlightSvelte
+<figure class="highlight">
+  <Highlight
+    language={html}
     code={`<Toggle style="is-primary">Toggle</Toggle>
 <Toggle style="is-link">Toggle</Toggle>
 <Toggle style="is-info">Toggle</Toggle>
@@ -47,7 +50,8 @@
 <Toggle disabled>Toggle</Toggle>
 <Toggle disabled checked>Toggle</Toggle>
 <figure class="highlight">
-  <HighlightSvelte
+  <Highlight
+    language={html}
     code={`<Toggle disabled>Toggle</Toggle>
 <Toggle disabled checked>Toggle</Toggle>`}
   />

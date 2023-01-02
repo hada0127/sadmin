@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import Input from '$components/atoms/Input.svelte';
   import Button from '$components/atoms/Button.svelte';
   import Field from '$components/atoms/Field.svelte';

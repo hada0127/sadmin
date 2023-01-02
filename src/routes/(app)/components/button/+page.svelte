@@ -1,6 +1,7 @@
-<script>
+<script lang="ts">
   import Button from '$components/atoms/Button.svelte';
-  import { HighlightSvelte } from 'svelte-highlight';
+  import { Highlight } from 'svelte-highlight';
+  import html from 'svelte-highlight/languages/vbscript-html';
   import highlightStyle from 'svelte-highlight/styles/vs2015';
   import { pageTitle, pagePath } from '$store/layout/PageTitle';
   pageTitle.set('Button');
@@ -16,7 +17,7 @@
 <h2>Basic</h2>
 <Button>button</Button>
 <figure class="highlight">
-  <HighlightSvelte code={`<Button>button</Button>`} />
+  <Highlight language={html} code={`<Button>button</Button>`} />
 </figure>
 
 <h2>Type</h2>
@@ -24,7 +25,7 @@
 <Button class="is-primary" type="submit">submit</Button>
 <Button class="" type="reset">reset</Button>
 <figure class="highlight">
-  <HighlightSvelte code={`<Button>button</Button>`} />
+  <Highlight language={html} code={`<Button>button</Button>`} />
 </figure>
 
 <h2>Colors</h2>
@@ -35,7 +36,8 @@
 <Button class="is-text">text</Button>
 <Button class="is-ghost">ghost</Button>
 <figure class="highlight">
-  <HighlightSvelte
+  <Highlight
+    language={html}
     code={`<Button class="is-white">white</Button>
 <Button class="is-light">light</Button>
 <Button class="is-dark">dark</Button>
@@ -54,7 +56,8 @@
   <Button class="is-danger">danger</Button>
 </div>
 <figure class="highlight">
-  <HighlightSvelte
+  <Highlight
+    language={html}
     code={`<Button class="is-primary">primary</Button>
 <Button class="is-link">link</Button>
 <Button class="is-info">info</Button>
@@ -76,7 +79,8 @@
   <Button class="is-danger is-outlined">danger</Button>
 </div>
 <figure class="highlight">
-  <HighlightSvelte
+  <Highlight
+    language={html}
     code={`<Button class="is-primary is-outlined">primary</Button>
 <Button class="is-link is-outlined">link</Button>
 <Button class="is-info is-outlined">info</Button>
@@ -95,7 +99,8 @@
   <Button class="is-danger is-inverted">danger</Button>
 </div>
 <figure class="highlight">
-  <HighlightSvelte
+  <Highlight
+    language={html}
     code={`<Button class="is-primary is-inverted">primary</Button>
 <Button class="is-link is-inverted">link</Button>
 <Button class="is-info is-inverted">info</Button>
@@ -132,7 +137,8 @@
   }}>disabled</Button
 >
 <figure class="highlight">
-  <HighlightSvelte
+  <Highlight
+    language={html}
     code={`<Button class="is-primary" on:click={() => { alert("click!");}}>static</Button>
 <Button class="is-primary is-static' on:click={() => { alert("click!");}}>static</Button>
 <Button class="is-primary is-loading' on:click={() => { alert("click!");}}>loading</Button>
@@ -152,7 +158,8 @@
 <Button class="is-success" iconLeft="fas fa-check">button</Button>
 <Button class="is-danger is-outlined" iconRight="fas fa-times">button</Button>
 <figure class="highlight">
-  <HighlightSvelte
+  <Highlight
+    language={html}
     code={`<Button class="is-primary" iconLeft="fab fa-github">button</Button>
 <Button class="is-success" iconLeft="fas fa-check">button</Button>
 <Button class="is-danger is-outlined" iconRight="fas fa-times">button</Button>`}

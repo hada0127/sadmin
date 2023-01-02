@@ -1,6 +1,7 @@
 <script>
   import Field from '$components/atoms/Field.svelte';
-  import { HighlightSvelte } from 'svelte-highlight';
+  import { Highlight } from 'svelte-highlight';
+  import html from 'svelte-highlight/languages/vbscript-html';
   import highlightStyle from 'svelte-highlight/styles/vs2015';
   import { pageTitle, pagePath } from '$store/layout/PageTitle';
   pageTitle.set('Checkbox & Radio');
@@ -27,14 +28,15 @@
     I agree to the <a href="#">terms and conditions</a>
   </label>
 </Field>
-<Field label="Remember me" class="checkbox" disabled>
-  <label>
+<Field label="Remember me" class="checkbox">
+  <label class="disabled">
     <input type="checkbox" disabled />
     Remember me
   </label>
 </Field>
 <figure class="highlight">
-  <HighlightSvelte
+  <Highlight
+    language={html}
     code={`<Field class="checkbox">
   <label>
     <input type="checkbox" name="checkbox01" />
@@ -47,8 +49,8 @@
     I agree to the <a href="#">terms and conditions</a>
   </label>
 </Field>
-<Field label="Remember me" class="checkbox" disabled>
-  <label>
+<Field label="Remember me" class="checkbox">
+  <label class="disabled">
     <input type="checkbox" disabled />
     Remember me
   </label>
@@ -66,13 +68,14 @@
     <input type="radio" name="rsvp" />
     Not going
   </label>
-  <label disabled>
+  <label class="disabled">
     <input type="radio" name="rsvp" disabled />
     Maybe
   </label>
 </Field>
 <figure class="highlight">
-  <HighlightSvelte
+  <Highlight
+    language={html}
     code={`<Field label="Control" class="radio">
   <label>
     <input type="radio" name="rsvp" />
@@ -82,7 +85,7 @@
     <input type="radio" name="rsvp" />
     Not going
   </label>
-  <label disabled>
+  <label class="disabled">
     <input type="radio" name="rsvp" disabled />
     Maybe
   </label>

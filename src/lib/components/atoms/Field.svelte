@@ -46,7 +46,7 @@
         margin-right: 10px;
         cursor: pointer;
       }
-      :global(label[disabled]) {
+      :global(label.disabled) {
         cursor: not-allowed;
       }
     }

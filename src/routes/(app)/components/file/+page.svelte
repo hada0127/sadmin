@@ -1,6 +1,7 @@
 <script>
   import File from '$components/atoms/File.svelte';
-  import { HighlightSvelte } from 'svelte-highlight';
+  import { Highlight } from 'svelte-highlight';
+  import html from 'svelte-highlight/languages/vbscript-html';
   import highlightStyle from 'svelte-highlight/styles/vs2015';
   import { pageTitle, pagePath } from '$store/layout/PageTitle';
   pageTitle.set('File');
@@ -17,7 +18,8 @@
 <File id="thumnail" name="thumnail" />
 <File name="thumnail" multiple />
 <figure class="highlight">
-  <HighlightSvelte
+  <Highlight
+    language={html}
     code={`<File id="thumnail" name="thumnail" />
 <File name="thumnail" multiple />`}
   />
@@ -35,7 +37,8 @@
   <File name="thumnail" class="is-danger" />
 </div>
 <figure class="highlight">
-  <HighlightSvelte
+  <Highlight
+    language={html}
     code={`<File name="thumnail" class="is-primary" />
 <File name="thumnail" class="is-link" />
 <File name="thumnail" class="is-info" />
@@ -49,7 +52,8 @@
 <File name="thumnail" class="is-boxed is-primary" />
 <File name="thumnail" class="is-boxed is-warning" icon="fas fa-cloud-upload-alt" />
 <figure class="highlight">
-  <HighlightSvelte
+  <Highlight
+    language={html}
     code={`<File name="thumnail" class="is-boxed is-primary" />
 <File
   name="thumnail"
@@ -62,7 +66,8 @@
 <h2>Accept</h2>
 <File name="thumnail" accept=".jpg, .jpeg, .gif, .png" />
 <figure class="highlight">
-  <HighlightSvelte
+  <Highlight
+    language={html}
     code={`<File name="thumnail" class="is-primary" accept=".jpg, .jpeg, .gif, .png" />`}
   />
 </figure>

@@ -43,10 +43,10 @@
 <figure class="highlight">
   <HighlightSvelte
     code={`<script>
-    let txt;
-  </script>
-  <Editor bind:value={txt} placeholder="Description" />
-  <EditorView bind:value={txt} />`}
+  let txt;
+</script>
+<Editor bind:value={txt} placeholder="Description" />
+<EditorView bind:value={txt} />`}
   />
 </figure>
 
@@ -65,18 +65,18 @@
 <figure class="highlight">
   <HighlightSvelte
     code={`<script>
-      let txt2;
-    </script>
-    <div class="columns">
-    <div class="column">
-      <Editor bind:value={txt2} height="300" />
+  let txt2;
+<\u002Fscript>
+<div class="columns">
+  <div class="column">
+    <Editor bind:value={txt2} height="300" />
+  </div>
+  <div class="column">
+    <div style="border:1px solid #EEE;border-radius:4px;padding:5px;">
+      <EditorView bind:value={txt2} width="100%" height="300" />
     </div>
-    <div class="column">
-      <div style="border:1px solid #EEE;border-radius:4px;padding:5px;">
-        <EditorView bind:value={txt2} width="100%" height="300" />
-      </div>
-    </div>
-  </div>`}
+  </div>
+</div>`}
   />
 </figure>
 
@@ -95,44 +95,43 @@
 <figure class="highlight">
   <HighlightSvelte
     code={`<script>
-    let toolbar = [
-      [
-        "undo",
-        "redo",
-        "font",
-        "fontSize",
-        "formatBlock",
-        "paragraphStyle",
-        "blockquote",
-      ],
-      [
-        "bold",
-        "underline",
-        "italic",
-        "strike",
-        "subscript",
-        "superscript",
-        "fontColor",
-        "hiliteColor",
-        "textStyle",
-        "removeFormat",
-      ],
-      ["outdent", "indent", "align", "horizontalRule", "list", "lineHeight"],
-      ["table", "link", "image", "video", "audio", "imageGallery"],
-      [
-        "fullScreen",
-        "showBlocks",
-        "codeView",
-        "preview",
-        "print",
-        "save",
-        "template",
-      ],
-    ];
-  </script>
-  <Editor bind:value={txt3} {toolbar} />
-  <EditorView bind:value={txt3} />
-  `}
+  let toolbar = [
+    [
+      "undo",
+      "redo",
+      "font",
+      "fontSize",
+      "formatBlock",
+      "paragraphStyle",
+      "blockquote",
+    ],
+    [
+      "bold",
+      "underline",
+      "italic",
+      "strike",
+      "subscript",
+      "superscript",
+      "fontColor",
+      "hiliteColor",
+      "textStyle",
+      "removeFormat",
+    ],
+    ["outdent", "indent", "align", "horizontalRule", "list", "lineHeight"],
+    ["table", "link", "image", "video", "audio", "imageGallery"],
+    [
+      "fullScreen",
+      "showBlocks",
+      "codeView",
+      "preview",
+      "print",
+      "save",
+      "template",
+    ],
+  ];
+<\u002Fscript>
+<Editor bind:value={txt3} {toolbar} />
+<EditorView bind:value={txt3} />`}
   />
 </figure>
 

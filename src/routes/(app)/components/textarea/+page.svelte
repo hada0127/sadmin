@@ -1,6 +1,7 @@
 <script lang="ts">
   import Textarea from '$components/atoms/Textarea.svelte';
-  import { HighlightSvelte } from 'svelte-highlight';
+  import { HighlightSvelte, Highlight } from 'svelte-highlight';
+  import html from 'svelte-highlight/languages/vbscript-html';
   import highlightStyle from 'svelte-highlight/styles/vs2015';
   import { pageTitle, pagePath } from '$store/layout/PageTitle';
   pageTitle.set('Textarea');
@@ -40,7 +41,8 @@
 <Textarea class="is-danger" />
 
 <figure class="highlight">
-  <HighlightSvelte
+  <Highlight
+    language={html}
     code={`<Textarea class="is-primary" />
 <Textarea class="is-link" />
 <Textarea class="is-info" />
@@ -56,10 +58,11 @@
 <Textarea value="disabled" disabled />
 
 <figure class="highlight">
-  <HighlightSvelte
-    code={`<Input class="is-primary is-static" value="is-static" readonly />
-<Input class="is-primary" value="readonly" readonly />
-<Input value="disabled" disabled />`}
+  <Highlight
+    language={html}
+    code={`<Textarea class="is-static" value="is-static" readonly />
+<Textarea class="is-primary" value="readonly" readonly />
+<Textarea value="disabled" disabled />`}
   />
 </figure>
 
@@ -76,7 +79,8 @@
   memo="Please enter characters between 100 and 300 digits."
 />
 <figure class="highlight">
-  <HighlightSvelte
+  <Highlight
+    language={html}
     code={`<Textarea
   placeholder="Password"
   iconLeft="fas fa-lock"

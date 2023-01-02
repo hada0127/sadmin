@@ -3,12 +3,7 @@
   import flatpickr from 'flatpickr';
   import 'flatpickr/dist/flatpickr.min.css';
   import { v4 as uuidv4 } from 'uuid';
-  import type {
-    DateOption,
-    DateRangeLimit,
-    DateLimit,
-    ParsedOptions
-  } from 'flatpickr/dist/types/options';
+  import type { DateOption, DateLimit } from 'flatpickr/dist/types/options';
 
   export let inheritsClass: string | null = $$props.class ? $$props.class : '';
   export let id = '';
@@ -17,25 +12,31 @@
   export let placeholder = '';
   export let readonly: boolean | null = null;
   export let disabled: boolean | null = null;
-  export let minDate = '';
-  export let maxDate = '';
-  export let disable: DateLimit<Date>[];
-  export let enable: DateLimit<Date>[];
-  export let mode: 'single' | 'multiple' | 'range' | 'time';
-  export let defaultDate: Date | Date[] | undefined;
+  export let minDate: DateOption = '';
+  export let maxDate: DateOption = '';
+  export let disable: DateLimit<DateOption>[] = [];
+  let enableInit = [
+    {
+      from: '1970-01-01',
+      to: '9999-12-31'
+    }
+  ];
+  export let enable: DateLimit<DateOption>[] = enableInit;
+  export let mode: 'single' | 'multiple' | 'range' | 'time' = 'single';
+  let defaultDate: DateOption | DateOption[] = '';
 
   const dateID = `f` + uuidv4();
 
   onMount(() => {
     const options = {
-      dateFormat: 'Y-m-d'
+      dateFormat: 'Y-m-d',
+      minDate: minDate && minDate,
+      maxDate: maxDate && maxDate,
+      disable: disable && disable,
+      defaultDate: defaultDate && defaultDate,
+      mode: mode
     };
-    if (minDate.length > 0) options.minDate = new Date(minDate);
-    if (maxDate.length > 0) options.maxDate = new Date(maxDate);
-    if (disable) options.disable = disable;
-    if (enable) options.enable = enable;
-    if (defaultDate) options.defaultDate = defaultDate;
-    if (mode) options.mode = mode;
+    if (enable !== enableInit) options.enable = enable;
     flatpickr(`.${dateID}`, options);
   });
 </script>

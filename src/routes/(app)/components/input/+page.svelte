@@ -1,6 +1,7 @@
 <script lang="ts">
   import Input from '$components/atoms/Input.svelte';
-  import { HighlightSvelte } from 'svelte-highlight';
+  import { HighlightSvelte, Highlight } from 'svelte-highlight';
+  import html from 'svelte-highlight/languages/vbscript-html';
   import highlightStyle from 'svelte-highlight/styles/vs2015';
   import { pageTitle, pagePath } from '$store/layout/PageTitle';
   pageTitle.set('Input');
@@ -28,7 +29,8 @@
 <Input type="email" placeholder="email" />
 <Input type="tel" placeholder="tel" />
 <figure class="highlight">
-  <HighlightSvelte
+  <Highlight
+    language={html}
     code={`<Input placeholder="name" />
 <Input type="password" placeholder="password" />
 <Input type="number" placeholder="number" />
@@ -46,7 +48,8 @@
 <Input class="is-danger" />
 
 <figure class="highlight">
-  <HighlightSvelte
+  <Highlight
+    language={html}
     code={`<Input class="is-primary" />
 <Input class="is-link" />
 <Input class="is-info" />
@@ -62,7 +65,8 @@
 <Input value="disabled" disabled />
 
 <figure class="highlight">
-  <HighlightSvelte
+  <Highlight
+    language={html}
     code={`<Input class="is-primary is-static" value="is-static" readonly />
 <Input class="is-primary" value="readonly" readonly />
 <Input value="disabled" disabled />`}
@@ -81,7 +85,8 @@
 <Input type="password" placeholder="Password" iconLeft="fas fa-lock" />
 
 <figure class="highlight">
-  <HighlightSvelte
+  <Highlight
+    language={html}
     code={`<Input placeholder="Email" iconLeft="fas fa-envelope" iconRight="fas fa-check" />
 <Input type="password" placeholder="Password" iconLeft="fas fa-lock" />`}
   />
@@ -102,7 +107,8 @@
   memo="Please enter characters between 8 and 30 digits."
 />
 <figure class="highlight">
-  <HighlightSvelte
+  <Highlight
+    language={html}
     code={`<Input type="password" placeholder="Password" iconLeft="fas fa-lock" memo="Please enter characters between 8 and 30 digits." />
 <Input type="password" class="is-danger" placeholder="Password" iconLeft="fas fa-lock" memo="Please enter characters between 8 and 30 digits." />`}
   />

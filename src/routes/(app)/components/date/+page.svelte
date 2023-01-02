@@ -1,6 +1,7 @@
-<script>
+<script lang="ts">
   import Date from '$components/atoms/Date.svelte';
-  import { HighlightSvelte } from 'svelte-highlight';
+  import { HighlightSvelte, Highlight } from 'svelte-highlight';
+  import html from 'svelte-highlight/languages/vbscript-html';
   import highlightStyle from 'svelte-highlight/styles/vs2015';
   import dayjs from 'dayjs';
   import { pageTitle, pagePath } from '$store/layout/PageTitle';
@@ -27,10 +28,10 @@
   <HighlightSvelte
     code={`<script>
     let today = dayjs().format("YYYY-MM-DD");
-  <\u002Fscript>
-  <Date bind:value={today} />
-  <Date bind:value={today} readonly />
-  <Date bind:value={today} disabled />
+<\u002Fscript>
+<Date bind:value={today} />
+<Date bind:value={today} readonly />
+<Date bind:value={today} disabled />
   `}
   />
 </figure>
@@ -43,13 +44,14 @@
 <Date bind:value={today} class="is-warning" />
 <Date bind:value={today} class="is-danger" />
 <figure class="highlight">
-  <HighlightSvelte
+  <Highlight
+    language={html}
     code={`<Date bind:value={today} class="is-primary" />
-  <Date bind:value={today} class="is-link" />
-  <Date bind:value={today} class="is-info" />
-  <Date bind:value={today} class="is-success" />
-  <Date bind:value={today} class="is-warning" />
-  <Date bind:value={today} class="is-danger" />`}
+<Date bind:value={today} class="is-link" />
+<Date bind:value={today} class="is-info" />
+<Date bind:value={today} class="is-success" />
+<Date bind:value={today} class="is-warning" />
+<Date bind:value={today} class="is-danger" />`}
   />
 </figure>
 
@@ -59,13 +61,13 @@
 <figure class="highlight">
   <HighlightSvelte
     code={`<script>
-    let today = dayjs().format("YYYY-MM-DD");
-    let minDate = dayjs().subtract(10, "day").format("YYYY-MM-DD");
-    let maxDate = dayjs().add(10, "day").format("YYYY-MM-DD");
-  <\u002Fscript>
-  <Date bind:value={today} minDate="today" />
-  <Date bind:value={today} minDate={minDate} maxDate={maxDate} />
-  `}
+  let today = dayjs().format("YYYY-MM-DD");
+  let minDate = dayjs().subtract(10, "day").format("YYYY-MM-DD");
+  let maxDate = dayjs().add(10, "day").format("YYYY-MM-DD");
+<\u002Fscript>
+<Date bind:value={today} minDate="today" />
+<Date bind:value={today} minDate={minDate} maxDate={maxDate} />
+`}
   />
 </figure>
 
@@ -90,40 +92,39 @@
 <Date
   value={today}
   disable={[
-    function (/** @type {{ getDay: () => number; }} */ date) {
-      // return true to disable
+    function (date) {
       return date.getDay() === 0 || date.getDay() === 6;
     }
   ]}
 />
 <figure class="highlight">
-  <HighlightSvelte
+  <Highlight
+    language={html}
     code={`<Date
-    value={dayjs("2025-02-10").format("YYYY-MM-DD")}
-    disable={["2025-02-01", "2025-02-21", "2025-02-22"]}
-  />
-  <Date
-    value={dayjs("2025-06-10").format("YYYY-MM-DD")}
-    disable={[
-      {
-        from: "2025-04-01",
-        to: "2025-05-01",
-      },
-      {
-        from: "2025-09-01",
-        to: "2025-12-01",
-      },
-    ]}
-  />
-  <Date
-    value={today}
-    disable={[
-      function (date) {
-        // return true to disable
-        return date.getDay() === 0 || date.getDay() === 6;
-      },
-    ]}
-  />`}
+  value={dayjs("2025-02-10").format("YYYY-MM-DD")}
+  disable={["2025-02-01", "2025-02-21", "2025-02-22"]}
+/>
+<Date
+  value={dayjs("2025-06-10").format("YYYY-MM-DD")}
+  disable={[
+    {
+      from: "2025-04-01",
+      to: "2025-05-01",
+    },
+    {
+      from: "2025-09-01",
+      to: "2025-12-01",
+    },
+  ]}
+/>
+<Date
+  value={today}
+  disable={[
+    function (date) {
+      return date.getDay() === 0 || date.getDay() === 6;
+    },
+  ]}
+/>`}
   />
 </figure>
 
@@ -148,38 +149,39 @@
 <Date
   value={today}
   enable={[
-    function (/** @type {{ getMonth: () => number; getDate: () => number; }} */ date) {
+    function (date) {
       return date.getMonth() % 2 === 0 && date.getDate() < 15;
     }
   ]}
 />
 <figure class="highlight">
-  <HighlightSvelte
+  <Highlight
+    language={html}
     code={`<Date
-    value={dayjs("2025-02-01").format("YYYY-MM-DD")}
-    enable={["2025-02-01", "2025-02-21", "2025-02-22"]}
-  />
-  <Date
-    value={dayjs("2025-04-10").format("YYYY-MM-DD")}
-    enable={[
-      {
-        from: "2025-04-01",
-        to: "2025-05-01",
-      },
-      {
-        from: "2025-09-01",
-        to: "2025-12-01",
-      },
-    ]}
-  />
-  <Date
-    value={today}
-    enable={[
-      function (date) {
-        return date.getMonth() % 2 === 0 && date.getDate() < 15;
-      },
-    ]}
-  />`}
+  value={dayjs("2025-02-01").format("YYYY-MM-DD")}
+  enable={["2025-02-01", "2025-02-21", "2025-02-22"]}
+/>
+<Date
+  value={dayjs("2025-04-10").format("YYYY-MM-DD")}
+  enable={[
+    {
+      from: "2025-04-01",
+      to: "2025-05-01",
+    },
+    {
+      from: "2025-09-01",
+      to: "2025-12-01",
+    },
+  ]}
+/>
+<Date
+  value={today}
+  enable={[
+    function (date) {
+      return date.getMonth() % 2 === 0 && date.getDate() < 15;
+    },
+  ]}
+/>`}
   />
 </figure>
 
@@ -189,13 +191,14 @@
   <Date mode="multiple" class="is-fullwidth" defaultDate={['2016-10-20', '2016-11-04']} />
 </div>
 <figure class="highlight">
-  <HighlightSvelte
+  <Highlight
+    language={html}
     code={`<Date multiple class="is-fullwidth" />
-  <Date
-    multiple
-    class="is-fullwidth"
-    defaultDate={["2016-10-20", "2016-11-04"]}
-  />`}
+<Date
+  multiple
+  class="is-fullwidth"
+  defaultDate={["2016-10-20", "2016-11-04"]}
+/>`}
   />
 </figure>
 
@@ -207,27 +210,26 @@
     class="is-fullwidth"
     minDate="today"
     disable={[
-      function (/** @type {{ getDate: () => number; }} */ date) {
-        // disable every multiple of 8
+      function (date) {
         return !(date.getDate() % 8);
       }
     ]}
   />
 </div>
 <figure class="highlight">
-  <HighlightSvelte
+  <Highlight
+    language={html}
     code={`<Date mode="range" class="is-fullwidth" />
-  <Date
-    mode="range"
-    class="is-fullwidth"
-    minDate="today"
-    disable={[
-      function (date) {
-        // disable every multiple of 8
-        return !(date.getDate() % 8);
-      },
-    ]}
-  />`}
+<Date
+  mode="range"
+  class="is-fullwidth"
+  minDate="today"
+  disable={[
+    function (date) {
+      return !(date.getDate() % 8);
+    },
+  ]}
+/>`}
   />
 </figure>
 

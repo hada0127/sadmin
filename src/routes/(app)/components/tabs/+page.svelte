@@ -1,6 +1,7 @@
 <script>
   import { pageTitle, pagePath } from '$store/layout/PageTitle';
-  import { HighlightSvelte } from 'svelte-highlight';
+  import { Highlight } from 'svelte-highlight';
+  import html from 'svelte-highlight/languages/vbscript-html';
   import highlightStyle from 'svelte-highlight/styles/vs2015';
   import Tabs from '$components/atoms/Tabs.svelte';
   pageTitle.set('Tabs');
@@ -19,7 +20,8 @@
   <div>tab3</div>
 </Tabs>
 <figure class="highlight">
-  <HighlightSvelte
+  <Highlight
+    language={html}
     code={`<Tabs tabs={['Basic Info', 'Extend', 'Log']}>
   <div>tab1</div>
   <div>tab2</div>
@@ -34,7 +36,8 @@
   <div>tab3</div>
 </Tabs>
 <figure class="highlight">
-  <HighlightSvelte
+  <Highlight
+    language={html}
     code={`<Tabs tabs={['Basic Info', 'Extend', 'Log']} class="is-boxed">
   <div>tab1</div>
   <div>tab2</div>
