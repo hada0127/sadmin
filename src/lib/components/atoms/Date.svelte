@@ -34,6 +34,7 @@
       maxDate: maxDate && maxDate,
       disable: disable && disable,
       defaultDate: defaultDate && defaultDate,
+      enable,
       mode: mode
     };
     if (enable !== enableInit) options.enable = enable;
