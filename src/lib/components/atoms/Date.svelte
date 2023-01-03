@@ -14,7 +14,8 @@
   export let disabled: boolean | null = null;
   export let minDate: DateOption = '';
   export let maxDate: DateOption = '';
-  export let disable: DateLimit<DateOption>[] = [];
+  let disableInit = ['9999-12-31'] as DateLimit<DateOption>[];
+  export let disable: DateLimit<DateOption>[] = disableInit;
   let enableInit = [
     {
       from: '1970-01-01',
@@ -23,21 +24,20 @@
   ];
   export let enable: DateLimit<DateOption>[] = enableInit;
   export let mode: 'single' | 'multiple' | 'range' | 'time' = 'single';
-  let defaultDate: DateOption | DateOption[] = '';
 
   const dateID = `f` + uuidv4();
 
   onMount(() => {
-    const options = {
+    let options = {
       dateFormat: 'Y-m-d',
       minDate: minDate && minDate,
       maxDate: maxDate && maxDate,
-      disable: disable && disable,
-      defaultDate: defaultDate && defaultDate,
+      disable,
       enable,
       mode: mode
     };
-    if (enable !== enableInit) options.enable = enable;
+    /* eslint-disable @typescript-eslint/no-explicit-any */
+    if (disable !== disableInit) delete (options as any).enable;
     flatpickr(`.${dateID}`, options);
   });
 </script>

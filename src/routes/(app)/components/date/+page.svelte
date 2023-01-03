@@ -26,13 +26,12 @@
 <p>Selected date : {today}</p>
 <figure class="highlight">
   <HighlightSvelte
-    code={`<script>
+    code={`<script lang="ts">
     let today = dayjs().format("YYYY-MM-DD");
 <\u002Fscript>
 <Date bind:value={today} />
 <Date bind:value={today} readonly />
-<Date bind:value={today} disabled />
-  `}
+<Date bind:value={today} disabled />`}
   />
 </figure>
 
@@ -60,7 +59,7 @@
 <Date bind:value={today} {minDate} {maxDate} />
 <figure class="highlight">
   <HighlightSvelte
-    code={`<script>
+    code={`<script lang="ts">
   let today = dayjs().format("YYYY-MM-DD");
   let minDate = dayjs().subtract(10, "day").format("YYYY-MM-DD");
   let maxDate = dayjs().add(10, "day").format("YYYY-MM-DD");
@@ -188,7 +187,7 @@
 <h2>Multiple dates</h2>
 <Date mode="multiple" class="is-fullwidth" />
 <div class="mt-2">
-  <Date mode="multiple" class="is-fullwidth" defaultDate={['2016-10-20', '2016-11-04']} />
+  <Date mode="multiple" class="is-fullwidth" value="2016-10-20, 2016-11-04" />
 </div>
 <figure class="highlight">
   <Highlight
@@ -197,7 +196,7 @@
 <Date
   multiple
   class="is-fullwidth"
-  defaultDate={["2016-10-20", "2016-11-04"]}
+  value="2016-10-20, 2016-11-04"
 />`}
   />
 </figure>

@@ -62,7 +62,7 @@
 <p>{toggleChecked}</p>
 <figure class="highlight">
   <HighlightSvelte
-    code={`<script>
+    code={`<script lang="ts">
   let toggleChecked = true;
 <\u002Fscript>
 <Toggle bind:checked={toggleChecked}>Toggle</Toggle>

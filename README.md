@@ -22,8 +22,6 @@ server {
   }
 }  
 ```
-## Version History
-1.0.0 First Release
 
 ## License
 MIT License.

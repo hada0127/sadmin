@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import File from '$components/atoms/File.svelte';
   import { Highlight } from 'svelte-highlight';
   import html from 'svelte-highlight/languages/vbscript-html';

@@ -42,7 +42,7 @@
 
 <figure class="highlight">
   <HighlightSvelte
-    code={`<script>
+    code={`<script lang="ts">
   let txt;
 </script>
 <Editor bind:value={txt} placeholder="Description" />
@@ -64,7 +64,7 @@
 </div>
 <figure class="highlight">
   <HighlightSvelte
-    code={`<script>
+    code={`<script lang="ts">
   let txt2;
 <\u002Fscript>
 <div class="columns">
@@ -94,7 +94,7 @@
 </div>
 <figure class="highlight">
   <HighlightSvelte
-    code={`<script>
+    code={`<script lang="ts">
   let toolbar = [
     [
       "undo",

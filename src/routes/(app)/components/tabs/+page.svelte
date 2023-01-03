@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { pageTitle, pagePath } from '$store/layout/PageTitle';
   import { Highlight } from 'svelte-highlight';
   import html from 'svelte-highlight/languages/vbscript-html';

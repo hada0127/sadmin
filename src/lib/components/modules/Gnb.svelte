@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import Button from '$components/atoms/Button.svelte';
 </script>
 
@@ -19,12 +19,10 @@
         <Button
           iconLeft="fas fa-cog"
           on:click={() => {
-            location.href = "/setting";
+            location.href = '/setting';
           }}>Setting</Button
         >
-        <Button class="is-primary" iconLeft="fas fa-sign-out-alt"
-          >Sign Out</Button
-        >
+        <Button class="is-primary" iconLeft="fas fa-sign-out-alt">Sign Out</Button>
       </div>
     </div>
   </div>

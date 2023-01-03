@@ -106,7 +106,7 @@
 <p>Selected value : {bindSelectBasic}</p>
 <figure class="highlight">
   <HighlightSvelte
-    code={`<script>
+    code={`<script lang="ts">
   let bindSelect = "1";
 <\u002Fscript>
 <Select bind:value={bindSelect}>
@@ -125,7 +125,7 @@
 <p>Selected value : {bindSelectPlaceholder}</p>
 <figure class="highlight">
   <HighlightSvelte
-    code={`<script>
+    code={`<script lang="ts">
   let bindSelect;
 <\u002Fscript>
 <Select bind:value={bindSelect} placeholder="Select City">
@@ -144,7 +144,7 @@
 <p>Selected value : {bindSelectDisabled}</p>
 <figure class="highlight">
   <HighlightSvelte
-    code={`<script>
+    code={`<script lang="ts">
   let bindSelect = "2";
 <\u002Fscript>
 <Select bind:value={bindSelect} disabled>
@@ -173,7 +173,7 @@
 <p>Selected value : {bindSelectMultie}</p>
 <figure class="highlight">
   <HighlightSvelte
-    code={`<script>
+    code={`<script lang="ts">
   let bindSelect;
 <\u002Fscript>
 <Select bind:value={bindSelect} multiple size="5">

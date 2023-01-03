@@ -23,7 +23,7 @@
 <p>Input Text : {text}</p>
 <figure class="highlight">
   <HighlightSvelte
-    code={`<script>
+    code={`<script lang="ts">
   let text;
 <\u002Fscript>
 <Textarea bind:value={text} placeholder="description" rows="5" />
@@ -110,7 +110,7 @@
 <p>Review Check Result : {reviewCheckResult}</p>
 <figure class="highlight">
   <HighlightSvelte
-    code={`<script>
+    code={`<script lang="ts">
   let reviewCheckResult = false;
   const reviewRegex = /^.{100,300}$/;
 <\u002Fscript>

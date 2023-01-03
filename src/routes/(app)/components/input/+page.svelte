@@ -128,7 +128,7 @@
 <p>Password Check Result : {passwordCheckResult}</p>
 <figure class="highlight">
   <HighlightSvelte
-    code={`<script>
+    code={`<script lang="ts">
   const passwordRegex = new RegExp(/^.{8,30}$/);
 <\u002Fscript>
 <Input
@@ -155,7 +155,7 @@
 </div>
 <figure class="highlight">
   <HighlightSvelte
-    code={`<script>
+    code={`<script lang="ts">
   const emailRegex = new RegExp(
     /([\\w-.]+)@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.)|(([\\w-]+\\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\\]?)$/
   );
@@ -182,7 +182,7 @@
 </div>
 <figure class="highlight">
   <HighlightSvelte
-    code={`<script>
+    code={`<script lang="ts">
   const idRegex = new RegExp(/^[a-zA-Z][0-9a-zA-Z]{3,20}$/);
 <\u002Fscript>
 <Input
@@ -206,7 +206,7 @@
 </div>
 <figure class="highlight">
   <HighlightSvelte
-    code={`<script>
+    code={`<script lang="ts">
   const telRegex = new RegExp(/\\d{3}-\\d{3,4}-\\d{4}/);
 <\u002Fscript>
 <Input

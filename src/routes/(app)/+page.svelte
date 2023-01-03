@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { HighlightAuto } from 'svelte-highlight';
   import highlightStyle from 'svelte-highlight/styles/vs2015';
   import { pageTitle, pagePath } from '$store/layout/PageTitle';
@@ -59,26 +59,6 @@
     rel="noreferrer">FA free Cheatsheet</a
   >
 </p>
-
-<h2>Version History</h2>
-<table class="table is-fullwidth  is-hoverable">
-  <colgroup>
-    <col width="100" />
-    <col width="*" />
-  </colgroup>
-  <thead>
-    <tr>
-      <th>Version</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>1.0.0</td>
-      <td>First Release</td>
-    </tr>
-  </tbody>
-</table>
 
 <h2>Open Source Usage List</h2>
 <table class="table is-fullwidth  is-hoverable">

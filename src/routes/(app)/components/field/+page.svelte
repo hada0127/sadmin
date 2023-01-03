@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import Field from '$components/atoms/Field.svelte';
   import Input from '$components/atoms/Input.svelte';
   import { Highlight } from 'svelte-highlight';
