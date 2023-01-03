@@ -1,5 +1,7 @@
 <script lang="ts">
-  import { HighlightAuto } from 'svelte-highlight';
+  import { Highlight } from 'svelte-highlight';
+  import shell from 'svelte-highlight/languages/shell';
+  import nginx from 'svelte-highlight/languages/nginx';
   import highlightStyle from 'svelte-highlight/styles/vs2015';
   import { pageTitle, pagePath } from '$store/layout/PageTitle';
   pageTitle.set('Guide');
@@ -18,11 +20,12 @@
 </p>
 <h2>Installation</h2>
 <figure class="highlight">
-  <HighlightAuto code={`npx degit hada0127/sadmin`} />
+  <Highlight language={shell} code={`npx degit hada0127/sadmin`} />
 </figure>
 <h2>Setting Nginx</h2>
 <figure class="highlight">
-  <HighlightAuto
+  <Highlight
+    language={nginx}
     code={`server {
   listen 80;
   root /usr/share/nginx/html;
