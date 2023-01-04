@@ -63,8 +63,5 @@
       font-weight: 700;
       padding-bottom: 20px;
     }
-    div.field {
-      height: 50px;
-    }
   }
 </style>
