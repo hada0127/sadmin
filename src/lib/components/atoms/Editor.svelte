@@ -109,7 +109,8 @@
   };
   let editorObj;
   onMount(async () => {
-    editorObj = suneditor.create(editorID, editorOptions);
+    /* eslint-disable @typescript-eslint/no-explicit-any */
+    editorObj = suneditor.create(editorID, editorOptions as any);
     editorObj.onChange = function (contents) {
       value = contents;
     };
