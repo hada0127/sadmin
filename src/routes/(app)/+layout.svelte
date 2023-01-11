@@ -29,6 +29,7 @@
   .container {
     position: relative;
     max-width: 100%;
+    display: flex !important;
     aside {
       display: block;
       position: relative;

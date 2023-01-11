@@ -14,7 +14,13 @@
   {@html highlightStyle}
 </svelte:head>
 
-<Tabs tabs={['Basic Info', 'Extend', 'Log']}>
+<h2>Basic</h2>
+<Tabs tabs={[{ name: 'Basic Info' }, { name: 'Extend' }, { name: 'Log' }]}>
+  <div>tab1</div>
+  <div>tab2</div>
+  <div>tab3</div>
+</Tabs>
+<Tabs tabs={[{ name: 'Basic Info' }, { name: 'Extend' }, { name: 'Log', checked: true }]}>
   <div>tab1</div>
   <div>tab2</div>
   <div>tab3</div>
@@ -22,7 +28,12 @@
 <figure class="highlight">
   <Highlight
     language={html}
-    code={`<Tabs tabs={['Basic Info', 'Extend', 'Log']}>
+    code={`<Tabs tabs={[{name:'Basic Info'}, {name:'Extend'}, {name:'Log'}]}>
+  <div>tab1</div>
+  <div>tab2</div>
+  <div>tab3</div>
+</Tabs>
+<Tabs tabs={[{ name: 'Basic Info' }, { name: 'Extend' }, { name: 'Log', checked: true }]}>
   <div>tab1</div>
   <div>tab2</div>
   <div>tab3</div>
@@ -30,7 +41,8 @@
   />
 </figure>
 
-<Tabs tabs={['Basic Info', 'Extend', 'Log']} class="is-boxed mt-5">
+<h2>Styles</h2>
+<Tabs tabs={[{ name: 'Basic Info' }, { name: 'Extend' }, { name: 'Log' }]} class="is-boxed mt-5">
   <div>tab1</div>
   <div>tab2</div>
   <div>tab3</div>
@@ -38,11 +50,34 @@
 <figure class="highlight">
   <Highlight
     language={html}
-    code={`<Tabs tabs={['Basic Info', 'Extend', 'Log']} class="is-boxed">
+    code={`<Tabs tabs={[{name:'Basic Info'}, {name:'Extend'}, {name:'Log'}]} class="is-boxed">
   <div>tab1</div>
   <div>tab2</div>
   <div>tab3</div>
 </Tabs>`}
+  />
+</figure>
+
+<h2>External Link</h2>
+<Tabs
+  tabs={[
+    { name: 'Basic Info', link: '#' },
+    { name: 'Extend', link: '#', checked: true },
+    { name: 'Log', link: '#' }
+  ]}
+  pageMove={true}
+/>
+<figure class="highlight">
+  <Highlight
+    language={html}
+    code={`<Tabs
+  tabs={[
+    { name: 'Basic Info', link: '#' },
+    { name: 'Extend', link: '#', checked: true },
+    { name: 'Log', link: '#' }
+  ]}
+  pageMove={true}
+/>`}
   />
 </figure>
 

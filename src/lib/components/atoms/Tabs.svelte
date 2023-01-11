@@ -1,12 +1,17 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import { v4 as uuidv4 } from 'uuid';
-  export let tabs: string[] = [];
+  interface Tab {
+    name: string;
+    checked?: boolean;
+    link?: string;
+  }
+  export let pageMove = false;
+  export let tabs: Tab[] = [];
   export let inheritsClass = $$props.class ? $$props.class : '';
 
   const tabID = `t` + uuidv4();
-  let nowTab: number;
-  $: nowTab = 0;
+  let nowTab = 0;
 
   const setTabs = (selectTab: number) => {
     nowTab = selectTab;
@@ -20,6 +25,12 @@
   };
   onMount(() => {
     setTabs(0);
+    tabs.forEach(function (tab, i) {
+      if (tab.checked === true) {
+        nowTab = i;
+        setTabs(nowTab);
+      }
+    });
   });
 </script>
 
@@ -31,15 +42,18 @@
           <!-- svelte-ignore a11y-missing-attribute -->
           <!-- svelte-ignore a11y-click-events-have-key-events -->
           <a
+            href={tab.link ? tab.link : undefined}
             on:click={() => {
               setTabs(i);
-            }}>{tab}</a
+            }}>{tab.name}</a
           >
         </li>
       {/each}
     </ul>
   </div>
-  <slot />
+  {#if pageMove === false}
+    <slot />
+  {/if}
 </div>
 
 <style lang="scss">
