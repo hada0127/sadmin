@@ -58,10 +58,10 @@
 
 <style lang="scss">
   .tabsgroup {
-    :global(div:not(.tabs):not(.is-visible)) {
+    > :global(div:not(.tabs):not(.is-visible)) {
       display: none;
     }
-    :global(.is-visible) {
+    > :global(.is-visible) {
       display: block;
     }
   }
