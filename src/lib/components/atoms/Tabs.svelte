@@ -15,7 +15,7 @@
 
   const setTabs = (selectTab: number) => {
     nowTab = selectTab;
-    document.querySelectorAll(`#${tabID} div:not(.tabs)`).forEach((el, i) => {
+    document.querySelectorAll(`#${tabID} > div:not(.tabs)`).forEach((el, i) => {
       if (i === selectTab) {
         el.classList.add('is-visible');
       } else {
