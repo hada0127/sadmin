@@ -1,7 +1,7 @@
 
 export const LnbData = [
     {
-      "url": "/components/label",
+      "url": "/components/field",
       "name": "Components",
       "submenu": [
         {
