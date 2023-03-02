@@ -22,23 +22,14 @@
 <figure class="highlight">
   <Highlight language={shell} code={`npx degit hada0127/sadmin`} />
 </figure>
-<h2>Setting Nginx</h2>
-<figure class="highlight">
-  <Highlight
-    language={nginx}
-    code={`server {
-  listen 80;
-  root /usr/share/nginx/html;
-  gzip on;
-  gzip_types text/css application/javascript application/json image/svg+xml;
-  gzip_comp_level 9;
-  etag on;
-  location / {
-    try_files $uri $uri/ /index.html;
-  }
-}`}
-  />
-</figure>
+<h2>Figma Plugin</h2>
+Use the FIGMA plugin to quickly draw screens, add descriptions, and export to svelte code.<br />
+[<a
+  href="https://www.figma.com/community/plugin/1210383539277701315/sadmin"
+  target="_blank"
+  rel="noreferrer">Get Figma Plugin</a
+>]<br />
+<img src="/favicon/cover.png" alt="logo" style="width:50%;" />
 
 <h2>Routing Manual</h2>
 <p>
