@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { onMount } from 'svelte';
+
   export let active = false;
   export let close = '';
   export const closeModal = () => {
@@ -16,12 +18,14 @@
       active = false;
     }
   };
-  document.addEventListener('keydown', (event) => {
-    const e = event || window.event;
-    if (e.key === 'Escape' && (!close || close === 'key')) {
-      // Escape key
-      active = false;
-    }
+  onMount(() => {
+    document.addEventListener('keydown', (event) => {
+      const e = event || window.event;
+      if (e.key === 'Escape' && (!close || close === 'key')) {
+        // Escape key
+        active = false;
+      }
+    });
   });
 </script>
 
