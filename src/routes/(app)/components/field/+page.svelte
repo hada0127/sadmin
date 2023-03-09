@@ -16,15 +16,25 @@
 </svelte:head>
 
 <h2>Basic</h2>
-<Field label="Title" required>
-  <Input placeholder="name" />
-</Field>
-<Field label="Title" memo="Guide text">
-  <Input placeholder="name" />
-</Field>
-<Field label="Title" memo="Field memo">
-  <Input placeholder="Field memo & Input memo duplicated" memo="Input memo" class="is-fullwidth" />
-</Field>
+<div>
+  <Field label="Title" required>
+    <Input placeholder="name" />
+  </Field>
+</div>
+<div>
+  <Field label="Title" memo="Guide text">
+    <Input placeholder="name" />
+  </Field>
+</div>
+<div>
+  <Field label="Title" memo="Field memo">
+    <Input
+      placeholder="Field memo & Input memo duplicated"
+      memo="Input memo"
+      class="is-fullwidth"
+    />
+  </Field>
+</div>
 <figure class="highlight">
   <Highlight
     language={html}

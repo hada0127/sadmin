@@ -22,10 +22,14 @@
 
 <style lang="scss">
   .field {
-    display: block;
+    display: inline-block;
+    vertical-align: middle;
     font-size: 12px;
     font-weight: 700;
     color: var(--font-base-color);
+    :not(:last-child) {
+      margin-right: 10px;
+    }
     div {
       min-height: 30px;
       line-height: 30px;

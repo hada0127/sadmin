@@ -15,19 +15,23 @@
 </svelte:head>
 
 <h2>Checkbox Basic</h2>
-<Field class="checkbox">
-  <label>
-    <input type="checkbox" name="checkbox01" />
-    Remember me
-  </label>
-</Field>
-<Field class="checkbox">
-  <label>
-    <input type="checkbox" />
-    <!-- svelte-ignore a11y-invalid-attribute -->
-    I agree to the <a href="#">terms and conditions</a>
-  </label>
-</Field>
+<div>
+  <Field class="checkbox">
+    <label>
+      <input type="checkbox" name="checkbox01" />
+      Remember me
+    </label>
+  </Field>
+</div>
+<div>
+  <Field class="checkbox">
+    <label>
+      <input type="checkbox" />
+      <!-- svelte-ignore a11y-invalid-attribute -->
+      I agree to the <a href="#">terms and conditions</a>
+    </label>
+  </Field>
+</div>
 <Field label="Remember me" class="checkbox">
   <label class="disabled">
     <input type="checkbox" disabled />
