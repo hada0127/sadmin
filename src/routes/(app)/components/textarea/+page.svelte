@@ -32,6 +32,15 @@
   />
 </figure>
 
+<h2>View</h2>
+<Textarea value="test Message" placeholder="description" rows={5} view={true} />
+<figure class="highlight">
+  <Highlight
+    language={html}
+    code={`<Textarea value="test Message" placeholder="description" rows={5} view={true} />`}
+  />
+</figure>
+
 <h2>Colors</h2>
 <Textarea class="is-primary" />
 <Textarea class="is-link" />

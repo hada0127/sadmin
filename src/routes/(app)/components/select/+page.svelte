@@ -33,6 +33,20 @@
   />
 </figure>
 
+<h2>View</h2>
+<Select value="1" view={true}>
+  <option value="1">Seoul</option>
+  <option value="2">Jeju</option>
+</Select>
+<figure class="highlight">
+  <HighlightSvelte
+    code={`<Select value="1" view={true}>
+  <option value="1">Seoul</option>
+  <option value="2">Jeju</option>
+</Select>`}
+  />
+</figure>
+
 <h2>Colors</h2>
 <Select class="is-primary">
   <option value="1">primary</option>

@@ -14,6 +14,8 @@
   export let disabled: boolean | null = null;
   export let minDate: DateOption = '';
   export let maxDate: DateOption = '';
+  export let view = false;
+
   let disableInit = ['9999-12-31'] as DateLimit<DateOption>[];
   export let disable: DateLimit<DateOption>[] = disableInit;
   let enableInit = [
@@ -42,31 +44,35 @@
   });
 </script>
 
-<div class="control has-icons-right {inheritsClass} {disabled}">
-  {#if readonly === true}
-    <input
-      {id}
-      {name}
-      type="text"
-      bind:value
-      {placeholder}
-      {disabled}
-      readonly
-      class="is-small input {inheritsClass}"
-    />
-  {:else}
-    <input
-      type="text"
-      bind:value
-      {placeholder}
-      {disabled}
-      class="is-small input flatpickr {dateID} {inheritsClass}"
-    />
-  {/if}
-  <span class="icon is-small is-right">
-    <i class="fas fa-calendar-alt" />
-  </span>
-</div>
+{#if view === true}
+  {value}
+{:else}
+  <div class="control has-icons-right {inheritsClass} {disabled}">
+    {#if readonly === true}
+      <input
+        {id}
+        {name}
+        type="text"
+        bind:value
+        {placeholder}
+        {disabled}
+        readonly
+        class="is-small input {inheritsClass}"
+      />
+    {:else}
+      <input
+        type="text"
+        bind:value
+        {placeholder}
+        {disabled}
+        class="is-small input flatpickr {dateID} {inheritsClass}"
+      />
+    {/if}
+    <span class="icon is-small is-right">
+      <i class="fas fa-calendar-alt" />
+    </span>
+  </div>
+{/if}
 
 <style lang="scss">
   div {

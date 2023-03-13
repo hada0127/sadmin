@@ -39,6 +39,12 @@
   />
 </figure>
 
+<h2>View</h2>
+<Input view={true} value="010-1234-1234" />
+<figure class="highlight">
+  <Highlight language={html} code={`<Input view={true} value="010-1234-1234" />`} />
+</figure>
+
 <h2>Colors</h2>
 <Input class="is-primary" />
 <Input class="is-link" />

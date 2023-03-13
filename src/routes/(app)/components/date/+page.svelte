@@ -35,6 +35,17 @@
   />
 </figure>
 
+<h2>View</h2>
+<Date bind:value={today} view={true} />
+<figure class="highlight">
+  <HighlightSvelte
+    code={`<script lang="ts">
+    let today = dayjs().format("YYYY-MM-DD");
+<\u002Fscript>
+<Date bind:value={today} view={true} />`}
+  />
+</figure>
+
 <h2>Color</h2>
 <Date bind:value={today} class="is-primary" />
 <Date bind:value={today} class="is-link" />

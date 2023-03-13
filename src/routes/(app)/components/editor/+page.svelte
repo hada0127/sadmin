@@ -1,6 +1,5 @@
 <script lang="ts">
   import Editor from '$components/atoms/Editor.svelte';
-  import EditorView from '$components/atoms/EditorView.svelte';
   import { HighlightSvelte } from 'svelte-highlight';
   import highlightStyle from 'svelte-highlight/styles/vs2015';
   import { pageTitle, pagePath } from '$store/layout/PageTitle';
@@ -37,7 +36,7 @@
 <h2>Basic</h2>
 <Editor bind:value={txt} placeholder="Description" />
 <div class="mt-2">
-  <EditorView bind:value={txt} />
+  <Editor bind:value={txt} view={true} />
 </div>
 
 <figure class="highlight">
@@ -46,8 +45,14 @@
   let txt;
 </script>
 <Editor bind:value={txt} placeholder="Description" />
-<EditorView bind:value={txt} />`}
+<Editor bind:value={txt} view={true} />`}
   />
+</figure>
+
+<h2>View</h2>
+<Editor value="test Message" view={true} />
+<figure class="highlight">
+  <HighlightSvelte code={`<Editor value="test Message" view={true} />`} />
 </figure>
 
 <h2>Size</h2>
@@ -58,7 +63,7 @@
   </div>
   <div class="column">
     <div style="border:1px solid #EEE;border-radius:4px;padding:5px;">
-      <EditorView bind:value={txt2} width="100%" height="300" />
+      <Editor bind:value={txt2} width="100%" height="300" view={true} />
     </div>
   </div>
 </div>
@@ -73,7 +78,7 @@
   </div>
   <div class="column">
     <div style="border:1px solid #EEE;border-radius:4px;padding:5px;">
-      <EditorView bind:value={txt2} width="100%" height="300" />
+      <Editor bind:value={txt2} width="100%" height="300" view={true} />
     </div>
   </div>
 </div>`}
@@ -90,7 +95,7 @@
 </p>
 <Editor bind:value={txt3} {toolbar} />
 <div class="mt-2">
-  <EditorView bind:value={txt3} />
+  <Editor bind:value={txt3} view={true} />
 </div>
 <figure class="highlight">
   <HighlightSvelte
@@ -131,7 +136,7 @@
   ];
 <\u002Fscript>
 <Editor bind:value={txt3} {toolbar} />
-<EditorView bind:value={txt3} />`}
+<Editor bind:value={txt3} view={true} />`}
   />
 </figure>
 
