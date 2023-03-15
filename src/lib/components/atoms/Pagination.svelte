@@ -15,25 +15,26 @@
   $: {
     $page.url.searchParams.delete('page');
     searchData = $page.url.searchParams.toString();
-    totalPage = Math.floor(totalArticles / pageSize);
-    outputStart = Math.floor((nowPage - 1) / pageCols) * pageCols + 1;
+    totalPage = Math.floor(Number(totalArticles) / pageSize) + 1;
+    outputStart = Math.floor((Number(nowPage) - 1) / pageCols) * pageCols + 1;
     pageList = [];
     for (let outputNow = 0; outputNow < pageCols; outputNow++) {
       let outputPage = outputStart + outputNow;
-      let active = nowPage === outputPage ? true : false;
+      let active = Number(nowPage) === outputPage ? true : false;
       if (outputPage <= totalPage) {
         pageList.push({ page: outputPage, active: active });
       }
     }
+    console.log(nowPage, totalPage, outputStart, pageList);
     pageList = pageList;
   }
 </script>
 
 <nav class="pagination is-centered is-small" aria-label="pagination">
   <ul class="pagination-list">
-    {#if nowPage > 1}
+    {#if Number(nowPage) > 1}
       <li>
-        <a href="?page={nowPage - 1}&{searchData}" class="pagination-previous"
+        <a href="?page={Number(nowPage) - 1}&{searchData}" class="pagination-previous"
           ><i class="fas fa-angle-left" /></a
         >
       </li>
@@ -49,9 +50,9 @@
         >
       </li>
     {/each}
-    {#if nowPage < totalPage}
+    {#if Number(nowPage) < totalPage}
       <li>
-        <a href="?page={nowPage + 1}&{searchData}" class="pagination-next"
+        <a href="?page={Number(nowPage) + 1}&{searchData}" class="pagination-next"
           ><i class="fas fa-angle-right" /></a
         >
       </li>
