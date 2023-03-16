@@ -1,6 +1,6 @@
 <script lang="ts">
   import { page } from '$app/stores';
-  import { LnbData } from "$store/layout/Lnb";
+  import { LnbData } from '$store/layout/Lnb';
 </script>
 
 <div class="menu">
@@ -8,15 +8,14 @@
   <ul class="menu-list">
     {#each LnbData as lnb}
       <li>
-        <a href={lnb.url} class:active={$page.route.id === lnb.url && !lnb.submenu}
+        <a href={lnb.url} class:active={$page.route.id === `/(app)${lnb.url}` && !lnb.submenu}
           >{lnb.name}</a
         >
         {#if lnb.submenu}
           <ul>
             {#each lnb.submenu as sub}
               <li>
-                <a href={sub.url} class:active={$page.route.id === sub.url}
-                  >{sub.name}</a
+                <a href={sub.url} class:active={$page.route.id === `/(app)${sub.url}`}>{sub.name}</a
                 >
               </li>
             {/each}

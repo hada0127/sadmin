@@ -1,3 +1,4 @@
+1.0.10 Add SystemModal
 1.0.9 Pagination bug fix
 1.0.8 Add Components View Props(Input, Select, Date, Textarea, Editor)
 1.0.7 Change Toggle Size

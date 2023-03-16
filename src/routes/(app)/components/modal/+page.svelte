@@ -12,7 +12,7 @@
   let modalCloseButton: boolean;
   let modalCloseKey: boolean;
   let modalCloseUser: boolean;
-  let closeModal: (() => void) | undefined;
+  let closeModal: (() => void) | null = null;
 </script>
 
 <svelte:head>

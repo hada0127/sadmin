@@ -140,9 +140,9 @@
   <Highlight
     language={html}
     code={`<Button class="is-primary" on:click={() => { alert("click!");}}>static</Button>
-<Button class="is-primary is-static' on:click={() => { alert("click!");}}>static</Button>
-<Button class="is-primary is-loading' on:click={() => { alert("click!");}}>loading</Button>
-<Button class="is-primary' disabled on:click={() => { alert("click!");}}>disabled</Button>`}
+<Button class="is-primary is-static" on:click={() => { alert("click!");}}>static</Button>
+<Button class="is-primary is-loading" on:click={() => { alert("click!");}}>loading</Button>
+<Button class="is-primary" disabled on:click={() => { alert("click!");}}>disabled</Button>`}
   />
 </figure>
 

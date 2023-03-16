@@ -49,6 +49,10 @@ export const LnbData = [
           "name": "Modal"
         },
         {
+          "url": "/components/systemModal",
+          "name": "System Modal"
+        },
+        {
           "url": "/components/tabs",
           "name": "Tabs"
         }

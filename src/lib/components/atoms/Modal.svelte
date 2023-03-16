@@ -3,7 +3,7 @@
 
   export let active = false;
   export let close = '';
-  export const closeModal = () => {
+  export const closeModal: (() => void) | null = () => {
     if (close !== 'key') {
       active = false;
     }
