@@ -56,7 +56,6 @@
 <h2>Cases</h2>
 <Button
   on:click={() => {
-    //
     handleOk = null;
     modalType = 'alert';
     modalActive = true;
@@ -66,7 +65,6 @@
 
 <Button
   on:click={() => {
-    //
     handleOk = () => {
       alert('alert - callback');
       modalActive = false;
@@ -79,7 +77,18 @@
 
 <Button
   on:click={() => {
-    //
+    handleOk = () => {
+      alert('confirm - callback');
+      modalActive = false;
+    };
+    modalType = 'confirm';
+    modalActive = true;
+    modalMessage = 'Confirm Test(callback)';
+  }}>confirm(callback)</Button
+>
+
+<Button
+  on:click={() => {
     handleOk = () => {
       alert(`prompt - ${promptText}`);
       promptText = '';
@@ -94,7 +103,6 @@
 
 <Button
   on:click={() => {
-    //
     handleOk = () => {
       alert(`remove`);
       modalActive = false;
@@ -106,7 +114,6 @@
 >
 <Button
   on:click={() => {
-    //
     handleOk = () => {
       alert(`loading`);
       modalActive = false;
@@ -123,7 +130,6 @@
   <HighlightSvelte
     code={`<Button
   on:click={() => {
-    //
     handleOk = null;
     modalType = 'alert';
     modalActive = true;
@@ -133,7 +139,6 @@
 
 <Button
   on:click={() => {
-    //
     handleOk = () => {
       alert('alert - callback');
       modalActive = false;
@@ -146,7 +151,18 @@
 
 <Button
   on:click={() => {
-    //
+    handleOk = () => {
+      alert('confirm - callback');
+      modalActive = false;
+    };
+    modalType = 'confirm';
+    modalActive = true;
+    modalMessage = 'Confirm Test(callback)';
+  }}>confirm(callback)</Button
+>
+
+<Button
+  on:click={() => {
     handleOk = () => {
       alert(\`prompt - \${promptText}\`);
       promptText = '';
@@ -161,9 +177,8 @@
 
 <Button
   on:click={() => {
-    //
     handleOk = () => {
-      alert("remove");
+      alert(\`remove\`);
       modalActive = false;
     };
     promptText = '';
@@ -173,9 +188,8 @@
 >
 <Button
   on:click={() => {
-    //
     handleOk = () => {
-      alert("loading");
+      alert(\`loading\`);
       modalActive = false;
     };
     isComplete = false;
