@@ -27,6 +27,7 @@
   import table from './editor/table';
   import 'suneditor/dist/css/suneditor.min.css';
   import '$scss/suneditor.scss';
+  import type SunEditor from 'suneditor/src/lib/core';
 
   const editorID = `f` + uuidv4();
 
@@ -40,6 +41,7 @@
   $: widthUnit = match.test(width) ? 'px' : '';
   $: heightUnit = match.test(height) ? 'px' : '';
   export let inheritsClass: string = $$props.class ? $$props.class : '';
+  export let ref: SunEditor | null = null;
 
   export let toolbar = [
     ['undo', 'redo'],
@@ -114,16 +116,16 @@
       },
       resizingBar: false
     };
-    let editorObj;
+
     onMount(async () => {
       /* eslint-disable @typescript-eslint/no-explicit-any */
-      editorObj = suneditor.create(editorID, editorOptions as any);
-      editorObj.onChange = function (contents) {
+      ref = suneditor.create(editorID, editorOptions as any);
+      ref.onChange = function (contents: string) {
         value = contents;
       };
     });
     onDestroy(() => {
-      editorObj = null;
+      ref = null;
     });
   }
 </script>

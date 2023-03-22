@@ -1,5 +1,6 @@
 <script lang="ts">
   import Textarea from '$components/atoms/Textarea.svelte';
+  import Button from '$components/atoms/Button.svelte';
   import { HighlightSvelte, Highlight } from 'svelte-highlight';
   import html from 'svelte-highlight/languages/vbscript-html';
   import highlightStyle from 'svelte-highlight/styles/vs2015';
@@ -11,6 +12,11 @@
   let reviewCheckResult = false;
   const reviewRegex = new RegExp(/^.{100,300}$/);
   let text = '';
+
+  let ref: HTMLTextAreaElement | null;
+  const setFocus = () => {
+    ref && ref.focus();
+  };
 </script>
 
 <svelte:head>
@@ -72,6 +78,22 @@
     code={`<Textarea class="is-static" value="is-static" readonly />
 <Textarea class="is-primary" value="readonly" readonly />
 <Textarea value="disabled" disabled />`}
+  />
+</figure>
+
+<h2>Focus</h2>
+<Textarea bind:ref />
+<Button on:click={setFocus}>Set Focus</Button>
+<figure class="highlight">
+  <HighlightSvelte
+    code={`<script lang="ts">
+  let ref:HTMLInputElement | null;
+  const setFocus = () => {
+    ref && ref.focus();
+  };
+<\u002Fscript>
+<Textarea bind:ref />
+<Button on:click={setFocus}>Set Focus</Button>`}
   />
 </figure>
 

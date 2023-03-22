@@ -1,5 +1,6 @@
 <script lang="ts">
   import Select from '$components/atoms/Select.svelte';
+  import Button from '$components/atoms/Button.svelte';
   import { HighlightSvelte, Highlight } from 'svelte-highlight';
   import html from 'svelte-highlight/languages/vbscript-html';
   import highlightStyle from 'svelte-highlight/styles/vs2015';
@@ -12,6 +13,11 @@
   let bindSelectPlaceholder = '';
   let bindSelectDisabled = '2';
   let bindSelectMultie = '';
+
+  let ref: HTMLSelectElement | null;
+  const setFocus = () => {
+    ref && ref.focus();
+  };
 </script>
 
 <svelte:head>
@@ -109,6 +115,28 @@
   <option value="1">Seoul</option>
   <option value="2">Jeju</option>
 </Select>`}
+  />
+</figure>
+
+<h2>Focus</h2>
+<Select bind:ref bind:value={bindSelectBasic}>
+  <option value="1">Seoul</option>
+  <option value="2">Jeju</option>
+</Select>
+<Button on:click={setFocus}>Set Focus</Button>
+<figure class="highlight">
+  <HighlightSvelte
+    code={`<script lang="ts">
+  let ref:HTMLInputElement | null;
+  const setFocus = () => {
+    ref && ref.focus();
+  };
+<\u002Fscript>
+<Select bind:ref bind:value={bindSelectBasic}>
+  <option value="1">Seoul</option>
+  <option value="2">Jeju</option>
+</Select>
+<Button on:click={setFocus}>Set Focus</Button>`}
   />
 </figure>
 

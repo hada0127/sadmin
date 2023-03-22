@@ -1,4 +1,5 @@
 <script lang="ts">
+  export let ref: HTMLInputElement | null = null;
   export let type = 'text';
   export let value = '';
   const onInput = (e: Event) => {
@@ -40,6 +41,7 @@
     class:has-icons-right={iconRight && iconRight.length > 0}
   >
     <input
+      bind:this={ref}
       {id}
       {name}
       {type}

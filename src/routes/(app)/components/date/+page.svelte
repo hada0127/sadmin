@@ -1,5 +1,6 @@
 <script lang="ts">
   import Date from '$components/atoms/Date.svelte';
+  import Button from '$components/atoms/Button.svelte';
   import { HighlightSvelte, Highlight } from 'svelte-highlight';
   import html from 'svelte-highlight/languages/vbscript-html';
   import highlightStyle from 'svelte-highlight/styles/vs2015';
@@ -13,6 +14,12 @@
   let today = dayjs().format('YYYY-MM-DD');
   let minDate = dayjs().subtract(10, 'day').format('YYYY-MM-DD');
   let maxDate = dayjs().add(10, 'day').format('YYYY-MM-DD');
+
+  let ref: HTMLInputElement | null;
+  const setFocus = () => {
+    console.log(ref);
+    ref && ref.focus();
+  };
 </script>
 
 <svelte:head>
@@ -62,6 +69,22 @@
 <Date bind:value={today} class="is-success" />
 <Date bind:value={today} class="is-warning" />
 <Date bind:value={today} class="is-danger" />`}
+  />
+</figure>
+
+<h2>Focus</h2>
+<Date bind:ref />
+<Button on:click={setFocus}>Set Focus</Button>
+<figure class="highlight">
+  <HighlightSvelte
+    code={`<script lang="ts">
+  let ref:HTMLInputElement | null;
+  const setFocus = () => {
+    ref && ref.focus();
+  };
+<\u002Fscript>
+<Date bind:ref />
+<Button on:click={setFocus}>Set Focus</Button>`}
   />
 </figure>
 

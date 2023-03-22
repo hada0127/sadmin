@@ -1,4 +1,5 @@
 <script lang="ts">
+  export let ref: HTMLSelectElement | null = null;
   export let multiple = false;
   export let id = '';
   export let name = '';
@@ -34,6 +35,7 @@
     <div class="select is-small {inheritsClass} " class:is-multiple={multiple}>
       {#if multiple && multiple === true}
         <select
+          bind:this={ref}
           {id}
           {name}
           size={multiple === true ? size : 2}
@@ -50,6 +52,7 @@
         </select>
       {:else if value != ''}
         <select
+          bind:this={ref}
           {id}
           {name}
           {disabled}
@@ -63,7 +66,14 @@
           <slot />
         </select>
       {:else}
-        <select {id} {name} {disabled} class:placeholder={checkPlaceholder} class={inheritsClass}>
+        <select
+          bind:this={ref}
+          {id}
+          {name}
+          {disabled}
+          class:placeholder={checkPlaceholder}
+          class={inheritsClass}
+        >
           {#if placeholder && placeholder.length > 0}
             <option disabled>{placeholder}</option>
           {/if}

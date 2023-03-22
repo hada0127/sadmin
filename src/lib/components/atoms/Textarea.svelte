@@ -1,4 +1,5 @@
 <script lang="ts">
+  export let ref: HTMLTextAreaElement | null = null;
   export let value = '';
   const onInput = (e: Event) => {
     const target = e.target as HTMLSelectElement;
@@ -35,6 +36,7 @@
 {:else}
   <div class={style}>
     <textarea
+      bind:this={ref}
       {id}
       {name}
       class="is-small {style} textarea"

@@ -1,14 +1,16 @@
 <script lang="ts">
   import Editor from '$components/atoms/Editor.svelte';
+  import Button from '$components/atoms/Button.svelte';
   import { HighlightSvelte } from 'svelte-highlight';
   import highlightStyle from 'svelte-highlight/styles/vs2015';
   import { pageTitle, pagePath } from '$store/layout/PageTitle';
+  import type SunEditor from 'suneditor/src/lib/core';
   pageTitle.set('Editor');
   pagePath.set(
     `&gt; <a href="/components/field">Components</a> &gt; <a href="/components/editor">Editor</a>`
   );
 
-  let txt, txt2, txt3;
+  let txt: string, txt2: string, txt3: string;
   let toolbar = [
     ['undo', 'redo', 'font', 'fontSize', 'formatBlock', 'paragraphStyle', 'blockquote'],
     [
@@ -27,6 +29,10 @@
     ['table', 'link', 'image', 'video', 'audio', 'imageGallery'],
     ['fullScreen', 'showBlocks', 'codeView', 'preview', 'print', 'save', 'template']
   ];
+  let ref: SunEditor | null = null;
+  const setFocus = () => {
+    ref && ref.core.focus();
+  };
 </script>
 
 <svelte:head>
@@ -43,7 +49,7 @@
   <HighlightSvelte
     code={`<script lang="ts">
   let txt;
-</script>
+<\u002Fscript>
 <Editor bind:value={txt} placeholder="Description" />
 <Editor bind:value={txt} view={true} />`}
   />
@@ -53,6 +59,23 @@
 <Editor value="test Message" view={true} />
 <figure class="highlight">
   <HighlightSvelte code={`<Editor value="test Message" view={true} />`} />
+</figure>
+
+<h2>Focus</h2>
+<Editor bind:ref />
+<Button on:click={setFocus}>Set Focus</Button>
+<figure class="highlight">
+  <HighlightSvelte
+    code={`<script lang="ts">
+  import type SunEditor from 'suneditor/src/lib/core';
+  let ref: SunEditor | null = null;
+  const setFocus = () => {
+    ref && ref.core.focus();
+  };
+<\u002Fscript>
+<Editor bind:ref />
+<Button on:click={setFocus}>Set Focus</Button>`}
+  />
 </figure>
 
 <h2>Size</h2>

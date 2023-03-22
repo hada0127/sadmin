@@ -1,5 +1,6 @@
 <script lang="ts">
   import Input from '$components/atoms/Input.svelte';
+  import Button from '$components/atoms/Button.svelte';
   import { HighlightSvelte, Highlight } from 'svelte-highlight';
   import html from 'svelte-highlight/languages/vbscript-html';
   import highlightStyle from 'svelte-highlight/styles/vs2015';
@@ -15,6 +16,12 @@
   );
   const idRegex = new RegExp(/^[a-zA-Z][0-9a-zA-Z]{3,20}$/);
   const telRegex = new RegExp(/\d{3}-\d{3,4}-\d{4}/);
+
+  let ref: HTMLInputElement | null;
+  const setFocus = () => {
+    console.log(ref);
+    ref && ref.focus();
+  };
 </script>
 
 <svelte:head>
@@ -117,6 +124,22 @@
     language={html}
     code={`<Input type="password" placeholder="Password" iconLeft="fas fa-lock" memo="Please enter characters between 8 and 30 digits." />
 <Input type="password" class="is-danger" placeholder="Password" iconLeft="fas fa-lock" memo="Please enter characters between 8 and 30 digits." />`}
+  />
+</figure>
+
+<h2>Focus</h2>
+<Input bind:ref />
+<Button on:click={setFocus}>Set Focus</Button>
+<figure class="highlight">
+  <HighlightSvelte
+    code={`<script lang="ts">
+  let ref:HTMLInputElement | null;
+  const setFocus = () => {
+    ref && ref.focus();
+  };
+<\u002Fscript>
+<Input bind:ref />
+<Button on:click={setFocus}>Set Focus</Button>`}
   />
 </figure>
 

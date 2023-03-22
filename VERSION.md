@@ -1,3 +1,4 @@
+1.0.12 Add focus to input, date, select, textarea, and editor
 1.0.11 SystemModal update
 1.0.10 Add SystemModal
 1.0.9 Pagination bug fix

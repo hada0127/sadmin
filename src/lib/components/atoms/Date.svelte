@@ -5,6 +5,7 @@
   import { v4 as uuidv4 } from 'uuid';
   import type { DateOption, DateLimit } from 'flatpickr/dist/types/options';
 
+  export let ref: HTMLInputElement | null = null;
   export let inheritsClass: string | null = $$props.class ? $$props.class : '';
   export let id = '';
   export let name = '';
@@ -50,6 +51,7 @@
   <div class="control has-icons-right {inheritsClass} {disabled}">
     {#if readonly === true}
       <input
+        bind:this={ref}
         {id}
         {name}
         type="text"
@@ -61,6 +63,7 @@
       />
     {:else}
       <input
+        bind:this={ref}
         type="text"
         bind:value
         {placeholder}

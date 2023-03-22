@@ -1,6 +1,7 @@
 <script lang="ts">
   import File from '$components/atoms/File.svelte';
-  import { Highlight } from 'svelte-highlight';
+  import Button from '$components/atoms/Button.svelte';
+  import { HighlightSvelte, Highlight } from 'svelte-highlight';
   import html from 'svelte-highlight/languages/vbscript-html';
   import highlightStyle from 'svelte-highlight/styles/vs2015';
   import { pageTitle, pagePath } from '$store/layout/PageTitle';
@@ -8,6 +9,11 @@
   pagePath.set(
     `&gt; <a href="/components/field">Components</a> &gt; <a href="/components/file">File</a>`
   );
+
+  let ref: HTMLInputElement | null;
+  const setFocus = () => {
+    ref && ref.focus();
+  };
 </script>
 
 <svelte:head>
