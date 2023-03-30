@@ -65,20 +65,20 @@
         <i class={iconRight} />
       </span>
     {/if}
+    {#if matchView && matchResult === false}
+      <p class="help is-danger">{invalid}</p>
+    {:else if matchView && matchResult === true}
+      <p class="help is-success">{success}</p>
+    {:else if memo}
+      <p class="help {inheritsClass}">{memo}</p>
+    {/if}
   </div>
-
-  {#if matchView && matchResult === false}
-    <p class="help is-danger">{invalid}</p>
-  {:else if matchView && matchResult === true}
-    <p class="help is-success">{success}</p>
-  {:else if memo}
-    <p class="help {inheritsClass}">{memo}</p>
-  {/if}
 {/if}
 
 <style lang="scss">
   div {
     display: inline-block;
+    vertical-align: top;
   }
   .is-fullwidth {
     display: flex;
