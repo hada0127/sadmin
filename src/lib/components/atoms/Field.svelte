@@ -23,11 +23,10 @@
 <style lang="scss">
   .field {
     display: inline-block;
-    vertical-align: middle;
     font-size: 12px;
     font-weight: 700;
     color: var(--font-base-color);
-    :not(:last-child) {
+    &:not(:last-child) {
       margin-right: 10px;
     }
     div {
