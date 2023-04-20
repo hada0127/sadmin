@@ -1,3 +1,4 @@
+1.0.15 Input component on:input props add
 1.0.14 Field css fix
 1.0.13 input css fix
 1.0.12 Add focus to input, date, select, textarea, and editor

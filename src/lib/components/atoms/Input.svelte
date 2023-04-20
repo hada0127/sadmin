@@ -54,6 +54,7 @@
       {placeholder}
       {maxlength}
       on:input={onInput}
+      on:input
     />
     {#if iconLeft && iconLeft.length > 0}
       <span class="icon is-small is-left">
