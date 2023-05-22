@@ -1,3 +1,4 @@
+1.0.16 Date id, name props bug fix
 1.0.15 Input component on:input props add
 1.0.14 Field css fix
 1.0.13 input css fix

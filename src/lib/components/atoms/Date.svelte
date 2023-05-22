@@ -64,6 +64,8 @@
     {:else}
       <input
         bind:this={ref}
+        {id}
+        {name}
         type="text"
         bind:value
         {placeholder}
