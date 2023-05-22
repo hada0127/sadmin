@@ -1,6 +1,6 @@
 {
 	"name": "sadmin",
-	"version": "1.0.15",
+	"version": "1.0.16",
 	"private": true,
 	"scripts": {
 		"dev": "vite dev --port 3000",
