@@ -1,7 +1,7 @@
 <script lang="ts">
   export let ref: HTMLInputElement | null = null;
   export let type = 'text';
-  export let value = '';
+  export let value: string | number | null = '';
   const onInput = (e: Event) => {
     const target = e.target as HTMLSelectElement;
     value = target.value;
@@ -23,7 +23,7 @@
 
   export let matchResult = false;
   let matchView = false;
-  $: if (match && value && value.length > 0) {
+  $: if (match && value && typeof value === 'string' && value.length > 0) {
     matchResult = match.test(value);
     matchView = true;
   } else {
@@ -55,6 +55,7 @@
       {maxlength}
       on:input={onInput}
       on:input
+      on:keyup
     />
     {#if iconLeft && iconLeft.length > 0}
       <span class="icon is-small is-left">
@@ -87,5 +88,8 @@
   }
   p {
     font-size: 11px;
+  }
+  input:disabled {
+    border: none;
   }
 </style>
